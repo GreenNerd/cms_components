@@ -1,0 +1,52 @@
+$font-size:50px;
+
+.item-container {
+  background-color: #244d7d; 
+
+  padding:20px 10px;
+  padding-bottom:0;
+
+  .item-list {
+	  flex: 1;
+	  display: flex;
+	  justify-content: space-around;
+
+	  .item{
+		  background: url('https://modao.cc/uploads2/images/466/4660489/raw_1471229648.jpeg') no-repeat;
+		  background-size: cover;
+		  background-position: 50%;
+		  flex:1px;
+		  margin-right:8px;
+		  margin-bottom:8px;
+		  position:relative;
+		 
+		  max-height: 164px;
+		  min-height: 120px;
+		  overflow:hidden;
+		  padding-bottom:6%;
+
+		  .item-name{
+		  		position:absolute;
+				font-size:$font-size;
+				left:5px;
+				top:5px
+		  }
+		  .item-icon{
+		  		position:absolute;
+		  		font-size:$font-size;
+		  		bottom:5px;
+		  		right:5px;
+		  }
+		  .css-item-cover{
+			  width: 100%;
+			  height: 100%;
+			  background-color:#000000;
+			  opacity: 0.2;
+			  padding-bottom:25%;
+		  }
+		}
+		.item:last-child{
+			margin-right:0px;
+		}
+  	}
+}
