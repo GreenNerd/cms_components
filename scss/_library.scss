@@ -1,4 +1,4 @@
-$font-size:50px;
+$font-size:19px;
 
 .item-container {
   background-color: #244d7d; 
@@ -14,7 +14,6 @@ $font-size:50px;
 
 
 	  .item{
-		  /*background: url('https://modao.cc/uploads2/images/466/4660489/raw_1471229648.jpeg') no-repeat;*/
 		  background-size: cover;
 		  background-position: 50%;
 		  text-decoration:none;
@@ -37,15 +36,17 @@ $font-size:50px;
 		  .item-name{
 		  		position: absolute;
 				font-size: $font-size;
-				left: 5px;
-				top: 5px;
+				font-weight: bold;
+				left: 14px;
+				top: 14px;
 				color: white;
+				line-height: 1.3em;
 		  }
 		  .item-icon{
 		  		position: absolute;
-		  		font-size: $font-size;
-		  		bottom: 5px;
-		  		right: 5px;
+		  		font-size: 36px;
+		  		bottom: 14px;
+		  		right: 14px;
 				color: white;
 		  }
 
