@@ -1,12 +1,12 @@
-.item-container {
+.library-container {
   padding:20px 10px;
   padding-bottom:0;
 
-  .item-list {
+  .library-item-list {
 	  display:flex;
 	  justify-content: space-around;
 
-	  .item{
+	  .library-item{
 		  background-size: cover;
 		  background-position: 50%;
 		  text-decoration:none;
@@ -25,7 +25,7 @@
 		  overflow:hidden;
 		  padding-bottom:6%;
 
-		  .item-name{
+		  .library-item-name{
 		  	position: absolute;
 				font-size: 19px;
 				font-weight: bold;
@@ -34,7 +34,7 @@
 				color: white;
 				line-height: 1.3em;
 		  }
-		  .item-icon{
+		  .library-item-icon{
 		  		position: absolute;
 		  		font-size: 36px;
 		  		bottom: 14px;
@@ -48,7 +48,7 @@
 			  position: absolute;
 		  }
 		}
-		.item:last-child{
+		.library-item:last-child{
 			margin-right: 0px;
 		}
   }
