@@ -1,17 +1,10 @@
-$font-size:19px;
-
 .item-container {
-  background-color: #244d7d; 
   padding:20px 10px;
   padding-bottom:0;
 
   .item-list {
-
-
 	  display:flex;
-
 	  justify-content: space-around;
-
 
 	  .item{
 		  background-size: cover;
@@ -20,22 +13,21 @@ $font-size:19px;
 		  color:#000;
 		  display: block;
 
-	      flex-grow:1;
-	      flex-shrink:1;
-	      flex-basis:auto;
+      flex-grow:1;
+      flex-shrink:1;
+      flex-basis:auto;
 
 		  margin-right:8px;
 		  margin-bottom:8px;
-		  position:relative;
-		 
+		  position:relative;		 
 		  max-height: 164px;
 		  min-height: 120px;
 		  overflow:hidden;
 		  padding-bottom:6%;
 
 		  .item-name{
-		  		position: absolute;
-				font-size: $font-size;
+		  	position: absolute;
+				font-size: 19px;
 				font-weight: bold;
 				left: 14px;
 				top: 14px;
@@ -49,7 +41,6 @@ $font-size:19px;
 		  		right: 14px;
 				color: white;
 		  }
-
 		  .css-item-cover{
 			  width: 100%;
 			  height: 100%;
@@ -60,5 +51,5 @@ $font-size:19px;
 		.item:last-child{
 			margin-right: 0px;
 		}
-  	}
+  }
 }
