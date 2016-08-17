@@ -11,14 +11,13 @@
     @include flex_space_around;
 
     .library-item{
+      flex: 1;
+
       background-size: cover;
       background-position: 50%;
       text-decoration: none;
       color: #000;
       display: block;
-
-      flex: 1;
-
       margin-right: 8px;
       margin-bottom: 8px;
       position: relative;    
