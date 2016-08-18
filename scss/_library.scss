@@ -1,56 +1,64 @@
-@mixin flex_space_around{
+@mixin flex-space-around {
   display: flex;
   justify-content: space-around;
 }
+
+$color: #000;
 
 .library-container {
   padding: 20px 10px;
   padding-bottom: 0;
 
   .library-item-list {
-    @include flex_space_around;
+    @include flex-space-around;
 
-    .library-item{
+    .library-item {
       flex: 1;
 
       background-size: cover;
       background-position: 50%;
       text-decoration: none;
-      color: #000;
+      color: $color;
       display: block;
       margin-right: 8px;
       margin-bottom: 8px;
-      position: relative;    
+      position: relative;
       max-height: 164px;
       min-height: 120px;
       overflow: hidden;
       padding-bottom: 6%;
 
-      .library-item-name{
+      .library-item-name {
         position: absolute;
         font-size: 19px;
+        font-family: Microsoft YaHei;
         font-weight: bold;
         left: 14px;
         top: 14px;
-        color: white;
+        color: #fff;
         line-height: 1.3em;
       }
-      .library-item-icon{
+
+      .library-item-icon {
         position: absolute;
         font-size: 36px;
         bottom: 14px;
         right: 14px;
-        color: white;
+        color: #fff;
       }
-      .css-item-cover{
+
+      .css-item-cover {
         width: 100%;
         height: 100%;
-        opacity: 0.6;
+        opacity: .6;
+        
         position: absolute;
       }
+    
     }
-    .library-item:last-child{
-      margin-right: 0px;
+
+    &:last-child{
+      margin-right: 0;
     }
   }
 }

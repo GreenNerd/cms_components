@@ -1,21 +1,25 @@
-@mixin flex_colunm{
+@mixin flex-colunm {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
+$color: #00455f;
+
 * {
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
+
 html {
-	height: 100%;
+  height: 100%;
 }
+
 body {
   margin: 0 auto;
   max-width: 750px;
   min-width: 320px;
   min-height: 100%; 
-  background: #00455f;
-  @include flex_colunm;
+  background: $color;
+  @include flex-colunm;
 }
