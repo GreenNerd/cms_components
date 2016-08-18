@@ -1,3 +1,4 @@
 - npm install 
-- webpack-dev-server --port 3000 --host 0.0.0.0
+- npm start
+- npm run dev
 
