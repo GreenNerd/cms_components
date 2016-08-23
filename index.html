@@ -7,8 +7,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
 </head>
 <body>
-  <div class="banner">
+<!--   <div class="banner">
     <img style="width:100%" src="/assets/banner/default.png">
+  </div> -->
+  <div id="container">
+    <div id="list" style="left:-100%;">
+      <img src="assets/banner/bg_4.jpg" />
+      <img src="assets/banner/bg_1.jpg" />
+      <img src="assets/banner/bg_2.jpg" />
+      <img src="assets/banner/bg_3.jpg" />
+      <img src="assets/banner/bg_4.jpg" />
+      <img src="assets/banner/bg_1.jpg" />
+    </div>
+    <div id="buttons">
+      <span index="1" class="on"></span>
+      <span index="2"></span>
+      <span index="3"></span>
+      <span index="4"></span>
+    </div>
+    <a href="javascript:;" class="arrow" id="prev">&lt;</a>
+    <a href="javascript:;" class="arrow" id="next">&gt;</a>
   </div>
   <div class="library-container">
     <div class="library-item-list">
@@ -43,5 +61,10 @@
   </div>
 
   <script src="assets/bundle.js"></script>
+<!--   <script>
+      function resizeImage(obj){
+        obj.width = document.body.clientWidth;
+  }
+  </script> -->
 </body>
 </html>
