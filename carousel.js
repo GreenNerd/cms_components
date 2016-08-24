@@ -113,6 +113,7 @@ function GetSlideDirection(startX,startY,endX,endY){
 	var dx = endX - startX;
 	var result = 0;
 
+
 	if (Math.abs(dx) < 2 && Math.abs(dy) < 2 ) {
 		return result;
 	}
@@ -137,6 +138,7 @@ var startX ,startY;
 document.addEventListener('touchstart',function(ev){
 	startX = ev.touches[0].pageX;
 	startY = ev.touches[0].pageY;
+
 },false);
 
 document.addEventListener('touchend',function(ev){
