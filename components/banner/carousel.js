@@ -2,8 +2,11 @@ function carousel(opts){
   var options = {
     autoTime:3000,
     paganation:true,
-    arrow:true
+    arrow:true,
+    parentDivId:'carousel-container-sec',
+    images:''
   }
+
 
   if (opts) {
     for (var key in opts){
@@ -11,10 +14,66 @@ function carousel(opts){
     }
   }
 
+  var carousel = document.getElementById(options.parentDivId);
+
+//插入图片
+  var carouselList = document.createElement('div');
+
+  carouselList.className = 'list';
+  carouselList.id = 'list';
+  carouselList.style.left = '-100%';
+
+  var images = options.images;
+  
+  for(var i = 0;i <= images.length - 1; i++){
+    var img = new Image();
+    img.src = images[i];
+    carouselList.appendChild(img);
+  }
+
+  carousel.appendChild(carouselList);
+
+//插入序列号
+
+  var slidePaganation = document.createElement('div');
+  slidePaganation.className = 'silde';
+  slidePaganation.id = 'slide';
+
+  var slidePaganationButtons = document.createElement('div');
+  slidePaganationButtons.className = 'slide-buttons';
+  slidePaganationButtons.id = 'slide-buttons';
+
+  for(var i = 1;i <= images.length; i++){
+    var span = document.createElement('span');
+    span.setAttribute('index',i);
+    slidePaganationButtons.appendChild(span);
+  }
+
+  slidePaganationButtons.childNodes[0].className = 'on';
+
+  slidePaganation.appendChild(slidePaganationButtons);
+  carousel.appendChild(slidePaganation);
+
+//插入箭头
+
+  var arrowPrev = document.createElement('a');
+  var arrowNext = document.createElement('a');
+  arrowPrev.href = "javascript:;";
+  arrowPrev.className = 'arrow';
+  arrowPrev.id = 'prev';
+  arrowPrev.innerHTML = '&lt;';
+  arrowNext.href = "javascript:;";
+  arrowNext.className = 'arrow';
+  arrowNext.id = 'next';
+  arrowNext.innerHTML = '&gt;';
+  carousel.appendChild(arrowPrev);
+  carousel.appendChild(arrowNext);
+
+
   var container = document.getElementById('carousel-container');
   var list = document.getElementById('list');
   var slide = document.getElementById('slide');
-  var buttons = document.getElementById('buttons').getElementsByTagName('span');
+  var buttons = document.getElementById('slide-buttons').getElementsByTagName('span');
   var prev = document.getElementById('prev');
   var next = document.getElementById('next');
   var index = 1;
@@ -190,7 +249,6 @@ function carousel(opts){
     }
   },false);
 
-
   play();
 
 }
@@ -199,7 +257,15 @@ function carousel(opts){
 
 window.onload = function(){
     carousel({
-      autoTime:3000,
-      arrow:false
+      autoTime:3000, //轮播间隔时间
+      paganation:true, //下方序列
+      arrow:true, //两侧箭头
+      parentDivId:'carousel-container-sec',
+      images:[
+        "assets/banner/default.png",
+        "assets/banner/bg_1.jpg",
+        "assets/banner/bg_2.jpg",
+        "assets/banner/bg_3.jpg"
+      ]
   });
 }
