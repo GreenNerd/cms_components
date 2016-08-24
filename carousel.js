@@ -1,6 +1,6 @@
 window.onload = function(){
 
-	var container = document.getElementById('container');
+	var container = document.getElementById('carousel-container');
 	var list = document.getElementById('list');
 	var buttons = document.getElementById('buttons').getElementsByTagName('span');
 	var prev = document.getElementById('prev');
