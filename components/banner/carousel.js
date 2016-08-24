@@ -3,7 +3,7 @@ function carousel(opts){
     autoTime:3000,
     paganation:true,
     arrow:true,
-    parentDivId:'carousel-container-sec',
+    parentDivId:'carousel-container',
     images:''
   }
 
@@ -24,19 +24,26 @@ function carousel(opts){
   carouselList.style.left = '-100%';
 
   var images = options.images;
-  
+  var firstImg = document.createElement('img');
+  firstImg.src = images[images.length-1];
+  carouselList.appendChild(firstImg);
+
   for(var i = 0;i <= images.length - 1; i++){
     var img = new Image();
     img.src = images[i];
     carouselList.appendChild(img);
   }
 
+  var lastImg = document.createElement('img');
+  lastImg.src = images[0];
+  carouselList.appendChild(lastImg);
+
   carousel.appendChild(carouselList);
 
 //插入序列号
 
   var slidePaganation = document.createElement('div');
-  slidePaganation.className = 'silde';
+  slidePaganation.className = 'slide';
   slidePaganation.id = 'slide';
 
   var slidePaganationButtons = document.createElement('div');
@@ -69,7 +76,7 @@ function carousel(opts){
   carousel.appendChild(arrowPrev);
   carousel.appendChild(arrowNext);
 
-
+//轮播
   var container = document.getElementById('carousel-container');
   var list = document.getElementById('list');
   var slide = document.getElementById('slide');
@@ -260,7 +267,7 @@ window.onload = function(){
       autoTime:3000, //轮播间隔时间
       paganation:true, //下方序列
       arrow:true, //两侧箭头
-      parentDivId:'carousel-container-sec',
+      parentDivId:'carousel-container',
       images:[
         "assets/banner/default.png",
         "assets/banner/bg_1.jpg",
