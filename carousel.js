@@ -148,21 +148,16 @@ document.addEventListener('touchend',function(ev){
 
 	switch(direction){
 		case 0:
-			// alert('mei hua dong');
 			break;
 		case 1:
-			// alert('xiang shang');
 			break;
 		case 2:
-			// alert('xiang xia');
 			break;
 		case 3:
 			next.onclick();
-
 			break;
 		case 4:
 			prev.onclick();
-
 			break;
 		default:
 	}
