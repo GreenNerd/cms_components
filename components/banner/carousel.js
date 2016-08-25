@@ -15,6 +15,7 @@ function carousel(opts){
   }
 
   var carousel = document.getElementById(options.parentDivId);
+  carousel.className = 'carousel-container';
 
 //插入图片
   var carouselList = document.createElement('div');
@@ -24,6 +25,9 @@ function carousel(opts){
   carouselList.style.left = '-100%';
 
   var images = options.images;
+
+  carouselList.style.width = (images.length + 2) * 100 + '%' ;
+
   var firstImg = document.createElement('img');
   firstImg.src = images[images.length-1];
   carouselList.appendChild(firstImg);
@@ -39,6 +43,10 @@ function carousel(opts){
   carouselList.appendChild(lastImg);
 
   carousel.appendChild(carouselList);
+
+  for(var i = 0;i < carouselList.children.length;i++){
+    carouselList.children[i].style.width = 100 / carouselList.children.length + '%' ;
+  };
 
 //插入序列号
 
