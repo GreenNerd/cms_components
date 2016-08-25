@@ -10,7 +10,7 @@ module.exports = {
     },
     module: {
       loaders: [
-        { test: /\.js$/,loader:"jsx-loader?harmony"},
+        { test: /\.js$/,loader:"babel"},
         { test: /\.scss$/, loader: "style!css!postcss-loader!sass"},
         { test: /\.(png|jpg)$/, loader: "url-loader?limit=8192"}
       ]

@@ -1,30 +1,22 @@
-function carousel(opts){
-  var options = {
-    autoTime:3000,
-    paganation:true,
-    arrow:true,
-    parentDivId:'carousel-container',
-    images:''
-  }
+function carousel(elems,
+    opts={autoTime:3000, //轮播间隔时间
+          paganation:true, //下方序列
+          arrow:true //两侧箭头}
+        }
+  ){
 
 
-  if (opts) {
-    for (var key in opts){
-      options[key] = opts[key];
-    }
-  }
-
-  var carousel = document.getElementById(options.parentDivId);
-  carousel.className = 'carousel-container';
+  var carousel = document.getElementById(elems.parentDivId);
+  carousel.className += ' carousel-container';
 
 //插入图片
   var carouselList = document.createElement('div');
 
-  carouselList.className = 'list';
+  carouselList.className += ' list';
   carouselList.id = 'list';
   carouselList.style.left = '-100%';
 
-  var images = options.images;
+  var images = elems.images;
 
   carouselList.style.width = (images.length + 2) * 100 + '%' ;
 
@@ -49,40 +41,46 @@ function carousel(opts){
   };
 
 //插入序列号
+  
+  if (opts.paganation) {
 
-  var slidePaganation = document.createElement('div');
-  slidePaganation.className = 'slide';
-  slidePaganation.id = 'slide';
+    var slidePaganation = document.createElement('div');
+    slidePaganation.className += ' slide';
+    slidePaganation.id = 'slide';
 
-  var slidePaganationButtons = document.createElement('div');
-  slidePaganationButtons.className = 'slide-buttons';
-  slidePaganationButtons.id = 'slide-buttons';
+    var slidePaganationButtons = document.createElement('div');
+    slidePaganationButtons.className += ' slide-buttons';
+    slidePaganationButtons.id = 'slide-buttons';
 
-  for(var i = 1;i <= images.length; i++){
-    var span = document.createElement('span');
-    span.setAttribute('index',i);
-    slidePaganationButtons.appendChild(span);
+    for(var i = 1;i <= images.length; i++){
+      var span = document.createElement('span');
+      span.setAttribute('index',i);
+      slidePaganationButtons.appendChild(span);
+    }
+
+    slidePaganationButtons.childNodes[0].className = 'on';
+
+    slidePaganation.appendChild(slidePaganationButtons);
+    carousel.appendChild(slidePaganation);
+
   }
 
-  slidePaganationButtons.childNodes[0].className = 'on';
-
-  slidePaganation.appendChild(slidePaganationButtons);
-  carousel.appendChild(slidePaganation);
-
 //插入箭头
+  if (opts.arrow) {
 
-  var arrowPrev = document.createElement('a');
-  var arrowNext = document.createElement('a');
-  arrowPrev.href = "javascript:;";
-  arrowPrev.className = 'arrow';
-  arrowPrev.id = 'prev';
-  arrowPrev.innerHTML = '&lt;';
-  arrowNext.href = "javascript:;";
-  arrowNext.className = 'arrow';
-  arrowNext.id = 'next';
-  arrowNext.innerHTML = '&gt;';
-  carousel.appendChild(arrowPrev);
-  carousel.appendChild(arrowNext);
+    var arrowPrev = document.createElement('a');
+    var arrowNext = document.createElement('a');
+    arrowPrev.href = "javascript:;";
+    arrowPrev.className += ' arrow';
+    arrowPrev.id = 'prev';
+    arrowPrev.innerHTML = '&lt;';
+    arrowNext.href = "javascript:;";
+    arrowNext.className += ' arrow';
+    arrowNext.id = 'next';
+    arrowNext.innerHTML = '&gt;';
+    carousel.appendChild(arrowPrev);
+    carousel.appendChild(arrowNext);
+  }
 
 //轮播
   var container = document.getElementById('carousel-container');
@@ -93,20 +91,12 @@ function carousel(opts){
   var next = document.getElementById('next');
   var index = 1;
   var animated = false;
-  var autoTime = options.autoTime;
+  var autoTime = opts.autoTime;
 
   var timer = setInterval(
     function(){
       next.onclick();
     },autoTime);
-
-  if (!options.paganation) {
-     slide.style.display = 'none';
-  }
-  if (!options.arrow) {
-    prev.style.display = 'none';
-    next.style.display = 'none';
-  }
 
   function showButton(){
     for(var i =0;i < buttons.length; i++){
@@ -202,6 +192,7 @@ function carousel(opts){
     play();
   };
 
+//触摸滑动
 
   function GetSlideAngle(dx,dy){
     return Math.atan2(dy,dx)*180/Math.PI;
@@ -272,9 +263,6 @@ function carousel(opts){
 
 window.onload = function(){
     carousel({
-      autoTime:3000, //轮播间隔时间
-      paganation:true, //下方序列
-      arrow:true, //两侧箭头
       parentDivId:'carousel-container',
       images:[
         "assets/banner/default.png",
@@ -282,5 +270,5 @@ window.onload = function(){
         "assets/banner/bg_2.jpg",
         "assets/banner/bg_3.jpg"
       ]
-  });
+    });
 }
