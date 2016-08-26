@@ -42,5 +42,21 @@
 
 
   <script src="assets/bundle.js"></script>
+  <script src="assets/carousel.js"></script>
+  <script>
+    window.myCorousel = myCarousel({
+      parentDivId:'carousel-container',
+      images:[
+        "assets/banner/default.png",
+        "assets/banner/bg_1.jpg",
+        "assets/banner/bg_2.jpg",
+        "assets/banner/bg_3.jpg"
+      ]
+    },{autoTime:3000, //轮播间隔时间
+       paganation:true, //下方序列
+       arrow:true //两侧箭头}
+      });
+    
+  </script>
 </body>
 </html>

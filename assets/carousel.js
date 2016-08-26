@@ -1,6 +1,22 @@
 function myCarousel(elems,opts){
 
+    var defaultOptions = {
+      autoTime:3000,
+      paganation:true,
+      arrow:true
+    };
+    
+  //初始化
+    var options = defaultOptions;
 
+    if (opts) {
+      for(key in opts){
+        options[key] = opts[key];
+      }
+    }
+
+    var showPaganation = options.paganation;
+    var showArrow = options.arrow;
 
     var carousel = document.getElementById(elems.parentDivId);
     carousel.className += ' carousel-container';
@@ -38,7 +54,7 @@ function myCarousel(elems,opts){
 
   //插入序列号
     
-    if (opts.paganation) {
+    if (showPaganation) {
 
       var slidePaganation = document.createElement('div');
       slidePaganation.className += ' slide';
@@ -59,10 +75,13 @@ function myCarousel(elems,opts){
       slidePaganation.appendChild(slidePaganationButtons);
       carousel.appendChild(slidePaganation);
 
+      var slide = document.getElementById('slide');
+      var buttons = document.getElementById('slide-buttons').getElementsByTagName('span');
+
     }
 
   //插入箭头
-    if (opts.arrow) {
+    if (showArrow) {
 
       var arrowPrev = document.createElement('a');
       var arrowNext = document.createElement('a');
@@ -76,32 +95,46 @@ function myCarousel(elems,opts){
       arrowNext.innerHTML = '&gt;';
       carousel.appendChild(arrowPrev);
       carousel.appendChild(arrowNext);
+
+      var prev = document.getElementById('prev');
+      var next = document.getElementById('next');
     }
 
   //轮播
     var container = document.getElementById('carousel-container');
     var list = document.getElementById('list');
-    var slide = document.getElementById('slide');
-    var buttons = document.getElementById('slide-buttons').getElementsByTagName('span');
-    var prev = document.getElementById('prev');
-    var next = document.getElementById('next');
     var index = 1;
     var animated = false;
-    var autoTime = opts.autoTime;
+    var autoTime = options.autoTime;
 
-    var timer = setInterval(
-      function(){
-        next.onclick();
-      },autoTime);
+    var timer = setInterval(nextImg,autoTime);
 
-    function showButton(){
-      for(var i =0;i < buttons.length; i++){
-        if (buttons[i].className == 'on') {
-          buttons[i].className = '';
-          break;
+    function nextImg(){
+        if (index == 4) {
+          index = 1;
+        }else{
+          index += 1;
         }
-      }
-      buttons[index - 1].className = 'on';
+        if (showPaganation) {
+          showButton();
+        }
+        if (!animated) {
+          animate(-100);
+        }
+    }
+
+    function prevImg(){
+        if (index == 1) {
+          index = 4;
+        }else{
+          index -= 1;
+        }
+        if (showPaganation) {
+          showButton();
+        }
+        if (!animated) {
+          animate(100);
+        }
     }
 
     function animate(offset){
@@ -139,52 +172,71 @@ function myCarousel(elems,opts){
       clearInterval(timer);
     }
 
-    next.onclick = function(){
-      if (index == 4) {
-        index = 1;
+    if (showArrow) {
+      next.onclick = function(){
+        if (index == 4) {
+          index = 1;
+        }
+        else{
+          index += 1;
+        }
+
+        if (showPaganation) {
+          showButton();
+        }
+        if (!animated) {
+          animate(-100);      
+        }
       }
-      else{
-        index += 1;
-      }
-      showButton();
-      if (!animated) {
-        animate(-100);      
-      }
-    }
-    prev.onclick = function(){
-      if (index == 1) {
-        index = 4;
-      }
-      else{
-        index -= 1;
-      }
-      showButton();
-      if (!animated) {
-        animate(100);
+
+      prev.onclick = function(){
+        if (index == 1) {
+          index = 4;
+        }
+        else{
+          index -= 1;
+        }
+        
+        if (showPaganation) {
+          showButton();
+        }
+        if (!animated) {
+          animate(100);
+        }
       }
     }
 
-    for(var i = 0;i < buttons.length; i++){
-      buttons[i].onclick = function(){
-        if (this.className == 'on') {
-          return;
+
+    if (showPaganation) {
+      for(var i = 0;i < buttons.length; i++){
+        buttons[i].onclick = function(){
+          if (this.className == 'on') {
+            return;
+          }
+          var myIndex = parseInt(this.getAttribute('index'));
+          var offset = -100 * (myIndex - index);
+          if (!animated) {
+            animate(offset);
+          }
+          index = myIndex;
+          showButton();
         }
-        var myIndex = parseInt(this.getAttribute('index'));
-        var offset = -100 * (myIndex - index);
-        if (!animated) {
-          animate(offset);
+      }
+
+      function showButton(){
+        for(var i =0;i < buttons.length; i++){
+          if (buttons[i].className == 'on') {
+            buttons[i].className = '';
+            break;
+          }
         }
-        index = myIndex;
-        showButton();
+        buttons[index - 1].className = 'on';
       }
     }
 
     container.onmouseover = stop;
     container.onmouseout = function(){
-      timer = setInterval(
-        function(){
-          next.onclick();
-      },autoTime);
+      timer = setInterval(nextImg,autoTime);
       play();
     };
 
@@ -242,10 +294,10 @@ function myCarousel(elems,opts){
         case 2:
           break;
         case 3:
-          next.onclick();
+          nextImg();
           break;
         case 4:
-          prev.onclick();
+          prevImg();
           break;
         default:
       }
