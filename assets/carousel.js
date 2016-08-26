@@ -106,7 +106,6 @@ function myCarousel(elems,opts){
     var index = 1;
     var animated = false;
     var autoTime = options.autoTime;
-
     var timer = setInterval(nextImg,autoTime);
 
     function nextImg(){
@@ -301,6 +300,10 @@ function myCarousel(elems,opts){
           break;
         default:
       }
+    },false);
+
+    list.addEventListener('touchmove',function(ev){
+        ev.preventDefault();
     },false);
 
     play();
