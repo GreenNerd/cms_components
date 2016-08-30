@@ -127,7 +127,7 @@ function myCarousel(elems,opts){
       animated = true;
       var newLeft = parseInt(list.style.left) + offset;
       var time = 300;
-      var interval = 10;
+      var interval = 30;
       var speed = offset/(time/interval);
 
       function go(){
