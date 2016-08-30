@@ -107,30 +107,30 @@ function myCarousel(elems,opts){
     var timer = setInterval(nextImg,autoTime);
 
     function nextImg(){
-        if (index == 4) {
+        if (index == images.length) {
           index = 1;
         }else{
           index += 1;
         }
-        if (showPaganation) {
-          showButton();
-        }
         if (!animated) {
           animate(-100);
+        }
+        if (showPaganation) {
+          showButton();
         }
     }
 
     function prevImg(){
         if (index == 1) {
-          index = 4;
+          index = images.length;
         }else{
           index -= 1;
         }
-        if (showPaganation) {
-          showButton();
-        }
         if (!animated) {
           animate(100);
+        }
+        if (showPaganation) {
+          showButton();
         }
     }
 
@@ -150,18 +150,19 @@ function myCarousel(elems,opts){
           animated = false;
           list.style.left = newLeft + '%';
           if (newLeft > -100) {
-            list.style.left = -400 + '%';
+            list.style.left = '-' + images.length + '00' + '%';
           }
-          if (newLeft < -400) {
+          if (newLeft < '-' + images.length + '00') {
             list.style.left = -100 + '%';
           }
         }
+
       }
       go();
 
     }
 
-    function play(autoTime){
+    function play(){
       timer;
     }
 
@@ -171,34 +172,32 @@ function myCarousel(elems,opts){
 
     if (showArrow) {
       next.onclick = function(){
-        if (index == 4) {
+        if (index == images.length) {
           index = 1;
         }
         else{
           index += 1;
         }
-
-        if (showPaganation) {
-          showButton();
-        }
         if (!animated) {
           animate(-100);      
+        }
+        if (showPaganation) {
+          showButton();
         }
       }
 
       prev.onclick = function(){
         if (index == 1) {
-          index = 4;
+          index = images.length;
         }
         else{
           index -= 1;
         }
-        
-        if (showPaganation) {
-          showButton();
-        }
         if (!animated) {
           animate(100);
+        }
+        if (showPaganation) {
+          showButton();
         }
       }
     }
@@ -221,24 +220,34 @@ function myCarousel(elems,opts){
       }
 
       function showButton(){
+        indexOn = parseInt((parseInt(list.style.left)-100)/-100);
+        if (indexOn > images.length) {
+          indexOn = 1;
+        }
         for(var i =0;i < buttons.length; i++){
           if (buttons[i].className == 'on') {
             buttons[i].className = '';
             break;
           }
         }
-        buttons[index - 1].className = 'on';
+        buttons[indexOn-1].className = 'on';
       }
     }
 
-    container.onmouseover = stop;
+    var swipe = false;
+    container.onmouseover = function(){
+      stop();
+      swipe = true;
+      touchEvent();
+    };
     container.onmouseout = function(){
       timer = setInterval(nextImg,autoTime);
       play();
+      swipe = false;
+      touchEvent();
     };
 
   //触摸滑动
-
     function GetSlideAngle(dx,dy){
       return Math.atan2(dy,dx)*180/Math.PI;
     }
@@ -268,45 +277,48 @@ function myCarousel(elems,opts){
       return result;
     }
 
-    var startX ,startY;
+    var touchEvent = function(){
+      if (swipe) {
+      var startX ,startY;
 
-    list.addEventListener('touchstart',function(ev){
-      startX = ev.touches[0].pageX;
-      startY = ev.touches[0].pageY;
+      list.addEventListener('touchstart',function(ev){
+        startX = ev.touches[0].pageX;
+        startY = ev.touches[0].pageY;
 
-    },false);
+      },false);
 
-    list.addEventListener('touchend',function(ev){
-      var endX,endY;
-      endX = ev.changedTouches[0].pageX;
-      endY = ev.changedTouches[0].pageY;
+      list.addEventListener('touchend',function(ev){
+        var endX,endY;
+        endX = ev.changedTouches[0].pageX;
+        endY = ev.changedTouches[0].pageY;
 
-      var direction = GetSlideDirection(startX,startY,endX,endY);
+        var direction = GetSlideDirection(startX,startY,endX,endY);
 
-      switch(direction){
-        case 0:
-          break;
-        case 1:
-          break;
-        case 2:
-          break;
-        case 3:
-          nextImg();
-          break;
-        case 4:
-          prevImg();
-          break;
-        default:
-      };
+        switch(direction){
+          case 0:
+            break;
+          case 1:
+            break;
+          case 2:
+            break;
+          case 3:
+            nextImg();
+            break;
+          case 4:
+            prevImg();
+            break;
+          default:
+        };
 
+      },false);
 
-    },false);
+      list.addEventListener('touchmove',function(ev){
+          ev.preventDefault();
+      },false);
+    }
+  }
 
-    list.addEventListener('touchmove',function(ev){
-        ev.preventDefault();
-    },false);
-
-    play();
+  play();
 
 };
 
