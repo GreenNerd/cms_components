@@ -101,36 +101,25 @@ function myCarousel(elems,opts){
   //轮播
     var container = document.getElementById('carousel-container');
     var list = document.getElementById('list');
-    var index = 1;
     var animated = false;
     var autoTime = options.autoTime;
     var timer = setInterval(nextImg,autoTime);
 
     function nextImg(){
-        if (index == images.length) {
-          index = 1;
-        }else{
-          index += 1;
-        }
         if (!animated) {
           animate(-100);
         }
         if (showPaganation) {
-          showButton();
+          showButtonNext();
         }
     }
 
     function prevImg(){
-        if (index == 1) {
-          index = images.length;
-        }else{
-          index -= 1;
-        }
         if (!animated) {
           animate(100);
         }
         if (showPaganation) {
-          showButton();
+          showButtonPrev();
         }
     }
 
@@ -172,32 +161,20 @@ function myCarousel(elems,opts){
 
     if (showArrow) {
       next.onclick = function(){
-        if (index == images.length) {
-          index = 1;
-        }
-        else{
-          index += 1;
-        }
         if (!animated) {
           animate(-100);      
         }
         if (showPaganation) {
-          showButton();
+          showButtonNext();
         }
       }
 
       prev.onclick = function(){
-        if (index == 1) {
-          index = images.length;
-        }
-        else{
-          index -= 1;
-        }
         if (!animated) {
           animate(100);
         }
         if (showPaganation) {
-          showButton();
+          showButtonPrev();
         }
       }
     }
@@ -210,23 +187,40 @@ function myCarousel(elems,opts){
             return;
           }
           var myIndex = parseInt(this.getAttribute('index'));
+          index = parseInt(list.style.left)/-100;
           var num = myIndex;
           var offset = -100 * (myIndex - index);
           if (!animated) {
             animate(offset);
           }
-          index = myIndex;
-          showButton(num);
+          showButtonNext(num);
         }
       }
 
-      function showButton(num){
+      function showButtonNext(num){
         indexOn = parseInt((parseInt(list.style.left)-100)/-100);
         if (num) {
           indexOn = num;
         }
         if (indexOn > images.length) {
           indexOn = 1;
+        }
+        if (indexOn == 0) {
+          indexOn = images.length
+        }
+        for(var i =0;i < buttons.length; i++){
+          if (buttons[i].className == 'on') {
+            buttons[i].className = '';
+            break;
+          }
+        }
+        buttons[indexOn-1].className = 'on';
+      }
+
+      function showButtonPrev(){
+        indexOn = parseInt(parseInt(list.style.left)/-100);
+        if (indexOn == 0) {
+          indexOn = images.length
         }
         for(var i =0;i < buttons.length; i++){
           if (buttons[i].className == 'on') {
@@ -241,14 +235,10 @@ function myCarousel(elems,opts){
     var swipe = false;
     container.onmouseover = function(){
       stop();
-      swipe = true;
-      touchEvent();
     };
     container.onmouseout = function(){
       timer = setInterval(nextImg,autoTime);
       play();
-      swipe = false;
-      touchEvent();
     };
 
   //触摸滑动
@@ -281,8 +271,6 @@ function myCarousel(elems,opts){
       return result;
     }
 
-    var touchEvent = function(){
-      if (swipe) {
       var startX ,startY;
 
       list.addEventListener('touchstart',function(ev){
@@ -319,8 +307,6 @@ function myCarousel(elems,opts){
       list.addEventListener('touchmove',function(ev){
           ev.preventDefault();
       },false);
-    }
-  }
 
   play();
 
