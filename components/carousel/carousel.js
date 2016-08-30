@@ -210,17 +210,21 @@ function myCarousel(elems,opts){
             return;
           }
           var myIndex = parseInt(this.getAttribute('index'));
+          var num = myIndex;
           var offset = -100 * (myIndex - index);
           if (!animated) {
             animate(offset);
           }
           index = myIndex;
-          showButton();
+          showButton(num);
         }
       }
 
-      function showButton(){
+      function showButton(num){
         indexOn = parseInt((parseInt(list.style.left)-100)/-100);
+        if (num) {
+          indexOn = num;
+        }
         if (indexOn > images.length) {
           indexOn = 1;
         }
