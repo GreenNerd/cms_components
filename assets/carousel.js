@@ -1,12 +1,10 @@
-function myCarousel(elems,opts){
-
+function myCarousel(elems,opts){   
+  //初始化
     var defaultOptions = {
       autoTime:3000,
       paganation:true,
       arrow:true
     };
-    
-  //初始化
     var options = defaultOptions;
 
     if (opts) {
@@ -299,7 +297,9 @@ function myCarousel(elems,opts){
           prevImg();
           break;
         default:
-      }
+      };
+
+
     },false);
 
     list.addEventListener('touchmove',function(ev){
