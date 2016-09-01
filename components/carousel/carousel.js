@@ -304,9 +304,9 @@ function myCarousel(elems,opts){
 
       },false);
 
-      list.addEventListener('touchmove',function(ev){
-          ev.preventDefault();
-      },false);
+      // list.addEventListener('touchmove',function(ev){
+      //     ev.preventDefault();
+      // },false);
 
   play();
 

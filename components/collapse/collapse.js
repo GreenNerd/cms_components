@@ -14,7 +14,7 @@ Collapse.prototype.getCurrent = function(header){
   }else{
     cur = header.parentElement;
   }
-  return cur.getElementsByClassName("collapse_body")[0];
+  return cur.getElementsByClassName("collapse-body")[0];
 }
 
 Collapse.prototype.init = function(){
@@ -71,7 +71,7 @@ Collapse.prototype.collectElementbyClass = function(){
     var collapse_div = allelements[i];
     if (typeof collapse_div.className === "string" && collapse_div.className === this._className) {
       var h3s = collapse_div.getElementsByTagName("h3");
-      var collapse_body = collapse_div.getElementsByClassName("collapse_body");
+      var collapse_body = collapse_div.getElementsByClassName("collapse-body");
       if (h3s.length === 1 && collapse_body.length === 1) {
         h3s[0].style.cursor = "pointer";
 
@@ -89,4 +89,4 @@ Collapse.prototype.collectElementbyClass = function(){
   }
 }
 
-var myCollapse = new Collapse("collapseDiv",true);
+var myCollapse = new Collapse("collapseDiv",true,0);
