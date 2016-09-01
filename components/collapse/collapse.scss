@@ -1,0 +1,20 @@
+.collapseDiv{
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin: 2px;
+    overflow:hidden;
+    background-color: #f5f5f5;
+
+    h3{
+      border-bottom: 0;
+      font-size:14px;
+      display: block;
+      padding: 8px 15px;
+      cursor:pointer;
+    }
+
+    .collapse_content{
+      border-top: 1px solid #e5e5e5;
+      padding: 9px 15px;
+    }
+}
