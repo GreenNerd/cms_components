@@ -19,7 +19,6 @@ Collapse.prototype.getCurrent = function(header){
 
 Collapse.prototype.init = function(){
   var instance = this;
-  // console.log(instance);
   this.collectElementbyClass();
   if (this._elements.length === 0) {
     return;
@@ -45,6 +44,15 @@ Collapse.prototype.toggleDisplay = function(header){
     this.close(cur);
   }else{
     this.open(cur);
+  }
+  if (this._previous) {
+    for(var i = 0;i<this._elements.length;i++){
+      if (this._elements[i]!==(cur.parentNode||cur.parentElement)) {
+        var collapse_body = this._elements[i].getElementsByClassName("collapse-body");
+        collapse_body[0].style.height = "0px";
+        collapse_body[0].style.visibility = "hidden";
+      }
+    }
   }
 }
 
