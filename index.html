@@ -70,6 +70,7 @@
 
   <script src="assets/bundle.js"></script>
   <script>
+  //轮播
     myCarousel({
       parentDivId:'carousel-container',
       images:[
@@ -82,6 +83,13 @@
        paganation:true, //下方序列
        arrow:true //两侧箭头}
       });
+
+  //折叠
+    var myCollapse = new Collapse(
+      "collapseDiv", //折叠菜单外层Div
+      true,//是否关闭之前折叠
+      0 //默认开启折叠的序号
+      );
   </script>
 </body>
 </html>

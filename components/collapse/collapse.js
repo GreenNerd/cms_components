@@ -6,7 +6,7 @@ function Collapse(className,close_prev,default_open){
   this.getCurrent;
   this.init()
 }
-
+//获取title对应下的折叠内容
 Collapse.prototype.getCurrent = function(header){
   var cur;
   if (window.addEventListener) {
@@ -16,7 +16,7 @@ Collapse.prototype.getCurrent = function(header){
   }
   return cur.getElementsByClassName("collapse-body")[0];
 }
-
+//初始化，给title添加点击事件
 Collapse.prototype.init = function(){
   var instance = this;
   this.collectElementbyClass();
@@ -36,7 +36,7 @@ Collapse.prototype.init = function(){
     }
   }
 }
-
+//处理折叠
 Collapse.prototype.toggleDisplay = function(header){
   var cur = this.getCurrent(header);
 
@@ -55,21 +55,21 @@ Collapse.prototype.toggleDisplay = function(header){
     }
   }
 }
-
+//判断是否已经打开折叠
 Collapse.prototype.isOpen = function(elem){
   return elem.style.visibility === 'visible';
 }
-
+//关闭折叠
 Collapse.prototype.close = function(elem){
   elem.style.height = '0px';
   elem.style.visibility = 'hidden';
 }
-
+//打开折叠
 Collapse.prototype.open = function(elem){
   elem.style.height = elem.scrollHeight + 'px';
   elem.style.visibility = 'visible';
 }
-
+//将所有菜单外层Div合并为数组
 Collapse.prototype.collectElementbyClass = function(){
   this._elements = [];
   var container = document.getElementById('collapse-container');
@@ -97,4 +97,4 @@ Collapse.prototype.collectElementbyClass = function(){
   }
 }
 
-var myCollapse = new Collapse("collapseDiv",true,0);
+window.Collapse = Collapse;
