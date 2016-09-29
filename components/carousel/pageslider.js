@@ -203,50 +203,17 @@ PageSlide.prototype.touchcancel = function(e){
 }
 //去往索引值页面的go方法，接收三个参数:最终索引值，最终需要进行缩放的索引值，索引值是否改变
   PageSlide.prototype.go = function(i,n,boolean){
-
   	var nowTransX = parseInt(this.nowDistance) + n * this.width
-  	// this.targetX = nowTransX
-
     this.nowDistance = nowTransX
 
-  	this.current = i
-
-  	// var nowX = parseInt(this.$el.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2))
-  	
-    // this.moveX = nowX
+  	this.current = i  	
   	var parent = this.$el
 
   	if (boolean) {
-  		// var speed = (this.targetX - this.moveX)/10
-  		// // console.log(speed)
-  		// var target = this.targetX
   		if (this.displacement < 0) {
   			ii = i -1 < 0?this.total - 1:i -1
   			var targetChild = this.$el.children[ii].children[0]
-  			// var style = targetChild.style.webkitTransform
-
-
-  			// var childSpeed1 = (this.width*0.9 - parseInt(style.slice(12,-4).split(",")[0].slice(0,-2)))/10
-  			// var childSpeed2 = (parseFloat(style.slice(12,-4).split(",")[3]) - 0.9)/10
-  			// function s_toIndex(){
-  			// 	if (parseInt(parent.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2)) > target) {
-  			// 		var nowX = parseInt(parent.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2)) + speed
-  			// 		var nowChildX = parseInt(targetChild.style.webkitTransform.slice(12,-4).split(",")[0].slice(0,-2)) + childSpeed1
-  			// 		var nowChildS = parseFloat(targetChild.style.webkitTransform.slice(12,-4).split(",")[3]) - childSpeed2
-  					
-  			// 		parent.style.webkitTransform = 'translate3d('+ nowX + 'px' +',0,0)'
-  			// 		targetChild.style.webkitTransform = 'translate3d('+ nowChildX + 'px'+',0,0) scale3d('+ nowChildS +','+ nowChildS +',1)'
-
-
-
-  			// 		setTimeout(s_toIndex,20)
-  			// 	}else{
-  					// parent.style.webkitTransform = 'translate3d('+ nowTransX + 'px' +',0,0)'
-  					// targetChild.style.webkitTransform = 'translate3d(288px,0,0) scale3d(0.9,0.9,1)'
-  			// 		parent.children[i].children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
-  			// 	}
-  			// }
-  			// s_toIndex()
+  			
         targetChild.classList.add('moving')
         parent.classList.add('moving')
         parent.style.webkitTransform = 'translate3d('+ nowTransX + 'px' +',0,0)'
@@ -255,28 +222,6 @@ PageSlide.prototype.touchcancel = function(e){
   		}
   		if (this.displacement > 0) {
         var targetChild = this.$el.children[i].children[0]
-        // var style = targetChild.style.webkitTransform
-
-
-  			// var childSpeed1 = (parseInt(style.slice(12,-4).split(",")[0].slice(0,-2)))/10
-  			// var childSpeed2 = (1 - parseFloat(style.slice(12,-4).split(",")[3]))/10
-  			// function l_toIndex(){
-  			// 	if (parseInt(parent.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2)) < target) {
-  			// 		var nowX = parseInt(parent.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2)) + speed
-  			// 		var nowChildX = parseInt(targetChild.style.webkitTransform.slice(12,-4).split(",")[0].slice(0,-2)) - childSpeed1
-  			// 		var nowChildS = parseFloat(targetChild.style.webkitTransform.slice(12,-4).split(",")[3]) + childSpeed2
-  				
-  			// 		parent.style.webkitTransform = 'translate3d('+ nowX + 'px' +',0,0)'
-  			// 		targetChild.style.webkitTransform = 'translate3d('+ nowChildX + 'px'+',0,0) scale3d('+ nowChildS +','+ nowChildS +',1)'
-
-  			// 		setTimeout(l_toIndex,20)
-  			// 	}else{
-  			// 		parent.style.webkitTransform = 'translate3d('+ nowTransX + 'px' +',0,0)'
-  			// 		targetChild.style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
-  			// 		// parent.children[i].children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
-  			// 	}
-  			// }
-  			// l_toIndex()
 
         targetChild.classList.add('moving')
         parent.classList.add('moving')
@@ -284,95 +229,24 @@ PageSlide.prototype.touchcancel = function(e){
         targetChild.style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
 
   		}
-
   	}else{
-  		// var speed = (this.targetX - this.displacementX)/10
-  		// var target = this.targetX
-
-      // var lastlog
-      // console.oldlog = console.log
-      // console.log = function(str){
-      //   console.oldlog(str)
-      //   lastlog = str
-      // }
-
   	  if (this.displacement < 0) {
         var targetChild = this.$el.children[i].children[0]
-        // var style = targetChild.style.webkitTransform
-
-  			// var childSpeed1 = (0 - parseInt(style.slice(12,-4).split(",")[0].slice(0,-2)))/10
-  			// var childSpeed2 = (1 - parseFloat(style.slice(12,-4).split(",")[3]))/10
-  			// // console.log(targetChild.style.webkitTransform.slice(12).split(","))
-     //    // var a = parseInt(parent.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2)) < target
-     //    // document.write(a)
-
-
-     //    function _toIndex(){
-  			// 	if (parseInt(parent.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2)) < target) {
-     //        var nowX = parseInt(parent.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2)) + speed
-  			// 		var nowChildX = parseInt(targetChild.style.webkitTransform.slice(12,-4).split(",")[0].slice(0,-2)) + childSpeed1
-  			// 		var nowChildS = parseFloat(targetChild.style.webkitTransform.slice(12,-4).split(",")[3]) + childSpeed2
-  			// 		// console.log(targetChild.style.webkitTransform)
-  			// 		parent.style.webkitTransform = 'translate3d('+ nowX + 'px' +',0,0)'
-  			// 		targetChild.style.webkitTransform = 'translate3d('+ nowChildX + 'px'+',0,0) scale3d('+ nowChildS +','+ nowChildS +',1)'
-  			// 		// document.getElementById('write').write(targetChild.style.webkitTransform)
-     //        setTimeout(_toIndex,20)
-  			// 	}else{
-  			// 		parent.style.webkitTransform = 'translate3d('+ nowTransX + 'px' +',0,0)'
-  			// 		targetChild.style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
-  			// 	}
-  			// }
-  			// _toIndex();
-
+        
         targetChild.classList.add('moving')
         parent.classList.add('moving')
         targetChild.style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
         parent.style.webkitTransform = 'translate3d('+ nowTransX + 'px' +',0,0)'
-        // console.log(parent.style.webkitTransform)
-
-
 
   		}
   	  if (this.displacement > 0) {
   			ii = i - 1 < 0? this.total - 1: i - 1
   			var targetChild = this.$el.children[ii].children[0]
 
-  			// var style = targetChild.style.webkitTransform
-
-  			// var childSpeed1 = (parseInt(style.slice(12,-4).split(",")[0].slice(0,-2)) - this.width*0.9)/10
-  			// var childSpeed2 = (parseFloat(style.slice(12,-4).split(",")[3])-0.9)/10
-  			// // console.log(style)
-     //    function toIndex(){
-  			// 	if (parseInt(parent.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2)) > target) {
-  			// 		var nowX = parseInt(parent.style.webkitTransform.slice(12,-1).split(",")[0].slice(0,-2)) + speed
-  			// 		var nowChildX = parseInt(targetChild.style.webkitTransform.slice(12,-4).split(",")[0].slice(0,-2)) - childSpeed1
-  			// 		var nowChildS = parseFloat(targetChild.style.webkitTransform.slice(12,-4).split(",")[3]) - childSpeed2
-
-
-  			// 		parent.style.webkitTransform = 'translate3d('+ nowX + 'px' +',0,0)'
-  			// 		targetChild.style.webkitTransform = 'translate3d('+ nowChildX + 'px'+',0,0) scale3d('+ nowChildS +','+ nowChildS +',1)'
-  					
-     //        // console.log(targetChild.style.webkitTransform)
-     //        // var a  = document.getElementById('write')
-     //        // var dom = document.createElement('div')
-     //        // console.log(targetChild.style.webkitTransform)
-
-     //        // dom.innerHTML = lastlog
-     //        // a.appendChild(dom)
-
-  			// 		setTimeout(toIndex,20)
-  			// 	}else{
-  					// parent.style.webkitTransform = 'translate3d('+ nowTransX + 'px' +',0,0)'
-  					// targetChild.style.webkitTransform = 'translate3d(288px,0,0) scale3d(0.9,0.9,1)'
-  			// 		parent.children[i].children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
-  			// 	}
-  			// }
-  			// toIndex()
         targetChild.classList.add('moving')
         parent.classList.add('moving')
         targetChild.style.webkitTransform = 'translate3d(288px,0,0) scale3d(0.9,0.9,1)'
         parent.style.webkitTransform = 'translate3d('+ nowTransX + 'px' +',0,0)'
-
   		}
   	}
 	
@@ -383,16 +257,12 @@ PageSlide.prototype.touchcancel = function(e){
 PageSlide.prototype.addClass = function(){
 	var total = this.$el.childElementCount
 
-  // this.$el.classList.remove('moving')
-
 	for(var i = 0;i < total; i++){
 		this.$el.children[i].classList.remove('currentitem','nextitem','previousitem')
-    // this.$el.children[i].children[0].classList.remove('moving')
 	}
 
 	var current = this.getCurrent()
 
-  // console.log(current)
 
 	var next = (current.nextElementSibling)?current.nextElementSibling:this.$el.firstElementChild
 	var prev = (current.previousElementSibling)?current.previousElementSibling:this.$el.lastElementChild
