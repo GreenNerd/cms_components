@@ -66,7 +66,23 @@
       </div>
     </div>
   </div>
-
+  
+  <div class="pages-container">
+    <div class="pages">
+      <div class="page currentitem">
+        <img src="assets/banner/default.png">
+      </div>
+      <div class="page nextitem">
+        <img src="assets/banner/bg_1.jpg">
+      </div>
+      <div class="page ">
+        <img src="assets/banner/bg_2.jpg">
+      </div>
+      <div class="page previousitem">
+        <img src="assets/banner/bg_3.jpg">
+      </div>
+    </div>
+  </div>
 
   <script src="assets/bundle.js"></script>
   <script>
@@ -90,6 +106,8 @@
       true,//是否关闭之前折叠
       0 //默认开启折叠的序号
       );
+
+    var pages = new PageSlide(document.querySelector('.pages'))
   </script>
 </body>
 </html>

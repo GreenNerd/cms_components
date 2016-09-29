@@ -271,12 +271,15 @@ function myCarousel(elems,opts){
       return result;
     }
 
-      var startX ,startY;
+      var startX ,startY ,index,width;
+
+      width = list.offsetWidth/(images.length+2);
 
       list.addEventListener('touchstart',function(ev){
         startX = ev.touches[0].pageX;
         startY = ev.touches[0].pageY;
-
+        clearInterval(timer);
+        index = parseInt(list.style.left)
       },false);
 
       list.addEventListener('touchend',function(ev){
@@ -284,32 +287,93 @@ function myCarousel(elems,opts){
         endX = ev.changedTouches[0].pageX;
         endY = ev.changedTouches[0].pageY;
 
-        var direction = GetSlideDirection(startX,startY,endX,endY);
+        var dX = endX - startX
+        var nowX,targetIndex,speed
 
-        switch(direction){
-          case 0:
-            break;
-          case 1:
-            break;
-          case 2:
-            break;
-          case 3:
-            nextImg();
-            break;
-          case 4:
-            prevImg();
-            break;
-          default:
-        };
+        if (Math.abs(dX) < width && Math.abs(dX) > width/2 && dX < 0) {
+          nowX = dX/width * 100
+          targetIndex = index - 100
+          speed = (targetIndex - (index + nowX)) / (300/30)
+          list.style.left = index + nowX + '%'
 
+          function toIndex(){
+              if(parseInt(list.style.left)>targetIndex){
+                list.style.left = parseInt(list.style.left) + speed + '%'
+                setTimeout(toIndex,20)   
+              }else{
+                list.style.left = targetIndex + '%'
+                if (parseInt(list.style.left) < -images.length + '00') {
+                  list.style.left = '-100%'
+                }
+              }
+          }
+          toIndex()
+        }
+
+        if (Math.abs(dX) < width/2 && dX < 0) {
+          nowX = dX/width * 100
+          targetIndex = index
+          speed = nowX / (300/30)
+          list.style.left = index + nowX + '%'
+
+          function toIndex(){
+            if (parseInt(list.style.left) < targetIndex) {
+              list.style.left = parseInt(list.style.left) - speed + '%'
+              setTimeout(toIndex,20)
+            }else{
+              list.style.left = targetIndex + '%'
+            }
+          }
+          toIndex()
+        }
+
+        if (Math.abs(dX) < width/2 && dX > 0) {
+          nowX = dX/width * 100
+          targetIndex = index
+          speed = nowX / (300/30)
+          list.style.left = index + nowX + '%'
+
+          function toIndex(){
+            if (parseInt(list.style.left) > targetIndex) {
+              list.style.left = parseInt(list.style.left) - speed + '%'
+              setTimeout(toIndex,20)
+            }else{
+              list.style.left = targetIndex + '%'
+            }
+          }
+          toIndex()
+        }
+
+        if (Math.abs(dX) > width/2 && dX > 0) {
+          nowX = dX/width * 100
+          targetIndex = index + 100
+          speed = ((index + nowX) - targetIndex) / (300/30)
+          list.style.left = index + nowX + '%'
+
+          function toIndex(){
+            if (parseInt(list.style.left) < targetIndex) {
+              list.style.left = parseInt(list.style.left) - speed + '%'
+              setTimeout(toIndex,20)
+            }else{
+              list.style.left = targetIndex + '%'
+              if (parseInt(list.style.left) > -100) {
+                list.style.left = '-400%'
+              }
+            }
+          }
+          toIndex()
+        }
       },false);
 
-      // list.addEventListener('touchmove',function(ev){
-      //     ev.preventDefault();
-      // },false);
+      list.addEventListener('touchmove',function(ev){
+        var X = ev.touches[0].pageX - startX
+        list.style.left = index + X/width*100 + '%';
+        ev.preventDefault()
+      },false);
 
   play();
 
 };
 
 window.myCarousel = myCarousel;
+

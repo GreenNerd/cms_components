@@ -69,7 +69,6 @@ Collapse.prototype.open = function(elem){
   elem.style.height = elem.scrollHeight + 'px';
   elem.style.visibility = 'visible';
 }
-//将所有菜单外层Div合并为数组
 Collapse.prototype.collectElementbyClass = function(){
   this._elements = [];
   var container = document.getElementById('collapse-container');
