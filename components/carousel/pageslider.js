@@ -323,7 +323,6 @@ PageSlide.prototype.animate = function(offset){
     this.current = this.current - this.total
     for( i = 0 ;i<this.tablist.childElementCount;i++){
       this.tablist.children[i].children[0].children[0].style.webkitTransform = 'scaleX(0)'
-      // tablist.children[i].children[0].children[0].classList.remove('current')
     }
 
   }
@@ -332,25 +331,6 @@ PageSlide.prototype.animate = function(offset){
   this.nowDistance = newCurrentX
   this.setX(this.$el,newCurrentX,1)
 
-  // var speed = 1/300
-
-  // var a = this.current
-
-  // var scaleX = parseFloat(tablist.children[this.current].children[0].children[0].style.webkitTransform.slice(7,-1))
-  
-  // function toIndex(){
-  //   if (parseInt(tablist.children[a].children[0].children[0].style.webkitTransform.slice(7,-1)) < 1) {
-  //   var scaleX = parseFloat(tablist.children[a].children[0].children[0].style.webkitTransform.slice(7,-1))
-  //   var newScaleX = scaleX + speed
-  //   tablist.children[a].children[0].children[0].style.webkitTransform = 'scaleX('+newScaleX+')'
-  //   toIndex()
-  //   }else{
-  //   }
-  //   console.log(tablist.children[this.current].children[0].children[0].style.webkitTransform)
-  // }else{
-  // }
-  // console.log(speed)
-  // tablist.children[this.current].children[0].children[0].classList.add('current')
   this.tablist.children[this.current].children[0].children[0].style.webkitTransform = 'scaleX(1)'
 
   //动态添加class
