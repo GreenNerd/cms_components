@@ -37,8 +37,53 @@
 }
 
 .pages-container{
+	position: relative;
 	overflow: hidden;
 	background-color: white;
+
+	.dot-nav{
+		position: absolute;
+    z-index: 1000;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+
+    ul{
+    	display: inline-block;
+    	list-style: none;
+
+    	li{
+    		list-style: none;
+    		margin: 0 5px;
+    		width: 50px;
+    		height: 22px;
+    		float: left;
+    		position: relative;
+
+    		.nav-dash{
+    			position: relative;
+    			z-index: 1;
+    			height: 2px;
+    			width: 100%;
+    			background-color: rgba(128,128,128,0.2);
+
+    			.nav-progress{
+    				opacity: 1;
+				    position: absolute;
+				    z-index: 1001;
+				    left: 0;
+				    top: 0;
+				    width: 50px;
+				    transform-origin: left;
+				    height: 100%;
+				    background: white;
+    			}
+
+    		}
+    	}
+    }
+	}
 }
 
 .moving{
