@@ -7,7 +7,46 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
 </head>
 <body>
-  <div id="carousel-container"></div>
+  <div class="pages-container" id="pages-container">
+    <div class="pages" id="pages">
+      <div class="page currentitem">
+        <div class="item-content" style="background-image:url('assets/banner/default.png')">
+          <div class="mask">
+            <h4>科学镜头下的不可思议之美</h4>
+          </div>
+        </div>
+      </div>
+      <div class="page nextitem">
+        <div class="item-content" style="background-image: url('assets/banner/bg_1.jpg')">
+          <div class="mask">
+            <h4>科学镜头下的不可思议之美</h4>
+          </div>
+        </div>
+      </div>
+      <div class="page ">
+        <div class="item-content" style="background-image: url('assets/banner/bg_2.jpg')">
+          <div class="mask">
+            <h4>科学镜头下的不可思议之美</h4>
+          </div>
+        </div>
+      </div>
+      <div class="page previousitem">
+        <div class="item-content" style="background-image: url('assets/banner/bg_3.jpg')">
+          <div class="mask">
+            <h4>科学镜头下的不可思议之美</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="dot-nav-right">
+      <ul id="tablist">
+        <li role="presentation" class="on" index="0"></li>
+        <li role="presentation" index="1"></li>
+        <li role="presentation" index="2"></li>
+        <li role="presentation" index="3"></li>
+      </ul>
+    </nav>
+  </div>
   <div class="library-container">
     <div class="library-item-list">
       <a href="" class="library-item" style="background-image:url('assets/library/item_two_l.png')">
@@ -42,7 +81,7 @@
   
   <div id="collapse-container">
     <div class="collapseDiv">
-      <h3>Title1</h3>
+      <h3>股权架构<i class="fa fa-angle-down"></i></h3>
       <div class="collapse-body">
         <div class="collapse-content">
           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
@@ -50,7 +89,7 @@
       </div>
     </div>
     <div class="collapseDiv">
-      <h3>Title2</h3>
+      <h3>Title2<i class="fa fa-angle-down"></i></h3>
       <div class="collapse-body">
         <div class="collapse-content">
           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -58,7 +97,7 @@
       </div>
     </div>
     <div class="collapseDiv">
-      <h3>Title3</h3>
+      <h3>Title3<i class="fa fa-angle-down"></i></h3>
       <div class="collapse-body">
         <div class="collapse-content">
           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -66,63 +105,25 @@
       </div>
     </div>
   </div>
+<!--   <div id="carousel-container"></div>
   
-  <div class="pages-container">
-    <div class="pages">
-      <div class="page currentitem">
-        <img src="assets/banner/default.png">
-      </div>
-      <div class="page nextitem">
-        <img src="assets/banner/bg_1.jpg">
-      </div>
-      <div class="page ">
-        <img src="assets/banner/bg_2.jpg">
-      </div>
-      <div class="page previousitem">
-        <img src="assets/banner/bg_3.jpg">
-      </div>
-    </div>
-    <nav class="dot-nav">
-      <ul id="tablist">
-        <li role="presentation">
-          <div class="nav-dash">
-            <span class="nav-progress" style="transfomr:scaleX(0)"></span>
-          </div>
-        </li>
-        <li role="presentation">
-          <div class="nav-dash">
-            <span class="nav-progress"></span>
-          </div>
-        </li>
-        <li role="presentation">
-          <div class="nav-dash">
-            <span class="nav-progress"></span>
-          </div>
-        </li>
-        <li role="presentation">
-          <div class="nav-dash">
-            <span class="nav-progress"></span>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </div>
+ -->
 
   <script src="assets/bundle.js"></script>
   <script>
   //轮播
-    myCarousel({
-      parentDivId:'carousel-container',
-      images:[
-        "assets/banner/default.png",
-        "assets/banner/bg_1.jpg",
-        "assets/banner/bg_2.jpg",
-        "assets/banner/bg_3.jpg"
-      ]
-    },{autoTime:5000, //轮播间隔时间
-       paganation:true, //下方序列
-       arrow:true //两侧箭头}
-      });
+    // myCarousel({
+    //   parentDivId:'carousel-container',
+    //   images:[
+    //     "assets/banner/default.png",
+    //     "assets/banner/bg_1.jpg",
+    //     "assets/banner/bg_2.jpg",
+    //     "assets/banner/bg_3.jpg"
+    //   ]
+    // },{autoTime:5000, //轮播间隔时间
+    //    paganation:true, //下方序列
+    //    arrow:true //两侧箭头}
+    //   });
 
   //折叠
     var myCollapse = new Collapse(

@@ -12,6 +12,7 @@ var PageSlide = function(el){
 
   this.currentIndex
 
+  this.flag //滑动方向
   this.$el = el
   this.init()
   this.bindEvents()
@@ -22,6 +23,11 @@ var PageSlide = function(el){
 }
 //初始化
   PageSlide.prototype.init = function(){
+    var pages = document.getElementById('pages')
+    w = pages.offsetWidth;
+    h = w * 0.5;
+    pages.style.height = h + 'px'; 
+
     this.width = this.$el.clientWidth
     this.$el.style.webkitTransform = 'translate3d(0,0,0)'
     this.total = this.$el.childElementCount
@@ -82,15 +88,16 @@ var PageSlide = function(el){
 //四个滑动事件函数
   PageSlide.prototype.touchstart = function(e){
     clearInterval(this.timer)
-    for( i = 0 ;i<this.tablist.childElementCount;i++){
-      this.tablist.children[i].children[0].children[0].style.webkitTransform = 'scaleX(0)'
-    }
-    this.tablist.children[this.current].children[0].children[0].style.webkitTransform = 'scaleX(1)'
+    // for( i = 0 ;i<this.tablist.childElementCount;i++){
+    //   this.tablist.children[i].children[0].children[0].style.webkitTransform = 'scaleX(0)'
+    // }
+    // this.tablist.children[this.current].children[0].children[0].style.webkitTransform = 'scaleX(1)'
 
 
     var touches = e.touches[0]
 
     //触控开始
+    this.flag = null
     this.pageX = touches.pageX;
     //moving类名在样式中作滑动效果
     this.$el.classList.remove('moving')
@@ -106,6 +113,10 @@ var PageSlide = function(el){
     var displacement = touches.pageX - this.pageX //位移
     var total = this.total
     var index = this.current
+
+    if (displacement < 0) this.flag = 'left'
+    if (displacement > 0) this.flag = 'right'
+  
 
     //计算当前索引值与执行动画索引值
       var currentIndex, //当前索引值
@@ -142,9 +153,9 @@ var PageSlide = function(el){
       next.classList.add('nextitem')
       prev.classList.add('previousitem')
       for( i = 0 ;i<this.tablist.childElementCount;i++){
-        this.tablist.children[i].children[0].children[0].style.webkitTransform = 'scaleX(0)'
+        this.tablist.children[i].classList.remove('on')
       }
-      this.tablist.children[currentIndex].children[0].children[0].style.webkitTransform = 'scaleX(1)'
+      this.tablist.children[currentIndex].classList.add('on')
 
     //根据当前索引值设置前后图片的参数
       var currentX
@@ -223,10 +234,10 @@ PageSlide.prototype.touchcancel = function(e){
     this.current = i
     var parent = this.$el
 
-    for(var b = 0 ;b<this.tablist.childElementCount;b++){
-      this.tablist.children[b].children[0].children[0].style.webkitTransform = 'scaleX(0)'
-    }
-    this.tablist.children[this.current].children[0].children[0].style.webkitTransform = 'scaleX(1)'
+    // for(var b = 0 ;b<this.tablist.childElementCount;b++){
+    //   this.tablist.children[b].children[0].children[0].style.webkitTransform = 'scaleX(0)'
+    // }
+    // this.tablist.children[this.current].children[0].children[0].style.webkitTransform = 'scaleX(1)'
 
     //结束动画
       if (boolean) {
@@ -299,9 +310,9 @@ PageSlide.prototype.carousel = function(){
   var self = this
   // tablist.children[0].children[0].children[0].style.webkitTransform = 'scaleX(0)'
 
-  for( i = 0 ;i<tablist.childElementCount;i++){
-    this.tablist.children[i].children[0].children[0].style.webkitTransform = 'scaleX(0)'
-  }
+  // for( i = 0 ;i<tablist.childElementCount;i++){
+  //   this.tablist.children[i].children[0].children[0].style.webkitTransform = 'scaleX(0)'
+  // }
 
   this.timer = setInterval(nextImg,3000)
 
@@ -310,28 +321,58 @@ PageSlide.prototype.carousel = function(){
   }
 
   function play(){
-    this.tablist.children[0].children[0].children[0].style.webkitTransform = 'scaleX(1)'
+    // this.tablist.children[0].children[0].children[0].style.webkitTransform = 'scaleX(1)'
     self.timer
   }
 
+  for(var i = 0;i < this.tablist.childElementCount;i++){
+    this.tablist.children[i].onclick = function(){
+      if (this.className == 'on') {
+        return
+      }
+      var myIndex = parseInt(this.getAttribute('index'));
+      var index = self.current
+      var offset = myIndex - index
+      if (Math.abs(offset) > (self.total / 2) && offset < 0) {
+        offset = self.total + offset
+      }else{
+        if (Math.abs(offset) > (self.total / 2) && offset > 0) {
+          offset = offset - self.total
+        }
+      }
+      self.animate(offset)
+    }
+  }
   play()
 }
 
 PageSlide.prototype.animate = function(offset){
+  var index = this.current
+
   this.current = this.current + offset
   if (this.current > this.total - 1) {
     this.current = this.current - this.total
-    for( i = 0 ;i<this.tablist.childElementCount;i++){
-      this.tablist.children[i].children[0].children[0].style.webkitTransform = 'scaleX(0)'
-    }
+  }
+  if (this.current < 0) {
+    this.current = this.total + this.current
+  }
+  // console.log(this.current)
 
+  for( i = 0 ;i<this.tablist.childElementCount;i++){
+    this.tablist.children[i].classList.remove('on')
   }
   var currentX = this.getX(this.$el)
   var newCurrentX = currentX + (-offset) * this.width
   this.nowDistance = newCurrentX
   this.setX(this.$el,newCurrentX,1)
 
-  this.tablist.children[this.current].children[0].children[0].style.webkitTransform = 'scaleX(1)'
+  getIndexX = this.getX(this.$el.children[index])
+  newIndexX = getIndexX + offset * this.width
+  this.setX(this.$el.children[this.current],newIndexX,1)
+  // newIndexX = currentX + offset * this.width
+  // this.setX(this.$el.children[this.current],newIndexX,1)
+  // console.log(this.$el.children[this.current])
+  this.tablist.children[this.current].classList.add('on')
 
   //动态添加class
     for(var i = 0;i < this.total; i++){
@@ -355,14 +396,22 @@ PageSlide.prototype.animate = function(offset){
     current = this.$el.children[this.current]
     currentX = this.getX(current)
 
+    this.$el.children[this.current].children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
+
     var prevDiv = this.current - 1 < 0 ? this.total - 1 : this.current - 1
-    this.$el.children[prevDiv].children[0].classList.add('moving')
+
+    if (offset < 0) {
+      this.$el.children[this.current].children[0].classList.add('moving')
+    }else{
+      this.$el.children[prevDiv].children[0].classList.add('moving')
+    }
     this.$el.children[prevDiv].style.webkitTransform = 'translate3d(' + (currentX - this.width) + 'px' + ',0,0)'
     this.$el.children[prevDiv].children[0].style.webkitTransform = 'translate3d('+ this.width*0.9 + 'px' +',0,0) scale3d(0.9,0.9,1)'
     
     var nextDiv = this.current + 1 > this.total - 1 ? 0 : this.current + 1
     this.$el.children[nextDiv].style.webkitTransform = 'translate3d(' + (currentX + this.width) + 'px' + ',0,0)'
     this.$el.children[nextDiv].children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
+
 }
 
 window.PageSlide = PageSlide;

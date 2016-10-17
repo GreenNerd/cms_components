@@ -23,8 +23,11 @@ Collapse.prototype.init = function(){
   if (this._elements.length === 0) {
     return;
   }
+  this._elements[this._default].getElementsByTagName("h3")[0].children[0].classList.remove('fa-angle-down');
+  this._elements[this._default].getElementsByTagName("h3")[0].children[0].classList.add('fa-angle-up');
   for(var i = 0;i<this._elements.length;i++){
     var h3s = this._elements[i].getElementsByTagName("h3");
+    // console.log(h3s)
     if (window.addEventListener) {
       h3s[0].addEventListener("click",function(){
         instance.toggleDisplay(this);
@@ -40,10 +43,15 @@ Collapse.prototype.init = function(){
 Collapse.prototype.toggleDisplay = function(header){
   var cur = this.getCurrent(header);
 
+
   if(this.isOpen(cur)){
     this.close(cur);
+    header.children[0].classList.remove('fa-angle-up');
+    header.children[0].classList.add('fa-angle-down');
   }else{
     this.open(cur);
+    header.children[0].classList.remove('fa-angle-down');
+    header.children[0].classList.add('fa-angle-up');
   }
   if (this._previous) {
     for(var i = 0;i<this._elements.length;i++){
@@ -51,6 +59,8 @@ Collapse.prototype.toggleDisplay = function(header){
         var collapse_body = this._elements[i].getElementsByClassName("collapse-body");
         collapse_body[0].style.height = "0px";
         collapse_body[0].style.visibility = "hidden";
+        this._elements[i].getElementsByTagName("h3")[0].children[0].classList.remove('fa-angle-up');
+        this._elements[i].getElementsByTagName("h3")[0].children[0].classList.add('fa-angle-down');
       }
     }
   }

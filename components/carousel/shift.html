@@ -1,0 +1,126 @@
+shift
+current = 0
+counter = 0
+
+touchstart:
+	distance = $el.style.translate3dX
+
+touchmove:
+	shift
+
+	if right 
+	shift --> current,counter
+	if left
+	shift --> current,counter
+
+	if shift%width > width/2  && left
+	current +1
+	if shift%width > width/2  && right
+	current -1
+
+	remove 'current prev next' class
+
+	current = $el.children[current]
+	next = current.nextElementSibling
+	prev = current.previousElementSibling
+
+	current,next,prev add class
+
+	if children[i] contains 'current' class
+	currentX  = current.translate3dX
+
+	children[i-1].translate3dX = currentX - width
+	children[i+1].translate3dX = currentX + width
+
+	shifting = distance + shift
+
+	if right
+	moveChild = counter - 1
+	moveChild.translate3dX = width*0.9 - shift%width
+	shift -- >enlarge
+	if left
+	moveChild = counter
+	moveChild.translate3dX = shift%width * 0.9
+	shift -- >shrink
+
+touchend:
+	remainder = shift % width
+	n = shift / width
+
+	if remainder > width/2 && right
+		current = current + n - 1 < 0?total + current + n - 1 : current + n - 1
+
+		function go(current,-n + 1,true)
+	if remainder < width/2 && right
+		current = total + current + n>total-1 ? 0 : total+current + n
+
+		function go(current,-n,false)
+
+	if remainder > width/2 && left
+		current = current + n + 1 > total- 1 ? 0 : current + n +1
+		
+		function go(current,-n - 1,true)
+
+	if remainder < width/2 && left
+		current = current + n > total ? current+n-total : current + n
+		
+		function go(current,-n,false)
+
+function go(i,n,boolean){
+	targetX = distance + n*width
+
+	current = i
+
+
+	if(boolean){
+		if(left){
+			targetChild = $el.chidren[i-1].children[0]
+
+			if($el.translate3dX > targetX)
+				$el.translate3dX --> targetX
+				targetChild.translate3dX --> width*0.9
+				targetChild.scale3d --> 0.9
+		}
+		if(right){
+			targetChild = $el.children[i].children[0]
+
+			if($el.translate3dX < targetX)
+				$el.translate3dX --> targetX
+				targetChild.translate3dX --> 0
+				targetChild.scale3d --> 1
+		}
+	} 
+	else{
+		if(right){
+			targetChild = $el.chidren[i-1].children[0]
+
+			if($el.translate3dX > targetX)
+				$el.translate3dX --> targetX
+				targetChild.translate3dX --> width*0.9
+				targetChild.scale3d --> 0.9
+
+		}
+		if(left){
+			targetChild = $el.children[i].children[0]
+			
+			if($el.translate3dX < targetX)
+				$el.translate3dX --> targetX
+				targetChild.translate3dX --> 0
+				targetChild.scale3d --> 1
+		}
+	}
+
+	remove class 'current next prev'
+
+	current = $el.children[i]
+	next = current.nextElementSibling
+	prev = current.previousElementSibling
+
+	add class 'cureent next prev'
+
+	currentX  = current.translate3dX
+
+	children[i-1].translate3dX = currentX - width
+	children[i+1].translate3dX = currentX + width
+
+}	
