@@ -23,10 +23,10 @@ Collapse.prototype.init = function(){
   if (this._elements.length === 0) {
     return;
   }
-  this._elements[this._default].getElementsByTagName("h3")[0].children[0].classList.remove('fa-angle-down');
-  this._elements[this._default].getElementsByTagName("h3")[0].children[0].classList.add('fa-angle-up');
+  this._elements[this._default].getElementsByClassName("collapse-title")[0].children[1].classList.remove('fa-plus');
+  this._elements[this._default].getElementsByClassName("collapse-title")[0].children[1].classList.add('fa-minus');
   for(var i = 0;i<this._elements.length;i++){
-    var h3s = this._elements[i].getElementsByTagName("h3");
+    var h3s = this._elements[i].getElementsByClassName("collapse-title");
     // console.log(h3s)
     if (window.addEventListener) {
       h3s[0].addEventListener("click",function(){
@@ -46,12 +46,12 @@ Collapse.prototype.toggleDisplay = function(header){
 
   if(this.isOpen(cur)){
     this.close(cur);
-    header.children[0].classList.remove('fa-angle-up');
-    header.children[0].classList.add('fa-angle-down');
+    header.children[1].classList.remove('fa-minus');
+    header.children[1].classList.add('fa-plus');
   }else{
     this.open(cur);
-    header.children[0].classList.remove('fa-angle-down');
-    header.children[0].classList.add('fa-angle-up');
+    header.children[1].classList.remove('fa-plus');
+    header.children[1].classList.add('fa-minus');
   }
   if (this._previous) {
     for(var i = 0;i<this._elements.length;i++){
@@ -59,8 +59,8 @@ Collapse.prototype.toggleDisplay = function(header){
         var collapse_body = this._elements[i].getElementsByClassName("collapse-body");
         collapse_body[0].style.height = "0px";
         collapse_body[0].style.visibility = "hidden";
-        this._elements[i].getElementsByTagName("h3")[0].children[0].classList.remove('fa-angle-up');
-        this._elements[i].getElementsByTagName("h3")[0].children[0].classList.add('fa-angle-down');
+        this._elements[i].getElementsByClassName("collapse-title")[0].children[1].classList.remove('fa-minus');
+        this._elements[i].getElementsByClassName("collapse-title")[0].children[1].classList.add('fa-plus');
       }
     }
   }
@@ -87,7 +87,7 @@ Collapse.prototype.collectElementbyClass = function(){
   for(var i = 0;i<allelements.length;i++){
     var collapse_div = allelements[i];
     if (typeof collapse_div.className === "string" && collapse_div.className === this._className) {
-      var h3s = collapse_div.getElementsByTagName("h3");
+      var h3s = collapse_div.getElementsByClassName("collapse-title");
       var collapse_body = collapse_div.getElementsByClassName("collapse-body");
       if (h3s.length === 1 && collapse_body.length === 1) {
         h3s[0].style.cursor = "pointer";
