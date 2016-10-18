@@ -25,13 +25,6 @@ Collapse.prototype.init = function(){
     return;
   }
   for(var i = 0;i<this._elements.length;i++){
-    if (this._skin == 'default'){
-      this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-right')
-    }
-    if (this._skin == 'primary'){
-      this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-plus')
-    }
-    // if (this._skin ==) {}
     var h3s = this._elements[i].getElementsByClassName("collapse-title");
     if (window.addEventListener) {
       h3s[0].addEventListener("click",function(){
@@ -44,20 +37,11 @@ Collapse.prototype.init = function(){
     }
   }
 
-  if (this._skin == 'default'){
-      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-caret-right');
-      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-down');
-  }  
-  if (this._skin == 'primary'){
-      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-plus');
-      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-minus');
-  }
-
+  this.addIcon();
 }
 //处理折叠
 Collapse.prototype.toggleDisplay = function(header){
   var cur = this.getCurrent(header);
-
 
   if(this.isOpen(cur)){
     this.close(cur);
@@ -115,7 +99,7 @@ Collapse.prototype.open = function(elem){
 Collapse.prototype.collectElementbyClass = function(){
   this._elements = [];
   var container = document.getElementById('collapse-container');
-  this._skin = container.classList.value;
+  this._skin = container.classList[0];
   var allelements = container.getElementsByTagName("div");
 
   for(var i = 0;i<allelements.length;i++){
@@ -137,6 +121,24 @@ Collapse.prototype.collectElementbyClass = function(){
         this._elements[this._elements.length] = collapse_div;
       }
     }
+  }
+}
+Collapse.prototype.addIcon = function(){
+  for(var i = 0;i<this._elements.length;i++){
+    if (this._skin == 'default'){
+      this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-right')
+    }
+    if (this._skin == 'primary'){
+      this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-plus')
+    }
+  }
+  if (this._skin == 'default'){
+      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-caret-right');
+      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-down');
+  }  
+  if (this._skin == 'primary'){
+      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-plus');
+      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-minus');
   }
 }
 
