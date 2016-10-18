@@ -2,35 +2,31 @@
 
 $collapse-bg:url('/assets/library/collapse_bg.jpg');
 
-.collapseDiv{
-    border-top: 1px solid #fff;
+.collapse-div{
+    border-top: 1px solid #000;
     overflow:hidden;
-    background-color: $color-main;
 
     .collapse-title{
       width: 100%;
       height: 49px;
+      background: white;
       line-height: 49px;
       border-bottom: 0;
       display: block;
-      padding-left: 16px;
       cursor:pointer;
       font-weight: normal;
-      color: white;
-      position: relative;
-      background: $collapse-bg;
-      background-size: cover;
       z-index:50;
-
-      .fa-minus{
-        position: absolute;
-        right: 28px;
-        top: 18px;
+      
+      .collapse-title-txt{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: keep-all;
       }
-      .fa-plus{
-        position: absolute;
-        right: 28px;
-        top: 18px;
+
+      .fa{
+        line-height: 49px;
+        display: none;
       }
     }
 
@@ -43,28 +39,77 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
     }
 
     .collapse-content{
-      font-size: 17px;
+      font-size: $h3;
       border-top: 1px solid #fff;
       padding: 9px 15px;
-
-
-    }
-    .collapse-content::before{
-      content: "";
-      height: 0px;
-      width: 0px;
-      border-width: 0px 0px 16px 16px;
-      border-bottom-right-radius: 5px;
-      transform:rotate(45deg);
-      border-left-color: transparent;
-      border-bottom-color: #fc5836;
-      border-style: solid;
-      position: absolute;
-      top: -8px;
-      left: 18px;
     }
 
-  &:first-child{
-    border-top: none;
+    &:first-child{
+      border-top: none;
+    }
+}
+
+.primary{
+  .collapse-div{
+    border-top: 1px solid #fff;
+    background-color: $color-main;
+
+    .collapse-title{
+      color: white;
+      background: $collapse-bg;
+      background-size: cover;
+
+      .collapse-title-txt{
+        float: left;
+        width: 80%;    
+        margin-left: 16px;
+      }
+      .fa{
+        display: block;
+        margin: 0 16px;
+        float: right;
+      }
+    }
+    .collapse-body{
+      .collapse-content::before{
+        content: "";
+        height: 0px;
+        width: 0px;
+        border-width: 0px 0px 16px 16px;
+        border-bottom-right-radius: 5px;
+        transform:rotate(45deg);
+        border-left-color: transparent;
+        border-bottom-color: #fc5836;
+        border-style: solid;
+        position: absolute;
+        top: -8px;
+        left: 18px;
+      }
+    }
+    &:first-child{
+      border-top: none;
+    }
+  }
+}
+
+.default{
+  .collapse-div{
+    border-top: 1px solid $color-line;
+    background-color: #fff;
+    .collapse-title{
+      color: $color-main;
+      .collapse-title-txt{
+        float: left;
+        width: 80%;
+      }
+      .fa{
+        display: block;
+        margin: 0 8px;
+        float: left;
+      }
+    }
+    .collapse-body{
+      border-top: 1px solid $color-line;
+    }
   }
 }

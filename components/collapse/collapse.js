@@ -3,6 +3,7 @@ function Collapse(className,close_prev,default_open){
   this._className = String(className);
   this._previous = Boolean(close_prev);
   this._default = typeof(default_open) === 'number' ? default_open:-1;
+  this._skin;
   this.getCurrent;
   this.init()
 }
@@ -16,18 +17,22 @@ Collapse.prototype.getCurrent = function(header){
   }
   return cur.getElementsByClassName("collapse-body")[0];
 }
-//初始化，给title添加点击事件
+//初始化，给title添加点击事件，设置icon
 Collapse.prototype.init = function(){
   var instance = this;
   this.collectElementbyClass();
   if (this._elements.length === 0) {
     return;
   }
-  this._elements[this._default].getElementsByClassName("collapse-title")[0].children[1].classList.remove('fa-plus');
-  this._elements[this._default].getElementsByClassName("collapse-title")[0].children[1].classList.add('fa-minus');
   for(var i = 0;i<this._elements.length;i++){
+    if (this._skin == 'default'){
+      this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-right')
+    }
+    if (this._skin == 'primary'){
+      this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-plus')
+    }
+    // if (this._skin ==) {}
     var h3s = this._elements[i].getElementsByClassName("collapse-title");
-    // console.log(h3s)
     if (window.addEventListener) {
       h3s[0].addEventListener("click",function(){
         instance.toggleDisplay(this);
@@ -38,6 +43,16 @@ Collapse.prototype.init = function(){
       }
     }
   }
+
+  if (this._skin == 'default'){
+      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-caret-right');
+      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-down');
+  }  
+  if (this._skin == 'primary'){
+      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-plus');
+      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-minus');
+  }
+
 }
 //处理折叠
 Collapse.prototype.toggleDisplay = function(header){
@@ -46,12 +61,24 @@ Collapse.prototype.toggleDisplay = function(header){
 
   if(this.isOpen(cur)){
     this.close(cur);
-    header.children[1].classList.remove('fa-minus');
-    header.children[1].classList.add('fa-plus');
+    if (this._skin == 'default') {
+      header.children[0].classList.remove('fa-caret-down');
+      header.children[0].classList.add('fa-caret-right');
+    }
+    if (this._skin == 'primary') {
+      header.children[0].classList.remove('fa-minus');
+      header.children[0].classList.add('fa-plus');
+    }
   }else{
     this.open(cur);
-    header.children[1].classList.remove('fa-plus');
-    header.children[1].classList.add('fa-minus');
+    if (this._skin == 'default') {
+      header.children[0].classList.remove('fa-caret-right');
+      header.children[0].classList.add('fa-caret-down');
+    }
+    if (this._skin == 'primary') {
+      header.children[0].classList.remove('fa-plus');
+      header.children[0].classList.add('fa-minus');
+    }
   }
   if (this._previous) {
     for(var i = 0;i<this._elements.length;i++){
@@ -59,8 +86,14 @@ Collapse.prototype.toggleDisplay = function(header){
         var collapse_body = this._elements[i].getElementsByClassName("collapse-body");
         collapse_body[0].style.height = "0px";
         collapse_body[0].style.visibility = "hidden";
-        this._elements[i].getElementsByClassName("collapse-title")[0].children[1].classList.remove('fa-minus');
-        this._elements[i].getElementsByClassName("collapse-title")[0].children[1].classList.add('fa-plus');
+        if (this._skin == 'default') {
+         this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-caret-down');
+         this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-right');
+        }        
+        if (this._skin == 'primary') {
+         this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-minus');
+         this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-plus');
+        }
       }
     }
   }
@@ -82,6 +115,7 @@ Collapse.prototype.open = function(elem){
 Collapse.prototype.collectElementbyClass = function(){
   this._elements = [];
   var container = document.getElementById('collapse-container');
+  this._skin = container.classList.value;
   var allelements = container.getElementsByTagName("div");
 
   for(var i = 0;i<allelements.length;i++){
