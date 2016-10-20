@@ -85,15 +85,27 @@ var PageSlide = function(el){
     return this.$el.children[this.current]
   }
 
+// //获取下一个子节点
+//   PageSlide.prototype.getNextElement = function(node){
+//     var NextElementNode = node.nextSibling;
+//     while(NextElementNode.nodeValue != null){
+//       NextElementNode = NextElementNode.nextSibling
+//     }
+//     return NextElementNode;
+//   }
+
+// //获取上一个字节点
+//   PageSlide.prototype.getPrivousElement = function(node){
+//     var PriviousElementNode = node.priviousSibling;
+//     while(PriviousElementNode.nodeValue != null){
+//       PriviousElementNode = PriviousElementNode.priviousSibling
+//     }
+//     return PriviousElementNode;
+//   }
+
 //四个滑动事件函数
   PageSlide.prototype.touchstart = function(e){
     clearInterval(this.timer)
-    // for( i = 0 ;i<this.tablist.childElementCount;i++){
-    //   this.tablist.children[i].children[0].children[0].style.webkitTransform = 'scaleX(0)'
-    // }
-    // this.tablist.children[this.current].children[0].children[0].style.webkitTransform = 'scaleX(1)'
-
-
     var touches = e.touches[0]
 
     //触控开始

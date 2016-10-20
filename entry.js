@@ -12,3 +12,5 @@ require('./components/carousel/pageslider.js');
 
 require('./components/collapse/collapse.scss');
 require('./components/collapse/collapse.js');
+
+require('./components/category/category.scss');

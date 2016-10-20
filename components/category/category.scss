@@ -1,0 +1,284 @@
+@import '../parm';
+
+@mixin item-flex-warp {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-container{
+  width: 100%;
+  background: #fff;
+  
+  .category-main{
+    display: flex;
+    justify-content:space-around;
+    padding: 10px;
+    background: #fff;
+
+
+    .category-main-item{
+      flex:1;
+
+      position: relative;
+      background: $color-main;
+      height: 49px;
+      margin-right: 10px;
+      border-radius: 4px;
+
+      p{
+        position: absolute;
+        font-size: $h3;
+        color: #fff;
+        line-height: 49px;
+        left: 10px;
+        z-index: 10;
+      }
+
+      i{
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        font-size: 1.8em;
+        color: $color-main-dark;
+        opacity: .6;
+      }
+    }
+
+    :last-child{
+      margin-right: 0;
+    }
+  }
+
+  .category-primary{
+    padding: 5px 0;
+    background: #fff;
+    display: flex;
+
+    .category-pri-item{
+      flex: 1;
+      text-align: center;
+
+      p{
+        font-size: $h5;
+        color: black;
+      }
+      i{
+        margin: 5px 0 4px;
+        font-size: 1.1em;
+        color: black;
+      }
+    }
+  }
+
+  .category-pri-icon{
+    width: 100%;
+    padding: 10px 0;
+    background: #fff;
+    
+    .category-pri-icon-row{
+      display: flex;
+      margin: 0 10px 5px;
+    
+      :nth-child(1) .icon-item-bg{
+        background: $color-success;
+      }
+      :nth-child(2) .icon-item-bg{
+        background: $color-notice;
+      }
+      :nth-child(3) .icon-item-bg{
+        background: $color-error;
+      }
+      :nth-child(4) .icon-item-bg{
+        background: $color-main;
+      }
+      :nth-child(5) .icon-item-bg{
+        background: $color-main-dark;
+      }
+      .category-icon-item{
+        flex: 1;
+        text-align: center;
+        overflow: hidden;
+        
+        .icon-item-bg{
+          width: 37px;
+          height: 37px;
+          border-radius: 50%;
+          margin: 5px auto 0;
+          i{
+            line-height: 37px;
+            font-size: 1em;
+            color: black;
+          }
+        }
+        p{
+          font-size: $h6;
+          color: black;
+          margin: auto;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: keep-all;
+        }
+
+      }
+    }
+
+    :last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .category-lnk-lof2{
+    @include item-flex-warp;
+
+    .category-lnk-row-item{
+      flex: 0 0 50%;
+      overflow: hidden;
+      
+      .item-container{
+        border-right: 1px solid $color-line;
+        margin: 8px 0 8px 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        
+        .item-txt{
+          flex: auto;
+          overflow: hidden;
+
+          p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: keep-all;
+          }
+          .title{
+            color: #000;
+            font-size: $h3;
+          }
+          .describe{
+            color:$color-gray;
+            font-size: $h6;
+          }
+        }
+        i{
+          text-align: center;
+          flex: 0 0 1.3em;
+          font-size: 2.6em;
+          color: $color-main;
+        }
+      }
+    }
+  }
+
+  .category-lnk-icon-lof2{
+    @include item-flex-warp;
+    
+    .lnk-lof2-item{
+      flex: 0 0 50%;
+      overflow: hidden;
+      
+      .item-container{
+        padding: 8px 10px;
+        border: 1px solid $color-line;
+        border-left: none;
+        border-top: none;
+        display: flex;
+        align-items:center;
+        
+        .item-txt{
+          flex: auto;
+          margin-left: 10px;
+          overflow: hidden;
+
+          p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: keep-all;
+          }
+
+          .title{
+            color: #000;
+            font-size: $h3;
+          }
+          .describe{
+            color:$color-gray;
+            font-size: $h6;
+          }
+        }
+
+        .icon-bg{
+          flex: 0 0 37px;
+          width: 37px;
+          height: 37px;
+          border-radius: 50%;
+          background: $color-main;
+          text-align: center;
+          line-height: 37px;
+          
+          i{
+            font-size: 1em;
+            color: #fff;
+          }
+        }
+
+      }
+    }
+
+  //   :nth-child(1) .item-border{
+  //     border-top: none;
+  //   }
+  //   :nth-child(2) .item-border{
+  //     border-top: none;
+  //     border-bottom: 1px solid $color-line
+  //   }
+  }
+
+  .category-lnk-lof1{
+    display: flex;
+    flex-direction: column;
+
+    .lnk-lof1-item{
+      margin: 0px 0px 0 10px;
+      display: flex;
+      align-items:center;
+      .icon-bg{
+        flex: 0 0 37px;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        background: $color-main;
+        text-align: center;
+        line-height: 37px;
+        i{
+          font-size: 1em;
+          color: #fff;
+        }
+      }
+
+      .item-txt{
+        flex: auto;
+        padding: 10px 0px 10px 10px;
+        overflow: hidden;
+        border-bottom: 1px solid $color-line;
+
+        p{
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: keep-all;
+        }
+        .title{
+          font-size: $h4;
+          color: #000;
+        }
+        .describe{
+          font-size: $h6;
+          color: $color-gray;
+        }
+      }
+    }
+  }
+}

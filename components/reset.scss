@@ -1,3 +1,5 @@
+@import 'parm';
+
 html{
 	font-size: 16px;
 }
@@ -19,3 +21,88 @@ h5{
 h6{
 	font-size: 13px;
 }
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+
+textarea {  
+	-webkit-appearance: none;
+}   
+
+	.btn{
+		border-radius: 4px;
+		border: none;
+		outline: none;
+	}
+	.btn-large{
+		width: 355px;
+		height: 49px;
+		font-size: $h2;
+		font-weight: bold;
+	}
+	.btn-mini{
+		height: 34px;
+		padding: 0 15px;
+	}
+	//btn-primary
+		.btn-primary{
+			background: $color-main;
+			color: #fff;
+		}
+		.btn-primary:active{
+			background: $color-main-dark;
+			color: #fff;
+		}
+		.btn-primary:disabled{
+			background: hsla(13,97%,67%,$disable);
+			color: #fff;
+		}
+	//btn-primary-line
+		.btn-primary-line{
+			border: 1px solid $color-main;
+			color: $color-main;
+			background: #fff;
+		}
+		.btn-primary-line:active{
+			border: 1px solid $color-main-dark;
+			color: $color-main-dark;
+			background: #fff;
+		}
+		.btn-primary-line:disabled{
+			border: 1px solid $color-main-dark;
+			color: $color-main-dark;
+			background: #fff;
+			opacity: $disable;
+		}
+	//btn-default
+		.btn-default{
+			background: $color-line;
+			color: #000;
+		}
+		.btn-default:active{
+			background: $color-line-dark;
+			color: #000;
+		}
+		.btn-default:disabled{
+			background: $color-line;
+			color: #000;
+			opacity: $disable;
+		}
+	//btn-default-line
+		.btn-default-line{
+			background: #fff;
+			border: 1px solid $color-gray;
+			color: #000;
+		}
+		.btn-default-line:active{
+			background: #fff;
+			border: 1px solid #000;
+			color: #000;
+		}
+		.btn-default-line:disabled{
+			background: #fff;
+			border: 1px solid #000;
+			color: #000;
+			opacity: $disable;
+		}
