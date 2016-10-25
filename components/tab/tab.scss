@@ -1,0 +1,130 @@
+@import '../parm';
+.tab-container{
+	background: #fff;
+
+	.tab-lof5{
+		height: 49px;
+		display: flex;
+		margin: 0 10px;
+		overflow: hidden;
+
+		.lof5-item{
+			flex: 1 0 20%;
+			margin: auto;
+			text-align: -webkit-center;
+			height: 100%;
+			line-height: 49px;
+			position: relative;
+
+			p{
+				display: inline-block;
+				font-size: $h4;
+				color: #000;
+			}
+			.active{				
+				p{
+					color: $color-main;
+				}
+				.underline{
+					width: 25px;
+					height: 2px;
+					background: $color-main;
+					margin-top: -2px;
+				}
+			}
+		}
+	}
+
+	.tab-lof5-default{
+		height: 49px;
+		display: flex;
+		margin: 0 10px;
+		overflow: hidden;
+		align-items: center;
+
+		.lof5-item{
+			flex: 1 0 20%;
+			text-align: center;
+
+			p{
+				font-size: $h4;
+				padding: 0 14px;
+				height: 34px;
+				line-height: 34px;
+				display: inline-block;
+				border-radius: 4px;
+			}
+			.active{
+				color: #fff;
+				background: $color-main;
+			}
+		}			
+	}
+	
+	.tab-label{
+		margin: 5px 0;
+		.label-container{
+			display: flex;
+			flex-wrap: wrap;
+
+			.label-item{
+				flex: 1 0 25%;
+				width: 100%;
+				font-size: $h4;
+				padding: 5px 0;
+				text-align: center;
+				position: relative;
+				&::after{
+					content: '';
+					position: absolute;
+					height: 15px;
+					width: 1px;
+					background: $color-line;
+					right: 0;
+					top: 10px;
+				}
+			}
+			.active{
+				color: $color-main;
+			}
+			:nth-child(4n)::after{
+				display: none;
+			}
+		}
+	}
+
+	.tab-border{
+		margin: 10px 0;
+		overflow: hidden;
+
+		.tab-border-container{
+			width: 75%;
+			height: 34px;
+			border: 1px solid $color-main;
+			border-radius: 4px;
+			margin: auto;
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+			.tab-border-item{
+				flex: 1 0 24%;
+				width: 100%;
+				text-align: center;
+				line-height: 34px;
+				border-right: 1px solid $color-main;
+				color: #000;
+			}
+
+			:last-child{
+				border-right: none;
+			}
+
+			.active{
+				color: white;
+				background: $color-main;
+			}
+		}
+	}
+}
+
