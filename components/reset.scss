@@ -22,19 +22,12 @@ h6{
 	font-size: 13px;
 }
 
-// button{
-// 	text-transform: none;
-// }
-
 input[type="button"], input[type="submit"], input[type="reset"] {
 	-webkit-appearance: button;
 }
 
-input[type="button"],textarea {  
-	// color: inherit;
-	// font: inherit;
-	// margin: 0;
-	vertical-align: middle;
+textarea {  
+	-webkit-appearance: none;
 }   
 
 .button-group{

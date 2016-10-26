@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
   <title>cms</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  <meta name = "format-detection" content = "telephone=no">
 </head>
 <body>
-  <div class="pages-container" id="pages-container">
+  <div class="pages-container" id="pages-container" style="display:none">
     <div class="pages" id="pages">
       <div class="page currentitem">
         <div class="item-content" style="background-image:url('assets/banner/default.png')">
@@ -47,7 +48,7 @@
       </ul>
     </nav>
   </div>
-  <div class="library-container">
+  <div class="library-container" style="display:none">
     <div class="library-item-list">
       <a href="" class="library-item" style="background-image:url('assets/library/item_two_l.png')">
         <div class="css-item-cover" style="background-color:#493824"></div>
@@ -78,7 +79,7 @@
       </a>
     </div>
   </div>
-  <div id="collapse-container" class="primary">
+  <div id="collapse-container" class="primary"  style="display:none">
     <div class="collapse-div">
       <div class="collapse-title">
         <i class="fa"></i>
@@ -429,7 +430,7 @@
       <div class="cell-title"><span>电话</span></div>
       <div class="cell-value">
         <i class="fa fa-angle-right"></i>
-        <span>12345678901</span>
+        <span>18200501125</span>
       </div>
     </a>
     <a class="profile-cell">
@@ -447,10 +448,30 @@
       </div>
     </a>
   </div>
-<!--   <div>
-    <input type="button" class="btn btn-large btn-default" value="按钮button">
-  </div> -->
- <footer class="footer-container">
+  <div class="spinner-container">
+    <div class="spinner-cell">
+      <div class="cell-title"><span>snake</span></div>
+      <div class="cell-value"><span><div class="spinner-snake" style="border-top-color: black;border-left-color: black;border-bottom-color: black;height: 28px;width: 28px;"></div></span></div>
+    </div>
+    <div class="spinner-cell">
+      <div class="cell-title"><span>snake</span></div>
+      <div class="cell-value">
+        <span>
+          <div class="colorcircle">
+            <div></div> 
+            <div></div> 
+            <div></div> 
+            <div></div> 
+            <div></div> 
+            <div></div>
+            <div class="centerWrap"></div>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer-container">
     <div class="footer">
       <div class="footer-button-group">
         <div class="footer-button">
@@ -467,7 +488,7 @@
         Powered by &copy; 2016 Skylark
       </div>
     </div>
- </footer>
+  </footer>
 
   <script src="assets/bundle.js"></script>
   <script>

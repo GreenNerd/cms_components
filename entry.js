@@ -17,3 +17,4 @@ require('./components/category/category.scss');
 require('./components/tab/tab.scss');
 require('./components/profile/profile.scss');
 require('./components/footer/footer.scss');
+require('./components/spinner/spinner.scss');
