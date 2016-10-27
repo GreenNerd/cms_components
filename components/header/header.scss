@@ -1,0 +1,71 @@
+@import '../parm';
+
+.header-container {
+
+  .header-main {
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .header-main-left {
+      line-height: 54px;
+      display: flex;
+      align-items: center;
+      .logo {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $color-main;
+        margin: 0 12px;
+      }
+    }
+    .header-main-right {
+      flex: .5;
+      line-height: 54px;
+      text-align: right;
+      margin-right: 12px;
+      i{
+        font-size: 1.1em;
+      }
+    }
+
+    &:before{
+      content: '';
+      width: 100%;
+      color: $color-line;
+      border-bottom: 1px solid;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+
+  .header-cell-group {
+    display: flex;
+    flex-direction: column;
+
+    .header-cell {
+      position: relative;
+      height: 49px;
+      font-size: $h4;
+
+      display: flex;
+      align-items: center;
+      
+      span {
+        margin-left: 12px;
+      }
+
+      &:before {
+        content: "";
+        color: $color-line;
+        width: 100%;
+        border-bottom: 1px solid;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    .link-active {
+      color: $color-main;
+    }
+  }
+}

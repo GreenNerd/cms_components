@@ -1,6 +1,8 @@
 require('./components/reset.scss');
 require('./components/parm.scss');
 require('./components/layout.scss');
+require('./components/header/header.scss');
+
 require('./components/banner/_banner.scss');
 require('./components/library/_library.scss');
 
