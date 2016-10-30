@@ -4,7 +4,7 @@
   align-items: center;
   padding: 0 10px;
   
-  .cell-title 
+  .cell-title { 
     flex: 1;
   }
   .cell-value {
@@ -12,11 +12,7 @@
     display: flex;
     align-items: center;
   }
-  .spinner-snake {
-    animation: spinner-rotate .8s infinite linear;
-    border: 4px solid transparent;
-    border-radius: 50%;
-  }
+  
 }
 
 @keyframes spinner-rotate {
@@ -29,23 +25,12 @@
 }
 
 $colorcircle-border-size: 14%;
-// $colorcircle-startColor: #ff0000;
-// $spincolor-1:$colorcircle-startColor;
-// $spincolor-2:spin($colorcircle-startColor,60);
-// $spincolor-3:spin($colorcircle-startColor,120);
-// $spincolor-4:spin($colorcircle-startColor,180);
-// $spincolor-5:spin($colorcircle-startColor,240);
-// $spincolor-6:spin($colorcircle-startColor,300);
 
-// @mixin cgrad($origin: left,$start: #fff,$stop: #000) {
-//  background-color: $start;
-//  background-image: linear-gradient($origin, $start $colorcircle-adjust, $stop 100-$colorcircle-adjust);
-// }
-
-// @mixin cskew($origin , $deg){
-//  transform-origin: $origin;
-//  transform: skew($deg);
-// }
+.spinner-rolling {
+  animation: spinner-rotate .8s infinite linear;
+  border: 4px solid transparent;
+  border-radius: 50%;
+}
 
 .colorcircle {
   width: 30px;
@@ -117,5 +102,24 @@ $colorcircle-border-size: 14%;
       transform: skewX(150deg);
       background-image: linear-gradient(150deg, rgb(83,83,83) 12%, rgb(125,125,125) 88%);
     }
+  }
+}
+
+.spinner-ring {
+  background: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+
+  div {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    box-shadow: 0 3px 0 0 #000;
+    animation: spinner-rotate .8s infinite linear;
   }
 }

@@ -8,24 +8,38 @@
   <meta name = "format-detection" content = "telephone=no">
 </head>
 <body>
-  <header class="header-container">
+  <header class="header-container fixed-top">
     <div class="header-main">
       <div class="header-main-left">
         <div class="logo"></div>
         <h3>成都了了科技有限公司</h3>
       </div>
       <div class="header-main-right">
-        <i class="fa fa-close"></i>
+        <i class="fa fa-reorder"></i>
       </div>
     </div>
-    <div class="header-cell-group">
-      <div class="header-cell"><span>新闻中心</span></div>
-      <div class="header-cell"><span>新闻中心</span></div>
-      <div class="header-cell link-active"><span>新闻中心</span></div>
-      <div class="header-cell"><span>新闻中心</span></div>
-      <div class="header-cell"><span>新闻中心</span></div>
+    <div class="header-cell-group header-collapse" style="height:0;">
+      <ul class="header-ul-nav">
+        <li class="header-cell"><a href="#">新闻中心</a href="#"></li>
+        <li class="header-cell"><a href="#">廉政建设</a href="#"></li>
+        <li class="header-cell link-active"><a href="#" class="link-active">年度考核须知</a href="#"></li>
+        <li class="header-cell"><a href="#">政策法规</a href="#"></li>
+        <li class="header-cell"><a href="#">公示公告</a href="#"></li>
+      </ul>
     </div>
   </header>
+  <div class="breadcrumbs-container default">
+    <div class="breadcrumbs-cell">
+      <i class="fa fa-home"></i>
+      <span>主页</span>
+    </div>
+    <div class="breadcrumbs-cell">
+      <span>培训考核</span>
+    </div>
+    <div class="breadcrumbs-cell">
+      <span>考核评价</span>
+    </div>
+  </div>
   <div class="pages-container" id="pages-container" style="display:none">
     <div class="pages" id="pages">
       <div class="page currentitem">
@@ -468,8 +482,8 @@
   </div>
   <div class="spinner-container">
     <div class="spinner-cell">
-      <div class="cell-title"><span>snake</span></div>
-      <div class="cell-value"><span><div class="spinner-snake" style="border-top-color: black;border-left-color: black;border-bottom-color: black;height: 28px;width: 28px;"></div></span></div>
+      <div class="cell-title"><span>rolling</span></div>
+      <div class="cell-value"><span><div class="spinner-rolling" style="border-top-color: black;border-left-color: black;border-bottom-color: black;height: 28px;width: 28px;"></div></span></div>
     </div>
     <div class="spinner-cell">
       <div class="cell-title"><span>snake</span></div>
@@ -487,8 +501,85 @@
         </span>
       </div>
     </div>
+    <div class="spinner-cell">
+      <div class="cell-title"><span>ring</span></div>
+      <div class="cell-value">
+        <span>
+          <div class="spinner-ring" style="transform:scale(0.96)">
+            <div></div>
+          </div>
+        </span>
+      </div>
+    </div>
   </div>
-  
+  <div class="picture-container">
+    <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_l.png')">
+    </a>
+    <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_m.png')">
+    </a>
+    <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_r.png')">
+    </a>
+    <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_l.png')">
+    </a>
+  </div>
+  <div class="attachment-container">
+    <div class="attachment-wrap">
+      <div class="attach-items excel">
+        <div class="attach-item-left">
+          <i class="fa fa-file-excel-o"></i>
+        </div>
+        <div class="attach-item-right">
+          <span class="item-title">2016附件文件标题.xlsx</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </div>
+      <div class="attach-items pdf">
+        <div class="attach-item-left">
+          <i class="fa fa-file-pdf-o"></i>
+        </div>
+        <div class="attach-item-right">
+          <span class="item-title">2016附件文件标题.pdf</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </div>
+      <div class="attach-items ppt">
+        <div class="attach-item-left">
+          <i class="fa fa-file-powerpoint-o"></i>
+        </div>
+        <div class="attach-item-right">
+          <span class="item-title">2016附件文件标题.ppt</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </div>
+      <div class="attach-items zip">
+        <div class="attach-item-left">
+          <i class="fa fa-file-zip-o"></i>
+        </div>
+        <div class="attach-item-right">
+          <span class="item-title">2016附件文件标题.zip</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </div>
+      <div class="attach-items word">
+        <div class="attach-item-left">
+          <i class="fa fa-file-word-o"></i>
+        </div>
+        <div class="attach-item-right">
+          <span class="item-title">2016附件文件标题.word</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </div>
+      <div class="attach-items other">
+        <div class="attach-item-left">
+          <i class="fa fa-file"></i>
+        </div>
+        <div class="attach-item-right">
+          <span class="item-title">2016附件文件标题.jpg</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="footer-container">
     <div class="footer">
       <div class="footer-button-group">
@@ -523,7 +614,8 @@
       //    paganation:true, //下方序列
       //    arrow:true //两侧箭头}
       //   });
-
+    //导航
+      var myHeader = new Header("header-container");
     //折叠
       var myCollapse = new Collapse(
         "collapse-div", //折叠菜单外层Div
