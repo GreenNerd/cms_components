@@ -1,50 +1,49 @@
 @import '../parm';
 
-.breadcrumbs-container{
-	display: flex;
+.breadcrumbs-container {
+  display: flex;
 
-	.breadcrumbs-cell{
-		padding: 0 12px;
-		font-size: $h4;
-		position: relative;
-		color: $color-main;
+  .breadcrumbs-cell {
+    padding: 0 12px;
+    font-size: $h4;
+    position: relative;
+    color: $color-main;
 
-		&:before{
-			// content: '>';
-			position: absolute;
-			right: -4px;
-			bottom: 1px;
-			color: $color-line-dark;
-		}
-	}
+    &:before {
+      position: absolute;
+      right: -4px;
+      bottom: 1px;
+      color: $color-line-dark;
+    }
+  }
 
 
 }
 
-.default{
-	.breadcrumbs-cell{
-		&:before{
-			content: '/';
-		}
-	}
-	>:last-child{
-		color: $color-line-dark;
-			&:before{
-			content: none;
-		}
-	}
+.breadcrumbs-default {
+  .breadcrumbs-cell {
+    &:before{
+      content: '/';
+    }
+  }
+  >:last-child {
+    color: $color-line-dark;
+      &:before{
+      content: none;
+    }
+  }
 }
 
-.primary{
-	.breadcrumbs-cell{
-		&:before{
-			content: '>';
-		}
-	}
-	>:last-child{
-		color: $color-line-dark;
-			&:before{
-			content: none;
-		}
-	}
+.breadcrumbs-primary {
+  .breadcrumbs-cell {
+    &:before{
+      content: '>';
+    }
+  }
+  >:last-child {
+    color: $color-line-dark;
+      &:before {
+      content: none;
+    }
+  }
 }
