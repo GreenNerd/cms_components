@@ -26,3 +26,4 @@ require('./components/spinner/spinner.scss');
 require('./components/picture/picture.scss');
 require('./components/attachment/attachment.scss');
 require('./components/search/search.scss');
+require('./components/product/product.scss');

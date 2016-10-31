@@ -1,0 +1,79 @@
+@import '../parm';
+
+.product-container {
+
+	.product-row {
+		
+		.product-row-cell {
+			padding: 10px;
+			display: flex;
+			.product-cell-left {
+				height: 110px;
+				flex: 0 0 110px;
+			}
+			.product-cell-right {
+				margin-left: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				.product-title {
+					font-size: $h4;
+					color: $color-black;
+					overflow: hidden;
+					height: 75px;
+				}
+				.product-price {
+					font-size: $h2;
+					color: $color-main;
+					i{
+						font-size: $h4;
+						color: #888;
+						margin-right: 4px;
+						font-style: normal;
+					}
+				}
+			}
+		}
+	}
+	.product-column {
+		margin-top: 5px;
+		display: flex;
+		flex-flow: row wrap;
+
+		.product-column-cell {
+			// padding: 10px;
+			flex: 0 0 50%;
+			
+			display: flex;
+			flex-direction: column;
+			padding: 10px;
+			.product-cell-top {
+				flex: 0 0 167.5px;
+				
+				img{
+				}
+			}
+			.product-cell-bottom {
+		    margin: 4px 0 2px 0;
+		    display: flex;
+				flex-direction: column;
+				.product-title {
+					font-size: $h5;
+					color: $color-black;
+					overflow: hidden;
+					height: 42px;
+				}
+				.product-price {
+					font-size: $h3;
+					color: $color-main;
+					i{
+						font-size: $h5;
+						color: #888;
+						margin-right: 4px;
+						font-style: normal;
+					}
+				}
+			}
+		}
+	}
+}
