@@ -55,7 +55,7 @@
     }
   }
 
-  .category-primary{
+  .category-default{
     padding: 5px 0;
     background: #fff;
     display: flex;
@@ -81,32 +81,18 @@
     }
   }
 
-  .category-pri-icon{
+  .category-lof5{
     width: 100%;
     padding: 10px 0;
     background: #fff;
     
-    .category-pri-icon-row{
+    .category-lof5-row{
       display: flex;
       margin: 0 10px 5px;
-    
-      :nth-child(1) .icon-item-bg{
-        background: $color-success;
-      }
-      :nth-child(2) .icon-item-bg{
-        background: $color-notice;
-      }
-      :nth-child(3) .icon-item-bg{
-        background: $color-error;
-      }
-      :nth-child(4) .icon-item-bg{
-        background: $color-main;
-      }
-      :nth-child(5) .icon-item-bg{
-        background: $color-main-dark;
-      }
+      overflow: scroll;
+
       .category-icon-item{
-        flex: 1;
+        flex: 1 0 20%;
         text-align: center;
         overflow: hidden;
         
@@ -139,10 +125,10 @@
     }
   }
 
-  .category-lnk-lof2{
+  .category-lof2-left{
     @include item-flex-warp;
 
-    .lnk-lof2-item{
+    .lof2-left-item{
       flex: 0 0 50%;
       overflow: hidden;
       
@@ -176,16 +162,15 @@
           text-align: center;
           flex: 0 0 1.3em;
           font-size: 2.6em;
-          color: $color-main;
         }
       }
     }
   }
 
-  .category-lnk-icon-lof2{
+  .category-lof2-right{
     @include item-flex-warp;
     
-    .lnk-lof2-item{
+    .lof2-right-item{
       flex: 0 0 50%;
       overflow: hidden;
       
@@ -224,7 +209,6 @@
           width: 37px;
           height: 37px;
           border-radius: 50%;
-          background: $color-main;
           text-align: center;
           line-height: 37px;
           
@@ -238,11 +222,11 @@
     }
   }
 
-  .category-lnk-lof1{
+  .category-lof1{
     display: flex;
     flex-direction: column;
 
-    .lnk-lof1-item{
+    .lof1-item{
       margin: 0 0 0 10px;
       display: flex;
       align-items:center;
@@ -251,7 +235,6 @@
         width: 37px;
         height: 37px;
         border-radius: 50%;
-        background: $color-main;
         text-align: center;
         line-height: 37px;
         i{
@@ -286,7 +269,7 @@
     }
   }
 
-  .category-lnk-lof1-nodes{
+  .category-lof1-noinfo{
     display: flex;
     flex-direction: column;
 
@@ -300,7 +283,6 @@
         width: 33px;
         height: 33px;
         border-radius: 50%;
-        background: $color-main;
         text-align: center;
         line-height: 33px;
         i{
@@ -331,7 +313,7 @@
     }
   }
 
-  .category-lnk-icon-lof1{
+  .category-lof1-nobg{
     display: flex;
     flex-direction: column;
 
@@ -343,7 +325,6 @@
       
       i{
         flex: 0 0 16px;
-        color: $color-main;
         font-size: 1em;
         text-align: center;
       }

@@ -16,9 +16,20 @@ $color: #00455f;
 
 html {
   height: 100%;
+
+  &.noscroll {
+    body {
+      overflow: hidden;
+      height: 100%;
+    }
+  }
 }
 
-a{
+ul {
+  list-style: none;
+}
+
+a {
   text-decoration: none;
 }
 
@@ -46,3 +57,4 @@ body {
 .fixed-bottom {
   bottom: 0
 }
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
@@ -11,36 +11,70 @@
   <header class="header-container fixed-top">
     <div class="header-main">
       <div class="header-main-left">
-        <div class="logo"></div>
+        <img src="/assets/library/item_three_l.png" class="logo big"/>
+      </div>
+      <div class="header-main-wrapper">
         <h3>成都了了科技有限公司</h3>
       </div>
       <div class="header-main-right">
         <i class="fa fa-navicon"></i>
       </div>
     </div>
-    <div class="header-cell-group header-collapse" style="height:0;">
-      <ul class="header-ul-nav">
-        <li class="header-cell"><a href="#">新闻中心</a href="#"></li>
-        <li class="header-cell"><a href="#">廉政建设</a href="#"></li>
-        <li class="header-cell link-active"><a href="#" class="link-active">年度考核须知</a href="#"></li>
-        <li class="header-cell"><a href="#">政策法规</a href="#"></li>
-        <li class="header-cell"><a href="#">公示公告</a href="#"></li>
-      </ul>
+    <div class="header-list">
+      <div id="globalnav" class="header-cell-group header-collapse" style="height:0;">
+        <ul class="header-ul-nav">
+          <li class="header-cell"><a href="#">新闻中心</a href="#"></li>
+          <li class="header-cell"><a href="#">廉政建设</a href="#"></li>
+          <li class="header-cell link-active"><a href="#" class="link-active">年度考核须知</a href="#"></li>
+          <li class="header-cell"><a href="#">政策法规</a href="#"></li>
+          <li class="header-cell"><a href="#">公示公告</a href="#"></li>
+        </ul>
+      </div>
     </div>
   </header>
-  <div class="breadcrumbs-container breadcrumbs-default">
-    <div class="breadcrumbs-cell">
-      <i class="fa fa-home"></i>
-      <span>主页</span>
+  <div class="breadcrumbs-container">
+    <h1 class="component-name">breadcrumbs</h1>
+    <h2 class="sub-component-name">default</h2>
+    <div class="breadcrumbs-warpper breadcrumbs-default">
+      <div class="breadcrumbs-cell">
+        <i class="fa fa-home"></i>
+        <span>主页</span>
+      </div>
+      <div class="breadcrumbs-cell">
+        <span>培训考核</span>
+      </div>
+      <div class="breadcrumbs-cell">
+        <span>考核评价</span>
+      </div>
+      <div class="breadcrumbs-cell">
+        <span>考核评价考核评价</span>
+      </div>
+      <div class="breadcrumbs-cell">
+        <span>考核评价</span>
+      </div>
     </div>
-    <div class="breadcrumbs-cell">
-      <span>培训考核</span>
-    </div>
-    <div class="breadcrumbs-cell">
-      <span>考核评价</span>
+    <h2 class="sub-component-name">primary</h2>
+    <div class="breadcrumbs-warpper breadcrumbs-primary">
+      <div class="breadcrumbs-cell">
+        <i class="fa fa-home"></i>
+        <span>主页</span>
+      </div>
+      <div class="breadcrumbs-cell">
+        <span>培训考核</span>
+      </div>
+      <div class="breadcrumbs-cell">
+        <span>考核评价</span>
+      </div>
+      <div class="breadcrumbs-cell">
+        <span>考核评价考核评价</span>
+      </div>
+      <div class="breadcrumbs-cell">
+        <span>考核评价</span>
+      </div>
     </div>
   </div>
   <div class="pages-container" id="pages-container" style="display:none">
+    <h1 class="component-name">swiper</h1>
     <div class="pages" id="pages">
       <div class="page currentitem">
         <div class="item-content" style="background-image:url('assets/banner/default.png')">
@@ -81,6 +115,7 @@
     </nav>
   </div>
   <div class="library-container" style="display:none">
+    <h1 class="component-name">library</h1>
     <div class="library-item-list">
       <a href="" class="library-item" style="background-image:url('assets/library/item_two_l.png')">
         <div class="css-item-cover" style="background-color:#493824"></div>
@@ -111,7 +146,8 @@
       </a>
     </div>
   </div>
-  <div id="collapse-container" class="primary"  style="display:none">
+  <div id="collapse-container" class="primary" style="display:none">
+    <h1 class="component-name">collapse</h1>
     <div class="collapse-div">
       <div class="collapse-title">
         <i class="fa"></i>
@@ -147,6 +183,8 @@
     </div>
   </div>
   <div class="category-container">
+    <h1 class="component-name">category</h1>
+    <h2 class="sub-component-name">category-main</h2>
     <div class="category-main">
       <a href="#" class="category-main-item">
         <p>重要文章重要文章</p>
@@ -161,7 +199,8 @@
         <i class="fa fa-fort-awesome"></i>
       </a>
     </div>
-    <div class="category-primary">
+    <h2 class="sub-component-name">category-default</h2>
+    <div class="category-default">
       <a href="#" class="category-pri-item">
         <i class="fa fa-anchor"></i>
         <p>重要文章重要文章重要文章</p>
@@ -179,88 +218,102 @@
         <p>活动</p>
       </a>
     </div>
-    <div class="category-pri-icon">
-      <div class="category-pri-icon-row">
+    <h2 class="sub-component-name">category-lof5</h2>
+    <div class="category-lof5">
+      <div class="category-lof5-row">
         <a href="#" class="category-icon-item">
-          <div class="icon-item-bg">
-            <i class="fa fa-anchor"></i>            
+          <div class="icon-item-bg" style="background:#ffc306">
+            <i class="fa fa-anchor"></i>
           </div>
           <p>重要文章重要文章重要文章</p>
         </a>
         <a href="#" class="category-icon-item">
-          <div class="icon-item-bg">
-            <i class="fa fa-anchor"></i>            
+          <div class="icon-item-bg" style="background:#fb7e59">
+            <i class="fa fa-anchor"></i>
           </div>
           <p>重要文章重要文章重要文章</p>
         </a>
         <a href="#" class="category-icon-item">
-          <div class="icon-item-bg">
-            <i class="fa fa-anchor"></i>            
+          <div class="icon-item-bg" style="background:#5bb5ec">
+            <i class="fa fa-anchor"></i>
           </div>
           <p>重要文章</p>
         </a>
         <a href="#" class="category-icon-item">
-          <div class="icon-item-bg">
-            <i class="fa fa-anchor"></i>            
+          <div class="icon-item-bg" style="background:#73bec1">
+            <i class="fa fa-anchor"></i>
           </div>
           <p>重要文章</p>
         </a>
       </div>
-      <div class="category-pri-icon-row">
+      <div class="category-lof5-row">
         <a href="#" class="category-icon-item">
-          <div class="icon-item-bg">
-            <i class="fa fa-anchor"></i>            
+          <div class="icon-item-bg" style="background:#ffc306">
+            <i class="fa fa-anchor"></i>
           </div>
           <p>重要文章重要文章重要文章重要文章</p>
         </a>
         <a href="#" class="category-icon-item">
-          <div class="icon-item-bg">
-            <i class="fa fa-anchor"></i>            
+          <div class="icon-item-bg" style="background:#ffc306">
+            <i class="fa fa-anchor"></i>
           </div>
           <p>重要文章重要文章重要文章</p>
         </a>
         <a href="#" class="category-icon-item">
-          <div class="icon-item-bg">
-            <i class="fa fa-anchor"></i>            
+          <div class="icon-item-bg" style="background:#ffc306">
+            <i class="fa fa-anchor"></i>
           </div>
           <p>重要文章</p>
         </a>
         <a href="#" class="category-icon-item">
-          <div class="icon-item-bg">
-            <i class="fa fa-anchor"></i>            
+          <div class="icon-item-bg" style="background:#ffc306">
+            <i class="fa fa-anchor"></i>
           </div>
           <p>重要文章</p>
         </a>
         <a href="#" class="category-icon-item">
-          <div class="icon-item-bg">
-            <i class="fa fa-anchor"></i>            
+          <div class="icon-item-bg" style="background:#ffc306">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <p>重要文章</p>
+        </a>
+        <a href="#" class="category-icon-item">
+          <div class="icon-item-bg" style="background:#ffc306">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <p>重要文章</p>
+        </a>
+        <a href="#" class="category-icon-item">
+          <div class="icon-item-bg" style="background:#ffc306">
+            <i class="fa fa-anchor"></i>
           </div>
           <p>重要文章</p>
         </a>
       </div>
     </div>
-    <div class="category-lnk-lof2">
-      <a href="#" class="lnk-lof2-item">
+    <h2 class="sub-component-name">category-lof2-left</h2>
+    <div class="category-lof2-left">
+      <a href="#" class="lof2-left-item">
         <div class="item-container">
-          <i class="fa fa-bullhorn"></i>
+          <i class="fa fa-bullhorn" style="color:#fd7e59"></i>
           <div class="item-txt">
             <p class="title">政策法规政策法规政策法规政策法规</p>
             <p class="describe">描述文字描述文字描述文字描述文字描述文字</p>
           </div>
         </div>
       </a>
-      <a href="#" class="lnk-lof2-item">
+      <a href="#" class="lof2-left-item">
         <div class="item-container">
-          <i class="fa fa-bullhorn"></i>
+          <i class="fa fa-bullhorn" style="color:#5bb5ec"></i>
           <div class="item-txt">
             <p class="title">政策法规</p>
             <p class="describe">描述文字描述文字描述文字描述文字描述文字</p>
           </div>
         </div>
       </a>
-      <a href="#" class="lnk-lof2-item">
+      <a href="#" class="lof2-left-item">
         <div class="item-container">
-          <i class="fa fa-bullhorn"></i>
+          <i class="fa fa-bullhorn" style="color:#73bec1"></i>
           <div class="item-txt">
             <p class="title">政策法规</p>
             <p class="describe">描述文字描述文字描述文字描述文字描述文字</p>
@@ -268,10 +321,11 @@
         </div>
       </a>
     </div>
-    <div class="category-lnk-icon-lof2">
-      <a href="#" class="lnk-lof2-item">
+    <h2 class="sub-component-name">category-lof2-right</h2>
+    <div class="category-lof2-right">
+      <a href="#" class="lof2-right-item">
         <div class="item-container">
-          <div class="icon-bg">
+          <div class="icon-bg" style="background:#fb7e59">
             <i class="fa fa-bullhorn"></i>          
           </div>
           <div class="item-txt">
@@ -280,9 +334,9 @@
           </div>
         </div>
       </a>
-      <a href="#" class="lnk-lof2-item">
+      <a href="#" class="lof2-right-item">
         <div class="item-container">
-          <div class="icon-bg">
+          <div class="icon-bg" style="background:#ffc306">
             <i class="fa fa-bullhorn"></i>          
           </div>
           <div class="item-txt">
@@ -291,9 +345,9 @@
           </div>
         </div>
       </a>
-      <a href="#" class="lnk-lof2-item">
+      <a href="#" class="lof2-right-item">
         <div class="item-container">
-          <div class="icon-bg">
+          <div class="icon-bg" style="background:#5bb5ec">
             <i class="fa fa-bullhorn"></i>          
           </div>
           <div class="item-txt">
@@ -303,9 +357,10 @@
         </div>
       </a>
     </div>
-    <div class="category-lnk-lof1">
-      <a href="#" class="lnk-lof1-item">
-        <div class="icon-bg">
+    <h2 class="sub-component-name">category-lof1</h2>
+    <div class="category-lof1">
+      <a href="#" class="lof1-item">
+        <div class="icon-bg" style="background:#ffc306">
           <i class="fa fa-bullhorn"></i>        
         </div>
         <div class="item-txt">
@@ -313,8 +368,8 @@
           <p class="describe">描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字</p>
         </div>
       </a>
-      <a href="#" class="lnk-lof1-item">
-        <div class="icon-bg">
+      <a href="#" class="lof1-item">
+        <div class="icon-bg" style="background:#5bb5ec">
           <i class="fa fa-bullhorn"></i>        
         </div>
         <div class="item-txt">
@@ -322,8 +377,8 @@
           <p class="describe">描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字</p>
         </div>
       </a>
-      <a href="#" class="lnk-lof1-item">
-        <div class="icon-bg">
+      <a href="#" class="lof1-item">
+        <div class="icon-bg" style="background:#73bec1">
           <i class="fa fa-bullhorn"></i>        
         </div>
         <div class="item-txt">
@@ -332,9 +387,10 @@
         </div>
       </a>
     </div>
-    <div class="category-lnk-lof1-nodes">
+    <h2 class="sub-component-name">category-lof1-noinfo</h2>
+    <div class="category-lof1-noinfo">
       <a href="#" class="lof1-nodes-item">
-        <div class="icon-bg">
+        <div class="icon-bg" style="background:#ffc306">
           <i class="fa fa-bullhorn"></i>        
         </div>
         <div class="item-txt">
@@ -342,7 +398,7 @@
         </div>
       </a>
       <a href="#" class="lof1-nodes-item">
-        <div class="icon-bg">
+        <div class="icon-bg" style="background:#ffc306">
           <i class="fa fa-bullhorn"></i>        
         </div>
         <div class="item-txt">
@@ -350,15 +406,16 @@
         </div>
       </a>
     </div>
-    <div class="category-lnk-icon-lof1">
+    <h2 class="sub-component-name">category-lof1-nobg</h2>
+    <div class="category-lof1-nobg">
       <a href="#" class="lof1-icon-item">
-        <i class="fa fa-bullhorn"></i>        
+        <i class="fa fa-bullhorn" style="color:#ffc306"></i>        
         <div class="item-txt">
           <p class="title">政策法规政策法规政策法规政策法规政策法规政策法规</p>
         </div>
       </a>
       <a href="#" class="lof1-icon-item">
-        <i class="fa fa-bullhorn"></i>        
+        <i class="fa fa-bullhorn" style="color:#ffc306"></i>        
         <div class="item-txt">
           <p class="title">政策法规</p>
         </div>
@@ -366,7 +423,9 @@
     </div>
   </div>
   <div class="tab-container">
-    <div class="tab-lof5">
+    <h1 class="component-name">tab</h1>
+    <h2 class="sub-component-name">tab-lof5-default</h2>
+    <div class="tab-lof5-default">
       <div class="lof5-item">
         <div class="lof5-item-wrap active">
           <p>首页</p>
@@ -398,13 +457,15 @@
         </div>
       </div>
     </div>
-    <div class="tab-lof5-default">
+    <h2 class="sub-component-name">tab-lof5-primary</h2>
+    <div class="tab-lof5-primary">
       <div class="lof5-item"><p class="active">首页</p></div>
       <div class="lof5-item"><p>首页</p></div>
       <div class="lof5-item"><p>首页</p></div>
       <div class="lof5-item"><p>首页</p></div>
       <div class="lof5-item"><p>首页</p></div>
     </div>
+    <h2 class="sub-component-name">tab-label</h2>
     <div class="tab-label">
       <div class="label-container">
         <div class="label-item active">重要文章</div>
@@ -414,36 +475,49 @@
         <div class="label-item">重要文章</div>
       </div>
     </div>
-    <div class="tab-border">
-      <div class="tab-border-container">
-        <a href="#" class="tab-border-item active">首页</a>
-        <a href="#" class="tab-border-item">首页</a>
-        <a href="#" class="tab-border-item">首页</a>
-        <a href="#" class="tab-border-item">首页</a>
+    <h2 class="sub-component-name">tab-lof4</h2>
+    <div class="tab-lof4">
+      <div class="tab-lof4-row">
+        <a href="#" class="lof4-item active">首页</a>
+        <a href="#" class="lof4-item">首页</a>
+        <a href="#" class="lof4-item">首页</a>
+        <a href="#" class="lof4-item">首页</a>
       </div>
     </div>
   </div>
   <div class="button-group">
+    <h1 class="component-name">button-group</h1>
+    <h2 class="sub-component-name">样式一</h2>
+    <h3 class="sub-component-name">large</h3>
     <input type="button" class="btn btn-large btn-default" value="default">
     <input type="button" class="btn btn-large btn-default" value="default" disabled>
-    <input type="button" class="btn btn-large btn-primary" value="primary">
-    <input type="button" class="btn btn-large btn-primary" value="primary" disabled>
-    <input type="button" class="btn btn-large btn-default-line" value="default">
-    <input type="button" class="btn btn-large btn-default-line" value="default" disabled>
-    <input type="button" class="btn btn-large btn-primary-line" value="primary">
-    <input type="button" class="btn btn-large btn-primary-line" value="primary" disabled>
-
+    <h3 class="sub-component-name">mini</h3>
     <input type="button" class="btn btn-mini btn-default" value="default">
     <input type="button" class="btn btn-mini btn-default" value="default" disabled>
+    <h2 class="sub-component-name">样式二</h2>
+    <h3 class="sub-component-name">large</h3>
+    <input type="button" class="btn btn-large btn-primary" value="primary">
+    <input type="button" class="btn btn-large btn-primary" value="primary" disabled>
+    <h3 class="sub-component-name">mini</h3>
     <input type="button" class="btn btn-mini btn-primary" value="primary">
     <input type="button" class="btn btn-mini btn-primary" value="primary" disabled>
-    <br/>
+    <h2 class="sub-component-name">样式三</h2>
+    <h3 class="sub-component-name">large</h3>
+    <input type="button" class="btn btn-large btn-default-line" value="default">
+    <input type="button" class="btn btn-large btn-default-line" value="default" disabled>
+    <h3 class="sub-component-name">mini</h3>
     <input type="button" class="btn btn-mini btn-default-line" value="default">
     <input type="button" class="btn btn-mini btn-default-line" value="default" disabled>
+    <h2 class="sub-component-name">样式四</h2>
+    <h3 class="sub-component-name">large</h3>
+    <input type="button" class="btn btn-large btn-primary-line" value="primary">
+    <input type="button" class="btn btn-large btn-primary-line" value="primary" disabled>
+    <h3 class="sub-component-name">mini</h3>
     <input type="button" class="btn btn-mini btn-primary-line" value="primary">
     <input type="button" class="btn btn-mini btn-primary-line" value="primary" disabled>
   </div>
   <div class="profile-container">
+    <h1 class="component-name">profile</h1>
     <a class="profile-cell">
       <div class="cell-title"><span>头像</span></div>
       <div class="cell-value">
@@ -481,6 +555,7 @@
     </a>
   </div>
   <div class="spinner-container">
+    <h1 class="component-name">spinner</h1>
     <div class="spinner-cell">
       <div class="cell-title"><span>rolling</span></div>
       <div class="cell-value"><span><div class="spinner-rolling" style="border-top-color: black;border-left-color: black;border-bottom-color: black;height: 28px;width: 28px;"></div></span></div>
@@ -513,16 +588,20 @@
     </div>
   </div>
   <div class="picture-container">
-    <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_l.png')">
-    </a>
-    <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_m.png')">
-    </a>
-    <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_r.png')">
-    </a>
-    <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_l.png')">
-    </a>
+    <h1 class="component-name">picture</h1>
+    <div class="picture-container-wrapper">
+      <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_l.png')">
+      </a>
+      <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_m.png')">
+      </a>
+      <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_r.png')">
+      </a>
+      <a href="#" class="picture-item" style="background-image:url('/assets/library/item_three_l.png')">
+      </a>
+    </div>
   </div>
   <div class="attachment-container">
+    <h1 class="component-name">attachment</h1>
     <div class="attachment-wrap">
       <div class="attach-items excel">
         <div class="attach-item-left">
@@ -581,6 +660,8 @@
     </div>
   </div>
   <div class="search-container">
+    <h1 class="component-name">search</h1>
+    <h2 class="sub-component-name">default</h2>
     <div class="search-cell default">
       <div class="search-cell-left"></div>
       <div class="search-cell-wrapper">
@@ -588,6 +669,7 @@
       </div>
       <div class="search-cell-right"></div>
     </div>
+    <h2 class="sub-component-name">点击搜索样式一</h2>
     <div class="search-cell primary1">
       <div class="search-cell-left">
         <i class="fa fa-arrow-left"></i>
@@ -599,6 +681,8 @@
         <i class="fa fa-search"></i>
       </div>
     </div>
+    <div class="content"></div>
+    <h2 class="sub-component-name">点击搜索样式二</h2>
     <div class="search-cell primary2">
       <div class="search-cell-left">
         <i class="fa fa-arrow-left"></i>
@@ -610,10 +694,14 @@
       <div class="search-cell-right">
       </div>
     </div>
+    <div class="content"></div>
   </div>
   <div class="product-container">
-    <div class="product-row">
-      <div class="product-row-cell">
+    <h1 class="component-name">product</h1>
+    <h2 class="sub-component-name">row</h2>
+
+    <ul class="product-row">
+      <li class="product-row-cell">
         <div class="product-cell-left">
           <img src="/assets/library/item_three_l.png" width="100%" height="100%">
         </div>
@@ -621,8 +709,8 @@
           <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本 Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
           <span class="product-price"><i>&yen;</i>6188.00</span>
         </div>
-      </div>
-      <div class="product-row-cell">
+      </li>
+      <li class="product-row-cell">
         <div class="product-cell-left">
           <img src="/assets/library/item_three_l.png" width="100%" height="100%"/>
         </div>
@@ -630,35 +718,44 @@
           <span class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</span>
           <span class="product-price"><i>&yen;</i>6188.00</span>
         </div>
-      </div>
-    </div>
-    <div class="product-column">
-      <div class="product-column-cell">
-        <div class="product-cell-top">
+      </li>
+    </ul>
+    <h2 class="sub-component-name">column</h2>
+    
+    <ul class="product-column">
+      <li class="product-column-cell">
+        <div class="product-cell-img">
           <img src="/assets/library/item_three_l.png" width="100%" height="100%">
         </div>
-        <div class="product-cell-bottom">
-          <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
-          <span class="product-price"><i>&yen;</i>6188.00</span>
-        </div>
-      </div>
-      <div class="product-column-cell">
-        <div class="product-cell-top">
+        <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
+        <span class="product-price"><i>&yen;</i>6188.00</span>
+      </li>
+      <li class="product-column-cell">
+        <div class="product-cell-img">
           <img src="/assets/library/item_three_l.png" width="100%" height="100%">
         </div>
-        <div class="product-cell-bottom">
-          <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
-          <span class="product-price"><i>&yen;</i>6188.00</span>
-        </div>
-      </div>
-      <div class="product-column-cell">
-        <div class="product-cell-top">
+        <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
+        <span class="product-price"><i>&yen;</i>6188.00</span>
+      </li>
+      <li class="product-column-cell">
+        <div class="product-cell-img">
           <img src="/assets/library/collapse_bg.jpg" width="100%" height="100%">
         </div>
-        <div class="product-cell-bottom">
-          <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
-          <span class="product-price"><i>&yen;</i>6188.00</span>
+        <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
+        <span class="product-price"><i>&yen;</i>6188.00</span>
+      </li>
+    </ul>
+    <h2 class="sub-component-name">details</h2>
+    
+    <div class="product-details">
+      <div class="product-details-cell">
+        <div class="product-cell-img" style="background-image:url('assets/library/item_three_l.png')">
+          <!-- <img src="/assets/library/item_three_l.png"> -->
         </div>
+        <a class="product-cell-title">
+          <span>Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</span>
+        </a>
+        <span class="product-cell-price"><i>&yen;</i>6188.00</span>
       </div>
     </div>
   </div>

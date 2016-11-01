@@ -1,9 +1,9 @@
 @import '../parm';
 
 .attachment-container {
-  padding: 20px;
   background: #fff;
   .attachment-wrap {
+    margin: 20px;
     border: 1px solid $color-main;
     
     .attach-items {

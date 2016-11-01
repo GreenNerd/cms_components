@@ -34,10 +34,25 @@ input[type="button"], input[type="submit"], input[type="reset"] {
 textarea {  
 	-webkit-appearance: none;
 }   
+.component-name {
+	margin: 20px 10px;
+	font-size: 40px;
+	position: relative;
+	&:before {
+    position: absolute;
+    width: 100%;
+    bottom: -5px;
+    content: '';
+    color: #e3e3e3;
+    border-bottom: 1px solid;
+	}
+}
+.sub-component-name {
+	margin: 20px;
+}
 
 .button-group{
 	background: #fff;
-	text-align: center;
 }
 .button-group>*{
 	margin-bottom: 15px;

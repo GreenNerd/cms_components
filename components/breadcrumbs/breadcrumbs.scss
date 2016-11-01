@@ -1,9 +1,9 @@
 @import '../parm';
 
 .breadcrumbs-container {
-  display: flex;
 
   .breadcrumbs-cell {
+    display: inline-block;
     padding: 0 12px;
     font-size: $h4;
     position: relative;

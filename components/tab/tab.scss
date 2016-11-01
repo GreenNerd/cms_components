@@ -2,7 +2,7 @@
 .tab-container {
   background: #fff;
 
-  .tab-lof5 {
+  .tab-lof5-default {
     height: 49px;
     display: flex;
     margin: 0 10px;
@@ -35,7 +35,7 @@
     }
   }
 
-  .tab-lof5-default {
+  .tab-lof5-primary {
     height: 49px;
     display: flex;
     margin: 0 10px;
@@ -93,11 +93,11 @@
     }
   }
 
-  .tab-border {
+  .tab-lof4 {
     margin: 10px 0;
     overflow: hidden;
 
-    .tab-border-container {
+    .tab-lof4-row {
       width: 75%;
       height: 34px;
       border: 1px solid $color-main;
@@ -107,7 +107,7 @@
       justify-content: space-around;
       flex-wrap: wrap;
 
-      .tab-border-item {
+      .lof4-item {
         flex: 1 0 24%;
         width: 100%;
         text-align: center;
