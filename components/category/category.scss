@@ -32,7 +32,7 @@
         line-height: 49px;
         left: 10px;
         z-index: 10;
-        color: black;
+        color: $color-black;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -67,7 +67,7 @@
 
       p{
         font-size: $h5;
-        color: black;
+        color: $color-black;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -76,7 +76,7 @@
       i{
         margin: 5px 0 4px;
         font-size: 1.1em;
-        color: black;
+        color: $color-black;
       }
     }
   }
@@ -104,12 +104,12 @@
           i{
             line-height: 37px;
             font-size: 1em;
-            color: black;
+            color: $color-black;
           }
         }
         p{
           font-size: $h6;
-          color: black;
+          color: $color-black;
           margin: auto;
           overflow: hidden;
           text-overflow: ellipsis;

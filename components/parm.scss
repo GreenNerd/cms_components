@@ -20,3 +20,8 @@ $h3:17px;
 $h4:16px;
 $h5:14px;
 $h6:13px;
+
+@mixin img-size($side:80px) {
+	width: $side;
+	height: $side;
+}

@@ -46,11 +46,11 @@
 
   .header-cell-group {
     position: absolute;
-    background: #000;
+    background: $color-black;
     width: 100%;
     overflow-x: visible;
 
-    transition-timing-function: ease;
+    transition-timing-function: ease-out;
     transition-duration: .35s;
     transition-property: height visibility;
     
@@ -81,16 +81,26 @@
           color: $color-main;
         }
       }
+      .header-cell-item {
+        opacity: 1;
+        transform: none;
+      }
     }
   }
 
 }
 .header-collapse {
-  // display: none;
   visibility: hidden;
   overflow-y: auto;
 }
 .in {
-  // display: block;
   visibility: visible;
+}
+
+@media only screen and (max-width: 767px) {
+  .header-cell-item {
+    opacity: 0;
+    transform: scale(1.1) translateY(-24px);
+    transition: opacity 0.35s ease-out,transform ease-out,-webkit-transform ease-out;    
+  }
 }

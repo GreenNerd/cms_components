@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
   <title>cms</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
-  <meta name = "format-detection" content = "telephone=no">
 </head>
 <body>
   <header class="header-container fixed-top">
@@ -23,11 +22,11 @@
     <div class="header-list">
       <div id="globalnav" class="header-cell-group header-collapse" style="height:0;">
         <ul class="header-ul-nav">
-          <li class="header-cell"><a href="#">新闻中心</a href="#"></li>
-          <li class="header-cell"><a href="#">廉政建设</a href="#"></li>
-          <li class="header-cell link-active"><a href="#" class="link-active">年度考核须知</a href="#"></li>
-          <li class="header-cell"><a href="#">政策法规</a href="#"></li>
-          <li class="header-cell"><a href="#">公示公告</a href="#"></li>
+          <li class="header-cell header-cell-item"><a href="#">新闻中心</a href="#"></li>
+          <li class="header-cell header-cell-item"><a href="#">廉政建设</a href="#"></li>
+          <li class="header-cell header-cell-item link-active"><a href="#" class="link-active">年度考核须知</a href="#"></li>
+          <li class="header-cell header-cell-item"><a href="#">政策法规</a href="#"></li>
+          <li class="header-cell header-cell-item"><a href="#">公示公告</a href="#"></li>
         </ul>
       </div>
     </div>
@@ -73,7 +72,7 @@
       </div>
     </div>
   </div>
-  <div class="pages-container" id="pages-container" style="display:none">
+  <div class="pages-container" id="pages-container">
     <h1 class="component-name">swiper</h1>
     <div class="pages" id="pages">
       <div class="page currentitem">
@@ -114,7 +113,55 @@
       </ul>
     </nav>
   </div>
-  <div class="library-container" style="display:none">
+  <div class="example">
+    <h1>library</h1>
+    <div class="subexample">
+      <div class="library-item-list">
+        <a href="#" class="library-item" style="background-image:url('assets/library/item_two_l.png')">
+          <div class="css-item-cover" style="background-color:#493824"></div>
+          <span class="library-item-name">政法</br>法规</span>
+          <i class="library-item-icon fa fa-bullhorn"></i>
+        </a>
+        <a href="#" class="library-item" style="background-image:url('assets/library/item_two_r.png')">
+          <div class="css-item-cover" style="background-color:#51644b"></div>
+          <span class="library-item-name">职业</br>卫生</span>
+          <i class="library-item-icon fa fa-briefcase"></i>
+        </a>
+      </div>
+      <div class="library-item-list">
+        <a href="" class="library-item" style="background-image:url('assets/library/item_three_l.png')">
+          <div class="css-item-cover" style="background-color:#888"></div>
+          <span class="library-item-name">标准化</br>建设</span>
+          <i class="library-item-icon fa fa-wpforms"></i>
+        </a>
+        <a href="" class="library-item" style="background-image:url('assets/library/item_three_m.png')">
+          <div class="css-item-cover" style="background-color:#666d64"></div>
+          <span class="library-item-name">社区</br>安全</span>
+          <i class="library-item-icon fa fa-shield"></i>
+        </a>
+        <a href="" class="library-item" style="background-image:url('assets/library/item_three_r.png')">
+          <div class="css-item-cover" style="background-color:#5f5549"></div>
+          <span class="library-item-name">经验</br>交流</span>
+          <i class="library-item-icon fa fa-smile-o"></i>
+        </a>
+      </div>
+    </div>
+    <pre class="usage">
+      <ol class="linenums">
+        <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"library-item-list"</span><span class="tag">&gt;</span></li>
+        <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"library-item"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-image:url(...)"</span><span class="tag">&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"css-item-cover"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-color:#493824"</span><span class="tag">&gt;&lt;/div&gt;</span></li>
+        <li class="L3"><span class="pln">    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"library-itme-name"</span><span class="tag">&gt;<span class="pln">职业</span><span class="tag">&lt;/br&gt;</span><span class="pln">卫生</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L4"><span class="pln">    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"library-item-icon fa fa-briefcase"</span><span class="tag">&gt;</span><span class="tag">&lt;/i&gt;</span></li>
+        <li class="L5"><span class="pln">  </span><span class="tag">&lt;/a&gt;</span></li>
+        <li class="L6"><span class="pln">  ...</span></li>
+        <li class="L7"><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L8"></li>
+        <li class="L9"><span class="tag">*可放置2-3个a标签*</span></li>
+      </ol>
+    </pre>
+  </div>
+<!--   <div class="library-container" >
     <h1 class="component-name">library</h1>
     <div class="library-item-list">
       <a href="" class="library-item" style="background-image:url('assets/library/item_two_l.png')">
@@ -145,8 +192,8 @@
         <i class="library-item-icon fa fa-smile-o"></i>
       </a>
     </div>
-  </div>
-  <div id="collapse-container" class="primary" style="display:none">
+  </div> -->
+  <div id="collapse-container" class="primary" >
     <h1 class="component-name">collapse</h1>
     <div class="collapse-div">
       <div class="collapse-title">
@@ -422,67 +469,61 @@
       </a>
     </div>
   </div>
-  <div class="tab-container">
-    <h1 class="component-name">tab</h1>
-    <h2 class="sub-component-name">tab-lof5-default</h2>
-    <div class="tab-lof5-default">
-      <div class="lof5-item">
-        <div class="lof5-item-wrap active">
-          <p>首页</p>
-          <div class="underline"></div>
-        </div>
-      </div>
-      <div class="lof5-item">
-        <div class="lof5-item-wrap">
-          <p>首页</p>
-          <div class="underline"></div>
-        </div>
-      </div>
-      <div class="lof5-item">
-        <div class="lof5-item-wrap">
-          <p>首页</p>
-          <div class="underline"></div>
-        </div>
-      </div>
-      <div class="lof5-item">
-        <div class="lof5-item-wrap">
-          <p>首页</p>
-          <div class="underline"></div>
-        </div>
-      </div>
-      <div class="lof5-item">
-        <div class="lof5-item-wrap">
-          <p>首页</p>
-          <div class="underline"></div>
-        </div>
-      </div>
+  <div class="example">
+    <h1>tab</h1>
+    <div class="subexample">
+      <h2>tab-lof5-default</h2>
+      <ul class="tab-cell tab-lof5-default">
+        <li class="tab-item active"><p>首页</p></li>
+        <li class="tab-item"><p>首页</p></li>
+        <li class="tab-item"><p>首页</p></li>
+        <li class="tab-item"><p>首页</p></li>
+        <li class="tab-item"><p>首页</p></li>
+      </ul>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"nav nav-tabs"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item active"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;p</span><span class="tag">></span><span class="pln">首页</span><span class="tag">&lt;/p</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln"> </span><span class="tag">&lt;/li&gt;</span></li>
+          <li class="L4"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;p</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/p&gt;&lt;/li&gt;</span></li>
+          <li class="L5"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;p</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/p&gt;&lt;/li&gt;</span></li>
+          <li class="L6"><span class="pln"> ...</span></li>
+          <li class="L7"><span class="tag">&lt;/ul&gt;</span></li>
+        </ol>
+      </pre>
     </div>
-    <h2 class="sub-component-name">tab-lof5-primary</h2>
-    <div class="tab-lof5-primary">
-      <div class="lof5-item"><p class="active">首页</p></div>
-      <div class="lof5-item"><p>首页</p></div>
-      <div class="lof5-item"><p>首页</p></div>
-      <div class="lof5-item"><p>首页</p></div>
-      <div class="lof5-item"><p>首页</p></div>
+
+    <div class="subexample">
+      <h2>tab-lof5-primary</h2>
+      <ul class="tab-cell tab-lof5-primary">
+        <li class="tab-item active"><p>首页</p></li>
+        <li class="tab-item"><p>首页</p></li>
+        <li class="tab-item"><p>首页</p></li>
+        <li class="tab-item"><p>首页</p></li>
+        <li class="tab-item"><p>首页</p></li>
+      </ul>
+      <div class="usage"></div>
     </div>
-    <h2 class="sub-component-name">tab-label</h2>
-    <div class="tab-label">
-      <div class="label-container">
-        <div class="label-item active">重要文章</div>
-        <div class="label-item">重要文章</div>
-        <div class="label-item">重要文章</div>
-        <div class="label-item">重要文章</div>
-        <div class="label-item">重要文章</div>
-      </div>
+
+    <div class="subexample">
+      <h2>tab-label</h2>
+      <ul class="tab-cell tab-label">
+        <li class="tab-item active">重要文章</li>
+        <li class="tab-item">重要文章</li>
+        <li class="tab-item">重要文章</li>
+        <li class="tab-item">重要文章</li>
+      </ul>
     </div>
-    <h2 class="sub-component-name">tab-lof4</h2>
-    <div class="tab-lof4">
-      <div class="tab-lof4-row">
-        <a href="#" class="lof4-item active">首页</a>
-        <a href="#" class="lof4-item">首页</a>
-        <a href="#" class="lof4-item">首页</a>
-        <a href="#" class="lof4-item">首页</a>
-      </div>
+
+    <div class="subexample">
+      <h2>tab-lof4</h2>
+      <ul class="tab-cell tab-lof4">
+        <li class="tab-item active">首页</li>
+        <li class="tab-item">首页</li>
+        <li class="tab-item">首页</li>
+        <li class="tab-item">首页</li>
+      </ul>
     </div>
   </div>
   <div class="button-group">
@@ -522,7 +563,7 @@
       <div class="cell-title"><span>头像</span></div>
       <div class="cell-value">
         <i class="fa fa-angle-right"></i>
-        <div class="head"><i class="fa fa-car"></i></div>
+        <div class="head"><img src="/assets/library/item_three_l.png"></div>
       </div>
     </a>
     <a class="profile-cell">
@@ -536,7 +577,7 @@
       <div class="cell-title"><span>电话</span></div>
       <div class="cell-value">
         <i class="fa fa-angle-right"></i>
-        <span>18200501125</span>
+        <a href="tel:18200501125">18200501125</a>
       </div>
     </a>
     <a class="profile-cell">
@@ -665,7 +706,7 @@
     <div class="search-cell default">
       <div class="search-cell-left"></div>
       <div class="search-cell-wrapper">
-        <input class="search-input" type="" name="search" placeholder="搜索内容">
+        <input class="search-input default-input" type="" name="search" placeholder="搜索内容" >
       </div>
       <div class="search-cell-right"></div>
     </div>
@@ -750,13 +791,130 @@
     <div class="product-details">
       <div class="product-details-cell">
         <div class="product-cell-img" style="background-image:url('assets/library/item_three_l.png')">
-          <!-- <img src="/assets/library/item_three_l.png"> -->
         </div>
         <a class="product-cell-title">
           <span>Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</span>
         </a>
         <span class="product-cell-price"><i>&yen;</i>6188.00</span>
       </div>
+    </div>
+  </div>
+  <div class="pagination-container">
+    <h1 class="component-name">pagination</h1>
+    <h2 class="sub-component-name">pagination-normal-main</h2>
+    <div id="js-pagination-select" class="pagination normal-main">
+      <div class="page-cell-left disable">
+        <span>上一页</span>
+      </div>
+      <div class="page-cell-wrapper">
+        <div class="page-menu">
+          <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
+          <div class="pagenumber style-main">
+            <a>1</a>
+            <a>2</a>
+            <a>3</a>
+            <a>4</a>
+            <a>5</a>
+            <a>6</a>
+            <a>7</a>
+            <a>8</a>
+            <a>9</a>
+            <a>10</a>
+            <a>11</a>
+          </div>
+        </div>
+      </div>
+      <div class="page-cell-right">
+        <span>下一页</span>
+      </div>
+    </div>
+    <h2 class="sub-component-name">pagination-normal-default</h2>
+    <div class="pagination normal-default">
+      <div class="page-cell-left disable">
+        <span>上一页</span>
+      </div>
+      <div class="page-cell-wrapper">
+        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
+      </div>
+      <div class="page-cell-right">
+        <span>下一页</span>
+      </div>
+    </div>
+    <h2 class="sub-component-name">pagination-default</h2>
+    <div class="pagination default">
+      <div class="page-cell-left disable">
+        <span>上一页</span>
+      </div>
+      <div class="page-cell-wrapper">
+        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
+      </div>
+      <div class="page-cell-right">
+        <span>下一页</span>
+      </div>
+    </div>
+    <h2 class="sub-component-name">pagination-default-bg</h2>
+    <div class="pagination default-bg">
+      <div class="page-cell-left disable">
+        <span>上一页</span>
+      </div>
+      <div class="page-cell-wrapper">
+        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
+      </div>
+      <div class="page-cell-right">
+        <span>下一页</span>
+      </div>
+    </div>
+    <h2 class="sub-component-name">pagination-main</h2>
+    <div class="pagination main">
+      <div class="page-cell-left disable">
+        <span>上一页</span>
+      </div>
+      <div class="page-cell-wrapper">
+        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
+      </div>
+      <div class="page-cell-right">
+        <span>下一页</span>
+      </div>
+    </div>
+    <h2 class="sub-component-name">pagination-main-bg</h2>
+    <div class="pagination main-bg">
+      <div class="page-cell-left disable">
+        <span>上一页</span>
+      </div>
+      <div class="page-cell-wrapper">
+        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
+      </div>
+      <div class="page-cell-right">
+        <span>下一页</span>
+      </div>
+    </div>
+    <h2 class="sub-component-name">pagenumber style-default</h2>
+    <div class="pagenumber style-default">
+      <a>1</a>
+      <a>2</a>
+      <a>3</a>
+      <a>4</a>
+      <a>5</a>
+      <a>6</a>
+      <a>7</a>
+      <a>8</a>
+      <a>9</a>
+      <a>10</a>
+      <a>11</a>
+    </div>
+    <h2 class="sub-component-name">pagenumber style-main</h2>
+    <div class="pagenumber style-main">
+      <a>1</a>
+      <a>2</a>
+      <a>3</a>
+      <a>4</a>
+      <a>5</a>
+      <a>6</a>
+      <a>7</a>
+      <a>8</a>
+      <a>9</a>
+      <a>10</a>
+      <a>11</a>
     </div>
   </div>
   <footer class="footer-container">
@@ -777,8 +935,8 @@
       </div>
     </div>
   </footer>
-
-  <script src="assets/bundle.js"></script>
+  
+  <script src="/assets/bundle.js"></script>
   <script>
     //轮播
       // myCarousel({
@@ -803,6 +961,7 @@
         );
 
       var pages = new PageSlide(document.querySelector('.pages'))
+      var pagination = new Pagination('js-pagination-select')
   </script>
 </body>
 </html>

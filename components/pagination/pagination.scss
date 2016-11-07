@@ -1,0 +1,117 @@
+@import '../parm';
+
+.pagination-container {
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    font-size: $h4;
+    color: $color-black;
+
+    .page-cell-wrapper {
+      flex: auto;
+      text-align: center;
+      i {
+        margin-left: 4px;
+      }
+      .page-menu {
+        width: 50%;
+        height: 30px;
+        line-height: 30px;
+        margin: auto;
+      }
+    }
+    .page-cell-left,.page-cell-right {
+      flex: .5;
+      text-align: center;
+      padding: 0 15px;
+      height: 34px;
+      line-height: 34px;
+      border-radius: 4px;
+    }
+
+    .disable {
+      opacity: $disable;
+    }
+  }
+  .normal-main {
+    .page-cell-left,.page-cell-right,.page-cell-wrapper {
+      color: $color-main;
+    }
+  }
+  .normal-default {
+  }
+  .default {
+    .page-cell-left,.page-cell-right {
+      border: 1px solid $color-gray;
+    }
+  }
+  .default-bg {
+    .page-cell-left,.page-cell-right {
+      background: $color-line;
+    }
+  }
+  .main {
+    .page-cell-left,.page-cell-right,.page-cell-wrapper {
+      color: $color-main;
+    }
+    .page-cell-left,.page-cell-right {
+      border: 1px solid $color-main;
+    }
+  }
+  .main-bg {
+    .page-cell-wrapper {
+      color: $color-main;
+    }
+    .page-cell-left,.page-cell-right {
+      background: $color-main;
+      color: #fff;
+    }
+    >.disable {
+      opacity: $disable;
+      // background: rgba(252,125,89,$disable);      
+    }
+  }
+
+  .pagenumber {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-height: 280px;
+    overflow: scroll;
+    margin: 5px 0;
+    background: #fff;
+    border-radius: 4px;
+    
+    a {
+      flex: 1 0 40px;
+      font-size: $h4;
+      width: 100%;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+  .style-default {
+    border: 1px solid $color-line;
+    box-shadow: .4px .4px rgba(0,0,0,.15);
+    a {
+      color: $color-black;
+      &:hover {
+        background: $color-line;
+      }
+    }
+  }
+  .style-main {
+    border: 1px solid $color-main;
+    a {
+      color: $color-main;
+      &:hover {
+        background: $color-main;
+        color: #fff;
+      }
+    }
+  }
+}

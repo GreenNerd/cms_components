@@ -1,50 +1,50 @@
 @import '../parm';
-.tab-container {
-  background: #fff;
-
+.tab-cell {
+  display: flex;
+  .tab-item {
+    text-align: center;
+  }
+}
   .tab-lof5-default {
     height: 49px;
-    display: flex;
     margin: 0 10px;
     overflow: hidden;
-
-    .lof5-item {
+    .tab-item {
       flex: 1 0 20%;
       margin: auto;
-      text-align: -webkit-center;
       height: 100%;
       line-height: 49px;
       position: relative;
-
       p {
+        position: relative;
         display: inline-block;
         font-size: $h4;
         color: #000;
       }
-      .active {       
-        p {
-          color: $color-main;
-        }
-        .underline {
-          width: 25px;
+    }
+    .active {
+      p {
+        color: $color-main;
+        &:before {
+          content: '';
+          position: absolute;
           height: 2px;
           background: $color-main;
-          margin-top: -2px;
+          bottom: 0;
+          left: 0;
+          right: 0;
         }
       }
     }
   }
-
   .tab-lof5-primary {
     height: 49px;
-    display: flex;
     margin: 0 10px;
     overflow: hidden;
     align-items: center;
 
-    .lof5-item {
+    .tab-item {
       flex: 1 0 20%;
-      text-align: center;
 
       p {
         font-size: $h4;
@@ -54,77 +54,63 @@
         display: inline-block;
         border-radius: 4px;
       }
-      .active {
-        color: #fff;
-        background: $color-main;
-      }
-    }     
-  }
-  
-  .tab-label {
-    margin: 5px 0;
-    .label-container {
-      display: flex;
-      flex-wrap: wrap;
-
-      .label-item {
-        flex: 1 0 25%;
-        width: 100%;
-        font-size: $h4;
-        padding: 5px 0;
-        text-align: center;
-        position: relative;
-        &::after {
-          content: '';
-          position: absolute;
-          height: 15px;
-          width: 1px;
-          background: $color-line;
-          right: 0;
-          top: 10px;
-        }
-      }
-      .active {
-        color: $color-main;
-      }
-      :nth-child(4n)::after {
-        display: none;
-      }
+    }
+    .active {
+      color: #fff;
+      background: $color-main;
     }
   }
-
+  .tab-label {
+    margin: 5px 0;
+    flex-wrap: wrap;
+    .tab-item {
+      flex: 1 0 25%;
+      width: 100%;
+      font-size: $h4;
+      padding: 5px 0;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        height: 15px;
+        width: 1px;
+        background: $color-line;
+        right: 0;
+        top: 10px;
+      }
+    }
+    .active {
+      color: $color-main;
+    }
+    :nth-child(4n):after {
+      display: none;
+    }
+  }
   .tab-lof4 {
     margin: 10px 0;
     overflow: hidden;
+    width: 75%;
+    height: 34px;
+    border: 1px solid $color-main;
+    border-radius: 4px;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-    .tab-lof4-row {
-      width: 75%;
-      height: 34px;
-      border: 1px solid $color-main;
-      border-radius: 4px;
-      margin: auto;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+    .tab-item {
+      flex: 1 0 24%;
+      width: 100%;
+      line-height: 34px;
+      border-right: 1px solid $color-main;
+      color: #000;
+    }
 
-      .lof4-item {
-        flex: 1 0 24%;
-        width: 100%;
-        text-align: center;
-        line-height: 34px;
-        border-right: 1px solid $color-main;
-        color: #000;
-      }
+    :last-child {
+      border-right: none;
+    }
 
-      :last-child {
-        border-right: none;
-      }
-
-      .active {
-        color: white;
-        background: $color-main;
-      }
+    .active {
+      color: white;
+      background: $color-main;
     }
   }
-}
-

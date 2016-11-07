@@ -15,13 +15,27 @@ $borderRadius: 4px;
   }
   .default {
     padding: 5px 10px;
-    >.search-cell-wrapper>.search-input {
-      width: 100%;
+    >.search-cell-wrapper>.default-input {
       height: $inputHeight;
       text-align: center;
       border: 1px solid $color-line;
       border-radius: $borderRadius;
+      background-image: url("/assets/library/search.png");
+      background-size: 16px;
+      background-position: 37%;
+      background-repeat: no-repeat;
+      &:focus {
+        background-image: none;
+      }
     }
+    // .default-input {
+    //   background-image: url('/assets/library/collapse_bg.jpg');
+    //   background-repeat: no-repeat;
+    // }
+      // position: absolute;
+      // background: #000;
+      // width: 20px;
+      // height: 20px;
   }
 
   .primary1 {

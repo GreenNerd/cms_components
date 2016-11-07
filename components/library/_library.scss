@@ -5,60 +5,56 @@
 
 $color: #000;
 
-.library-container {
+.library-item-list {
+  @include flex-space-around;
   padding: 20px 10px;
   padding-bottom: 0;
 
-  .library-item-list {
-    @include flex-space-around;
+  .library-item {
+    flex: 1;
 
-    .library-item {
-      flex: 1;
+    background-size: cover;
+    background-position: 50%;
+    text-decoration: none;
+    color: $color;
+    display: block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    max-height: 164px;
+    min-height: 120px;
+    overflow: hidden;
+    padding-bottom: 6%;
 
-      background-size: cover;
-      background-position: 50%;
-      text-decoration: none;
-      color: $color;
-      display: block;
-      margin-right: 8px;
-      margin-bottom: 8px;
-      position: relative;
-      max-height: 164px;
-      min-height: 120px;
-      overflow: hidden;
-      padding-bottom: 6%;
-
-      .library-item-name {
-        position: absolute;
-        font-size: 19px;
-        font-family: Microsoft YaHei;
-        font-weight: bold;
-        left: 14px;
-        top: 14px;
-        color: #fff;
-        line-height: 1.3em;
-      }
-
-      .library-item-icon {
-        position: absolute;
-        font-size: 36px;
-        bottom: 14px;
-        right: 14px;
-        color: #fff;
-      }
-
-      .css-item-cover {
-        width: 100%;
-        height: 100%;
-        opacity: .6;
-        
-        position: absolute;
-      }
-    
+    .library-item-name {
+      position: absolute;
+      font-size: 19px;
+      font-family: Microsoft YaHei;
+      font-weight: bold;
+      left: 14px;
+      top: 14px;
+      color: #fff;
+      line-height: 1.3em;
     }
 
-    :last-child{
-      margin-right: 0;
+    .library-item-icon {
+      position: absolute;
+      font-size: 36px;
+      bottom: 14px;
+      right: 14px;
+      color: #fff;
     }
+
+    .css-item-cover {
+      width: 100%;
+      height: 100%;
+      opacity: .6;
+      
+      position: absolute;
+    }
+  }
+
+  :last-child{
+    margin-right: 0;
   }
 }
