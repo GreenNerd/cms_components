@@ -16,10 +16,44 @@
         margin-left: 4px;
       }
       .page-menu {
+        position: relative;
         width: 50%;
         height: 30px;
         line-height: 30px;
         margin: auto;
+
+        .pagenumber-alt {
+          visibility: hidden;
+          position: absolute;
+          bottom: 30px;
+
+          width: 100%;
+          max-height: 280px;
+          overflow: scroll;
+          margin: 5px 0;
+          background: #fff;
+          border-radius: 4px;
+
+          transition-timing-function: ease-out;
+          transition-duration: .35s;
+          transition-property: height visibility;
+          
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+              flex: 1 0 40px;
+              font-size: $h4;
+              width: 100%;
+              text-align: center;
+              line-height: 40px;
+            }
+          }
+        }
+        .in {
+          visibility: visible;
+        }
       }
     }
     .page-cell-left,.page-cell-right {
@@ -38,18 +72,58 @@
   .normal-main {
     .page-cell-left,.page-cell-right,.page-cell-wrapper {
       color: $color-main;
+      .pagenumber-alt {
+        border: 1px solid $color-main;
+        a {
+          color: $color-main;
+          &:hover {
+            background: $color-main;
+            color: #fff;
+          }
+        }
+      }
     }
   }
   .normal-default {
+    .pagenumber-alt {
+      border: 1px solid $color-line;
+      box-shadow: .4px .4px rgba(0,0,0,.15);
+      a {
+        color: $color-black;
+        &:hover {
+          background: $color-line;
+        }
+      }
+    }
   }
   .default {
     .page-cell-left,.page-cell-right {
       border: 1px solid $color-gray;
     }
+    .pagenumber-alt {
+      border: 1px solid $color-line;
+      box-shadow: .4px .4px rgba(0,0,0,.15);
+      a {
+        color: $color-black;
+        &:hover {
+          background: $color-line;
+        }
+      }
+    }
   }
   .default-bg {
     .page-cell-left,.page-cell-right {
       background: $color-line;
+    }
+    .pagenumber-alt {
+      border: 1px solid $color-line;
+      box-shadow: .4px .4px rgba(0,0,0,.15);
+      a {
+        color: $color-black;
+        &:hover {
+          background: $color-line;
+        }
+      }
     }
   }
   .main {
@@ -58,6 +132,16 @@
     }
     .page-cell-left,.page-cell-right {
       border: 1px solid $color-main;
+    }
+    .pagenumber-alt {
+      border: 1px solid $color-main;
+      a {
+        color: $color-main;
+        &:hover {
+          background: $color-main;
+          color: #fff;
+        }
+      }
     }
   }
   .main-bg {
@@ -72,45 +156,14 @@
       opacity: $disable;
       // background: rgba(252,125,89,$disable);      
     }
-  }
-
-  .pagenumber {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-    max-height: 280px;
-    overflow: scroll;
-    margin: 5px 0;
-    background: #fff;
-    border-radius: 4px;
-    
-    a {
-      flex: 1 0 40px;
-      font-size: $h4;
-      width: 100%;
-      text-align: center;
-      line-height: 40px;
-    }
-  }
-  .style-default {
-    border: 1px solid $color-line;
-    box-shadow: .4px .4px rgba(0,0,0,.15);
-    a {
-      color: $color-black;
-      &:hover {
-        background: $color-line;
-      }
-    }
-  }
-  .style-main {
-    border: 1px solid $color-main;
-    a {
-      color: $color-main;
-      &:hover {
-        background: $color-main;
-        color: #fff;
+    .pagenumber-alt {
+      border: 1px solid $color-main;
+      a {
+        color: $color-main;
+        &:hover {
+          background: $color-main;
+          color: #fff;
+        }
       }
     }
   }

@@ -17,7 +17,14 @@ Pagination.prototype.init = function() {
 	}
 }
 Pagination.prototype.toggleShowmenu = function() {
-	// alert('ok');
+	const pagelist = this.pageWrapper.getElementsByClassName('pagenumber-alt')[0];
+	if (pagelist.classList.contains('in')) {
+		pagelist.classList.remove('in');
+		pagelist.style.height = 0;
+	}else {
+		pagelist.classList.add('in');
+		pagelist.style.height = pagelist.children[0].offsetHeight + 'px';
+	}
 }
 
 window.Pagination = Pagination;
