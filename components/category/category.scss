@@ -5,231 +5,200 @@
   flex-wrap: wrap;
 }
 
-.category-container{
-  width: 100%;
+.category-main{
+  display: flex;
+  justify-content:space-around;
+  padding: 10px;
   background: #fff;
-  
-  .category-main{
-    display: flex;
-    justify-content:space-around;
-    padding: 10px;
-    background: #fff;
 
 
-    .category-main-item{
-      flex:1;
+  .category-item{
+    flex:1;
+    overflow: hidden;
+    position: relative;
+    background: $color-main;
+    height: 49px;
+    margin-right: 10px;
+    border-radius: 4px;
+
+    p{
+      position: absolute;
+      font-size: $h3;
+      color: #fff;
+      line-height: 49px;
+      left: 10px;
+      z-index: 10;
+      color: $color-black;
       overflow: hidden;
-      position: relative;
-      background: $color-main;
-      height: 49px;
-      margin-right: 10px;
-      border-radius: 4px;
-
-      p{
-        position: absolute;
-        font-size: $h3;
-        color: #fff;
-        line-height: 49px;
-        left: 10px;
-        z-index: 10;
-        color: $color-black;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        word-break: keep-all;
-        width: 85%;
-      }
-
-      i{
-        position: absolute;
-        right: 10px;
-        bottom: 0;
-        font-size: 1.8em;
-        color: $color-main-dark;
-        opacity: .6;
-      }
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: keep-all;
+      width: 85%;
     }
 
-    :last-child{
-      margin-right: 0;
+    i{
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      font-size: 1.8em;
+      color: $color-main-dark;
+      opacity: .6;
     }
   }
 
-  .category-default{
-    padding: 5px 0;
-    background: #fff;
-    display: flex;
+  :last-child{
+    margin-right: 0;
+  }
+}
 
-    .category-pri-item{
-      flex: 1;
-      text-align: center;
+.category-default{
+  padding: 5px 0;
+  background: #fff;
+  display: flex;
+
+  .category-item{
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+
+    p{
+      font-size: $h5;
+      color: $color-black;
       overflow: hidden;
-
-      p{
-        font-size: $h5;
-        color: $color-black;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        word-break: keep-all;
-      }
-      i{
-        margin: 5px 0 4px;
-        font-size: 1.1em;
-        color: $color-black;
-      }
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: keep-all;
+    }
+    i{
+      margin: 5px 0 4px;
+      font-size: 1.1em;
+      color: $color-black;
     }
   }
+}
 
-  .category-lof5{
-    width: 100%;
-    padding: 10px 0;
-    background: #fff;
+.category-lof5{
+  width: 100%;
+  padding: 10px 0;
+  background: #fff;
+  display: flex;
+  overflow: scroll;
+  .category-item{
+    flex: 1 0 20%;
+    text-align: center;
+    overflow: hidden;
     
-    .category-lof5-row{
-      display: flex;
-      margin: 0 10px 5px;
-      overflow: scroll;
+    .icon-bg{
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      margin: 5px auto 0;
+      i{
+        line-height: 37px;
+        font-size: 1em;
+        color: $color-black;
+      }
+    }
+    p{
+      font-size: $h6;
+      color: $color-black;
+      margin: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: keep-all;
+    }
 
-      .category-icon-item{
-        flex: 1 0 20%;
-        text-align: center;
+  }
+
+  :last-child{
+    margin-bottom: 0;
+  }
+}
+
+.category-lof2-left{
+  @include item-flex-warp;
+
+  .category-item{
+    flex: 0 0 50%;
+    overflow: hidden;
+    
+    .item-wrapper{
+      border-right: 1px solid $color-line;
+      margin: 8px 0 8px 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      
+      .item-con{
+        flex: auto;
         overflow: hidden;
-        
-        .icon-item-bg{
-          width: 37px;
-          height: 37px;
-          border-radius: 50%;
-          margin: 5px auto 0;
-          i{
-            line-height: 37px;
-            font-size: 1em;
-            color: $color-black;
-          }
-        }
         p{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: keep-all;
+        }
+        .item-con-title{
+          color: #000;
+          font-size: $h3;
+        }
+        .item-con-info{
+          color:$color-gray;
           font-size: $h6;
-          color: $color-black;
-          margin: auto;
+        }
+      }
+      i{
+        text-align: center;
+        flex: 0 0 1.3em;
+        font-size: 2.6em;
+      }
+    }
+  }
+  :nth-child(2n) {
+    .item-wrapper {
+      border-right: none;
+    }
+  }
+}
+
+.category-lof2-right{
+  @include item-flex-warp;
+  
+  .category-item{
+    flex: 0 0 50%;
+    overflow: hidden;
+    
+    .item-wrapper{
+      padding: 8px 10px;
+      border: 1px solid $color-line;
+      border-left: none;
+      border-top: none;
+      display: flex;
+      align-items:center;
+      
+      .item-con{
+        flex: auto;
+        margin-left: 10px;
+        overflow: hidden;
+
+        p{
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           word-break: keep-all;
         }
 
-      }
-    }
-
-    :last-child{
-      margin-bottom: 0;
-    }
-  }
-
-  .category-lof2-left{
-    @include item-flex-warp;
-
-    .lof2-left-item{
-      flex: 0 0 50%;
-      overflow: hidden;
-      
-      .item-container{
-        border-right: 1px solid $color-line;
-        margin: 8px 0 8px 10px;
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        
-        .item-txt{
-          flex: auto;
-          overflow: hidden;
-
-          p{
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            word-break: keep-all;
-          }
-          .title{
-            color: #000;
-            font-size: $h3;
-          }
-          .describe{
-            color:$color-gray;
-            font-size: $h6;
-          }
+        .item-con-title{
+          color: #000;
+          font-size: $h3;
         }
-        i{
-          text-align: center;
-          flex: 0 0 1.3em;
-          font-size: 2.6em;
+        .item-con-info{
+          color:$color-gray;
+          font-size: $h6;
         }
       }
-    }
-  }
 
-  .category-lof2-right{
-    @include item-flex-warp;
-    
-    .lof2-right-item{
-      flex: 0 0 50%;
-      overflow: hidden;
-      
-      .item-container{
-        padding: 8px 10px;
-        border: 1px solid $color-line;
-        border-left: none;
-        border-top: none;
-        display: flex;
-        align-items:center;
-        
-        .item-txt{
-          flex: auto;
-          margin-left: 10px;
-          overflow: hidden;
-
-          p{
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            word-break: keep-all;
-          }
-
-          .title{
-            color: #000;
-            font-size: $h3;
-          }
-          .describe{
-            color:$color-gray;
-            font-size: $h6;
-          }
-        }
-
-        .icon-bg{
-          flex: 0 0 37px;
-          width: 37px;
-          height: 37px;
-          border-radius: 50%;
-          text-align: center;
-          line-height: 37px;
-          
-          i{
-            font-size: 1em;
-            color: #fff;
-          }
-        }
-
-      }
-    }
-  }
-
-  .category-lof1{
-    display: flex;
-    flex-direction: column;
-
-    .lof1-item{
-      margin: 0 0 0 10px;
-      display: flex;
-      align-items:center;
       .icon-bg{
         flex: 0 0 37px;
         width: 37px;
@@ -237,47 +206,85 @@
         border-radius: 50%;
         text-align: center;
         line-height: 37px;
+        
         i{
           font-size: 1em;
           color: #fff;
         }
       }
 
-      .item-txt{
+    }
+  }
+  :nth-last-child(1),:nth-last-child(2) {
+    .item-wrapper {
+      border-bottom: none;
+    }
+  }
+  :nth-child(2n) {
+    .item-wrapper {
+      border-right: none;
+    }
+  }
+}
+
+.category-lof1 {
+  display: flex;
+  flex-direction: column;
+
+  .category-item {
+    margin: 0 0 0 10px;
+    .item-wrapper {
+      display: flex;
+      align-items:center;
+      .icon-bg {
+        flex: 0 0 37px;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 37px;
+        i {
+          font-size: 1em;
+          color: #fff;
+        }
+      }
+
+      .item-con {
         flex: auto;
         margin-left: 10px;
         padding: 10px 0px;
         overflow: hidden;
         border-bottom: 1px solid $color-line;
 
-        p{
+        p {
           width: 100%;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           word-break: keep-all;
         }
-        .title{
+        .item-con-title {
           font-size: $h4;
           color: #000;
         }
-        .describe{
+        .item-con-info {
           font-size: $h6;
           color: $color-gray;
         }
       }
     }
   }
+}
 
-  .category-lof1-noinfo{
-    display: flex;
-    flex-direction: column;
+.category-lof1-noinfo{
+  display: flex;
+  flex-direction: column;
 
-    .lof1-nodes-item{
-      margin: 0 0 0 10px;
+  .category-item{
+    margin: 0 0 0 10px;
+    .item-wrapper {
       display: flex;
       align-items: center;
-
       .icon-bg{
         flex: 0 0 33px;
         width: 33px;
@@ -290,8 +297,7 @@
           color: #fff;
         }
       }
-
-      .item-txt{
+      .item-con{
         flex: auto;
         margin-left: 10px;
         height: 49px;
@@ -305,30 +311,31 @@
           white-space: nowrap;
           word-break: keep-all;
         }
-        .title{
+        .item-con-title{
           font-size: $h3;
           color: #000;
         }
       }
     }
   }
+}
 
-  .category-lof1-nobg{
-    display: flex;
-    flex-direction: column;
+.category-lof1-nobg{
+  display: flex;
+  flex-direction: column;
 
-    .lof1-icon-item{
+  .category-item{
+    margin-left: 12px;
+    border-bottom: 1px solid $color-line;
+    .item-wrapper{
       display: flex;
       align-items: center;
-      margin-left: 12px;
-      border-bottom: 1px solid $color-line;
-      
       i{
         flex: 0 0 16px;
         font-size: 1em;
         text-align: center;
       }
-      .item-txt{
+      .item-con{
         flex: auto;
         height: 49px;
         line-height: 49px;
@@ -342,7 +349,7 @@
           white-space: nowrap;
           word-break: keep-all;
         }
-        .title{
+        .item-con-title{
           font-size: $h3;
           color: #000;
         }
