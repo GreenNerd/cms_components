@@ -31,3 +31,5 @@ require('./components/search/search.js');
 require('./components/product/product.scss');
 require('./components/pagination/pagination.scss');
 require('./components/pagination/pagination.js');
+
+require('./components/article/article.scss');
