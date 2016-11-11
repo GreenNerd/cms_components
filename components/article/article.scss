@@ -1,5 +1,13 @@
 @import '../parm';
 
+@mixin text_overflow($line:2){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
 .article {
 	// margin: 20px;
 	background: #fff;
@@ -7,7 +15,7 @@
 	header {
 		height: 45px;
 		line-height: 45px;
-		margin-left: 20px;
+		margin-left: 10px;
 		font-size: $h5;
 		color: $color-gray;
 		border-bottom: 1px solid $color-line;
@@ -19,7 +27,7 @@
 	}
 
 	nav {
-		margin: 0 0 10px 20px;
+		margin: 0 0 0 10px;
 		.article-cell {
 			height: 85px;
 			position: relative;
@@ -56,14 +64,12 @@
 					color: $color-black;
 					width: 100%;
 					font-weight: bold;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					white-space: nowrap;
-					word-break: keep-all;
+
 				}
 				.cell-con-info {
 					font-size: $h5;
 					color: $color-gray;
+					@include text_overflow(2);
 				}
 				.cell-con-time {
 					font-size: $h5;
@@ -71,16 +77,135 @@
 				}
 			}
 		}		
-		:last-child:before {
-			content: none;
-		}
+
+	}
+	.more-tag {
+		height: 49px;
+		line-height: 49px;
+		color: $color-main;
+		font-size: $h3;
+		display: flex;
+		margin: 0 10px;
+		justify-content: space-between;
 	}
 }
 
+.article-default {
+	nav {
+		:last-child:before {
+			content: none;
+		}
+		.cell-con-title {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			word-break: keep-all;
+		}
+	}
+}
 .article-more {
 	.cell-con {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		.cell-con-title {
+			@include text_overflow(2)
+		}
+	}
+}
+.article-lgimg {
+	.article-cell {
+		padding: 15px 10px;
+		position: relative;
+		border-bottom: 1px solid $color-line;
+
+		.cell-img {
+			padding-bottom: 50%;
+			background-position: 50%;
+			background-size: cover;
+		}
+		.cell-con {
+			.cell-con-title {
+				margin: 4px 0;
+				color: $color-black;
+				@include text_overflow(3)
+			}
+			.cell-con-info {
+				color: $color-gray;
+				.cell-con-day {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.article-with-anthor {
+		.cell-con-anthor{
+			float: right;
+		}
+	}
+}
+.article-onlytitle{
+	.noinfo {
+		height: 49px;
+		line-height: 49px;
+		padding: 0 10px;
+		border-bottom: 1px solid $color-line;
+		.cell-con-title {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			word-break: keep-all;
+		}
+	}
+	.withinfo {
+		margin: 15px 0 0 10px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid $color-line;
+		.cell-con-title {
+			margin: 0 10px 4px 0;
+			@include text_overflow(2)
+		}
+		.cell-con-info {
+			margin-right: 10px;
+			font-size: $h5;
+			color: $color-gray;
+			@include text_overflow(2)
+		}
+	}
+}
+.article-img-11 {
+	.article-cell {
+		display: flex;
+		flex-direction: row;
+		border-bottom: 1px solid $color-line;
+    margin: 10px 0 10px 10px;
+    padding: 0 10px 10px 0;
+    .cell-img {
+			flex: 0 0 110px;
+			height: 110px;
+			background-size: cover;
+			background-position: 50%;
+		}
+		.cell-con {
+			flex: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			.cell-con-info {
+				font-size: $h5;
+				color: $color-gray;
+				margin-right: 10px;
+				@include text_overflow(2)
+			}
+		}
+	}
+	.with-title-day {
+		.cell-con {
+			justify-content: space-between;
+			.cell-con-day {
+				font-size: $h6;
+				color: $color-gray-light;
+			}
+		}
 	}
 }
