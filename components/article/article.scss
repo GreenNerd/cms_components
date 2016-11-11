@@ -8,7 +8,7 @@
   -webkit-box-orient: vertical;
 }
 
-.article {
+.article-smimg {
 	// margin: 20px;
 	background: #fff;
 
@@ -89,7 +89,6 @@
 		justify-content: space-between;
 	}
 }
-
 .article-default {
 	nav {
 		:last-child:before {
@@ -173,7 +172,7 @@
 		}
 	}
 }
-.article-img-11 {
+.article-midimg {
 	.article-cell {
 		display: flex;
 		flex-direction: row;

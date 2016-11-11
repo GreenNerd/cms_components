@@ -113,7 +113,7 @@
       </ul>
     </nav>
   </div>
-  <div class="example">
+  <div class="example" style="display:none">
     <h1>library</h1>
     <div class="subexample">
       <div class="library-item-list">
@@ -197,7 +197,7 @@
       </div>
     </div>
   </div>
-  <div class="example">
+  <div class="example" style="display:none">
     <h1>category</h1>
     <div class="subexample">
       <h2>category-main</h2>
@@ -560,7 +560,7 @@
         </ol>
       </pre>    </div>
   </div>
-  <div class="example">
+  <div class="example" style="display:none">
     <h1>tab</h1>
     <div class="subexample">
       <h2>tab-lof5-default</h2>
@@ -657,7 +657,7 @@
       </pre>
     </div>
   </div>
-  <div class="example">
+  <div class="example" style="display:none">
     <h1>button-group</h1>
     <div class="subexample">
       <h2>预定义样式</h2>
@@ -728,7 +728,8 @@
       <div class="cell-title"><span>电话</span></div>
       <div class="cell-value">
         <i class="fa fa-angle-right"></i>
-        <a href="tel:18200501125">18200501125</a>
+        <!-- <a href="tel:18200501125">18200501125</a> -->
+        <span>18200501125</span>
       </div>
     </a>
     <a class="profile-cell">
@@ -1056,8 +1057,8 @@
   <div class="example">
     <h1>article</h1>
     <div class="subexample">
-      <h2>article-default</h2>
-      <div class="article article-default">
+      <h2>article-smimg article-default</h2>
+      <div class="article-smimg article-default">
         <header>
           <span>图/标题/正文组合</span>
         </header>
@@ -1072,7 +1073,7 @@
               </p>
             </div>
             <div class="cell-img">
-              <img src="/assets/library/item_two_r.png" width="100%">
+              <img src="/assets/library/item_two_r.png" width="100%" />
             </div>
           </div>
           <div class="article-cell">
@@ -1090,11 +1091,31 @@
           </div>
         </nav>
       </div>
-      <pre class="usage"></pre>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-smimg article-default"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;header&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">图/标题/正文组合</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L3"><span class="pln">  </span><span class="tag">&lt;/header&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;nav&gt;</span></li>
+          <li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-con"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-con-title"</span><span class="tag">&gt;</span><span class="pln">文化建设的“六个一”</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-con-info"</span><span class="tag">&gt;</span><span class="pln">文化建设的“六个一”</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L9"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L10"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-img"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">        </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"width:100%;"</span><span class="tag"> /&gt;</span></li>
+          <li class="L12"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L13"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"><span class="pln">    ...</span></li>
+          <li class="L15"><span class="pln">  </span><span class="tag">&lt;/nav&gt;</span></li>
+          <li class="L16"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
     </div>
     <div class="subexample">
-      <h2>article-more</h2>
-      <div class="article article-more">
+      <h2>article-smimg article-more</h2>
+      <div class="article-smimg article-more">
         <header>
           <span>图/标题/加载更多</span>
         </header>
@@ -1136,13 +1157,41 @@
           </div>
         </div>
       </div>
-      <pre class="usage"></pre>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-smimg article-more"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;header&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">图/标题/加载更多</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L3"><span class="pln">  </span><span class="tag">&lt;/header&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;nav&gt;</span></li>
+          <li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-con"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-con-title"</span><span class="tag">&gt;</span><span class="pln">文化建设的“六个一”</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-con-time"</span><span class="tag">&gt;</span><span class="pln">2016-08-19 20:09</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L9"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L10"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-img"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">        </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"width:100%;"</span><span class="tag"> /&gt;</span></li>
+          <li class="L12"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L13"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"><span class="pln">    ...</span></li>
+          <li class="L15"><span class="pln">  </span><span class="tag">&lt;/nav&gt;</span></li>
+          <li class="L16"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"more-tag"</span><span class="tag">&gt;</span></li>
+          <li class="L17"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">tag-cell-left</span><span class="tag">&gt;</span></li>
+          <li class="L18"><span class="pln">      </span><span class="tag">&lt;span&gt;</span><span class="pln">查看更多</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L19"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L20"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">tag-cell-right</span><span class="tag">&gt;</span></li>
+          <li class="L21"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-angle-right"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L22"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L23"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L24"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
     </div>
     <div class="subexample">
       <h2>article lgimg</h2>
       <div class="article-lgimg">
         <div class="article-cell article-with-anthor">
-          <div class="cell-img" style="background-image:url('/assets/library/item_two_r.png">
+          <div class="cell-img" style="background-image:url('/assets/library/item_two_r.png')">
           </div>
           <div class="cell-con">
             <h2 class="cell-con-title">文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”
@@ -1158,7 +1207,7 @@
           </div>
         </div>
         <div class="article-cell">
-          <div class="cell-img" style="background-image:url('/assets/library/item_two_l.png">
+          <div class="cell-img" style="background-image:url('/assets/library/item_two_l.png')">
           </div>
           <div class="cell-con">
             <h2 class="cell-con-title">文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”
@@ -1202,8 +1251,8 @@
       <pre class="usage"></pre>
     </div>
     <div class="subexample">
-      <h2>article style_2</h2>
-      <div class="article-img-11">
+      <h2>article-midimg</h2>
+      <div class="article-midimg">
         <div class="article-cell with-title-day">
           <div class="cell-con">
             <h2 class="cell-con-title">
