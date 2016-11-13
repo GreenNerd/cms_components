@@ -1,47 +1,43 @@
 @import '../parm';
 
-.attachment-container {
-  background: #fff;
-  .attachment-wrap {
-    margin: 20px;
-    border: 1px solid $color-main;
-    
-    .attach-items {
-      display: flex;
+.attachment-wrap {
+  margin: 20px;
+  border: 1px solid $color-main;
+  
+  .attach-items {
+    display: flex;
 
-      .attach-item-left {
+    .attach-item-left {
+      margin: 10px;
+      height: 50px;
+      .fa {
+        font-size: 2em;
         margin: 10px;
-        height: 50px;
-        .fa {
-          font-size: 2em;
-          margin: 10px;
-          color: #fff;
-        }
-      }
-      .attach-item-right {
-        flex: auto;
-        display: flex;
-        flex-direction: column;
-        border-bottom: 1px solid $color-main;
-        .item-title {
-          font-size: $h4;
-          color: $color-black;
-        }
-        .item-size {
-          font-size: $h5;
-          color: $color-gray;
-        }
-        span {
-          padding: 7px;
-        }
+        color: #fff;
       }
     }
-  >:last-child .attach-item-right {
-      border-bottom: none;
+    .attach-item-right {
+      flex: auto;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid $color-main;
+      .item-title {
+        font-size: $h4;
+        color: $color-black;
+      }
+      .item-size {
+        font-size: $h5;
+        color: $color-gray;
+      }
+      span {
+        padding: 7px;
+      }
     }
   }
+  :last-child .attach-item-right {
+    border-bottom: none;
+  }
 }
-
 
 .excel {
   .attach-item-left {
