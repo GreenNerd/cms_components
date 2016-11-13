@@ -201,7 +201,7 @@
 	.with-title-day {
 		.cell-con {
 			justify-content: space-between;
-			.cell-con-day {
+			.cell-con-day,.cell-con-anthor {
 				font-size: $h6;
 				color: $color-gray-light;
 			}
