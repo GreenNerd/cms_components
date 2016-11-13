@@ -113,7 +113,7 @@
       </ul>
     </nav>
   </div>
-  <div class="example" style="display:none">
+  <div class="example">
     <h1>library</h1>
     <div class="subexample">
       <div class="library-item-list">
@@ -197,7 +197,7 @@
       </div>
     </div>
   </div>
-  <div class="example" style="display:none">
+  <div class="example">
     <h1>category</h1>
     <div class="subexample">
       <h2>category-main</h2>
@@ -560,7 +560,7 @@
         </ol>
       </pre>    </div>
   </div>
-  <div class="example" style="display:none">
+  <div class="example">
     <h1>tab</h1>
     <div class="subexample">
       <h2>tab-lof5-default</h2>
@@ -657,7 +657,7 @@
       </pre>
     </div>
   </div>
-  <div class="example" style="display:none">
+  <div class="example">
     <h1>button-group</h1>
     <div class="subexample">
       <h2>预定义样式</h2>
@@ -960,98 +960,414 @@
       </div>
     </div>
   </div>
-  <div class="pagination-container">
-    <h1 class="component-name">pagination</h1>
-    <h2 class="sub-component-name">pagination-normal-main</h2>
-    <div id="js-pagination-select" class="pagination normal-main">
-      <div class="page-cell-left disable">
-        <span>上一页</span>
-      </div>
-      <div class="page-cell-wrapper">
-        <div class="page-menu">
-          <div class="pagenumber">
-            <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
-          </div>
-          <div class="pagenumber-alt style-main" style="height:0;"">
-            <ul>
-              <a>1</a>
-              <a>2</a>
-              <a>3</a>
-              <a>4</a>
-              <a>5</a>
-              <a>6</a>
-              <a>7</a>
-              <a>8</a>
-              <a>9</a>
-              <a>10</a>
-              <a>11</a>
-            </ul>
+  <div class="example">
+    <h1>pagination</h1>
+    <div class="subexample">
+      <h2>基础组件</h2>
+      <div id="js-pagination-select" class="pagination page-default">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
           </div>
         </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
       </div>
-      <div class="page-cell-right">
-        <span>下一页</span>
-      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="pln">*HTML*</span></li>
+          <li class="L1"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"js-pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-deault"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-left"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">上一页</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-menu"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagenumber"</span><span class="tag">&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;span&gt;</span><span class="pln">1</span><span class="tag">&lt;/span&gt;</span><span class="pln">/</span><span class="tag">&lt;span&gt;</span><span class="pln">6</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="atv">"fa fa-angle-up"</span><span class="tag">&lt;/i&gt;</span></li>
+          <li class="L9"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L10"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagenumber-alt"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"height:0;"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li>
+          <li class="L12"><span class="pln">          </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">1</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L13"><span class="pln">          ...</span></li>
+          <li class="L14"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li>
+          <li class="L15"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L16"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L17"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L18"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-right"</span><span class="tag">&gt;</span></li>
+          <li class="L19"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">下一页</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L20"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L21"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L22"></li>
+          <li class="L23"><span class="tag">*JS*</span></li>
+          <li class="L24"><span class="atn">var</span><span class="pln"> </span><span class="atv">pagination</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atn">new</span><span class="pln"> </span><span class="atv">Pagination('js-pagination-select')</span></li>
+        </ol>
+      </pre>
     </div>
-    <h2 class="sub-component-name">pagination-normal-default</h2>
-    <div class="pagination normal-default">
-      <div class="page-cell-left disable">
-        <span>上一页</span>
+    <div class="subexample">
+      <h2>预定义样式</h2>
+      <div id="js-pagination-1" class="pagination page-default">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
       </div>
-      <div class="page-cell-wrapper">
-        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
+      <div id="js-pagination-2" class="pagination page-default-normal">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
       </div>
-      <div class="page-cell-right">
-        <span>下一页</span>
+      <div id="js-pagination-3" class="pagination page-default-bg">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
       </div>
+      <div id="js-pagination-4" class="pagination page-main">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div id="js-pagination-5" class="pagination page-main-normal">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div id="js-pagination-6" class="pagination page-main-bg">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default-normal"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L2"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default-bg"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L3"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L4"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main-default"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main-bg"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
     </div>
-    <h2 class="sub-component-name">pagination-default</h2>
-    <div class="pagination default">
-      <div class="page-cell-left disable">
-        <span>上一页</span>
+    <div class="subexample">
+      <h2>不可点击</h2>
+      <div id="" class="pagination page-default">
+        <div class="page-cell-left disable">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
       </div>
-      <div class="page-cell-wrapper">
-        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
+      <div id="" class="pagination page-default-normal">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>6</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right disable">
+          <span>下一页</span>
+        </div>
       </div>
-      <div class="page-cell-right">
-        <span>下一页</span>
+      <div id="" class="pagination page-default-bg">
+        <div class="page-cell-left disable">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
       </div>
-    </div>
-    <h2 class="sub-component-name">pagination-default-bg</h2>
-    <div class="pagination default-bg">
-      <div class="page-cell-left disable">
-        <span>上一页</span>
+      <div id="" class="pagination page-main">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>6</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right disable">
+          <span>下一页</span>
+        </div>
       </div>
-      <div class="page-cell-wrapper">
-        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
+      <div id="" class="pagination page-main-normal">
+        <div class="page-cell-left disable">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
       </div>
-      <div class="page-cell-right">
-        <span>下一页</span>
+      <div id="" class="pagination page-main-bg">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>6</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right disable">
+          <span>下一页</span>
+        </div>
       </div>
-    </div>
-    <h2 class="sub-component-name">pagination-main</h2>
-    <div class="pagination main">
-      <div class="page-cell-left disable">
-        <span>上一页</span>
-      </div>
-      <div class="page-cell-wrapper">
-        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
-      </div>
-      <div class="page-cell-right">
-        <span>下一页</span>
-      </div>
-    </div>
-    <h2 class="sub-component-name">pagination-main-bg</h2>
-    <div class="pagination main-bg">
-      <div class="page-cell-left disable">
-        <span>上一页</span>
-      </div>
-      <div class="page-cell-wrapper">
-        <span>1</span>/<span>11</span><i class="fa fa-angle-up"></i>
-      </div>
-      <div class="page-cell-right">
-        <span>下一页</span>
-      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-left disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L2"><span class="pln">  ...</span></li>
+          <li class="L3"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L4"></li>
+          <li class="L5"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default-normal"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">  ...</span></li>
+          <li class="L7"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-right disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L8"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L9"></li>
+          <li class="L10"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default-bg"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-left disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L12"><span class="pln">  ...</span></li>
+          <li class="L13"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"></li>
+          <li class="L15"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main"</span><span class="tag">&gt;</span></li>
+          <li class="L16"><span class="pln">  ...</span></li>
+          <li class="L17"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-right disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L18"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L19"></li>
+          <li class="L20"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main-normal"</span><span class="tag">&gt;</span></li>
+          <li class="L21"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-left disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L22"><span class="pln">  ...</span></li>
+          <li class="L23"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L24"></li>
+          <li class="L25"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main-bg"</span><span class="tag">&gt;</span></li>
+          <li class="L26"><span class="pln">  ...</span></li>
+          <li class="L27"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-right disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L28"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L29"></li>
+        </ol>
+      </pre>
     </div>
   </div>
   <div class="example">
@@ -1412,6 +1728,12 @@
 
       var pages = new PageSlide(document.querySelector('.pages'))
       var pagination = new Pagination('js-pagination-select')
+      var pagination = new Pagination('js-pagination-1')
+      var pagination = new Pagination('js-pagination-2')
+      var pagination = new Pagination('js-pagination-3')
+      var pagination = new Pagination('js-pagination-4')
+      var pagination = new Pagination('js-pagination-5')
+      var pagination = new Pagination('js-pagination-6')
   </script>
 </body>
 </html>

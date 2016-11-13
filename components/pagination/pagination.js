@@ -18,12 +18,17 @@ Pagination.prototype.init = function() {
 }
 Pagination.prototype.toggleShowmenu = function() {
 	const pagelist = this.pageWrapper.getElementsByClassName('pagenumber-alt')[0];
+	const page_icon = this.pageWrapper.getElementsByClassName('fa')[0];
 	if (pagelist.classList.contains('in')) {
 		pagelist.classList.remove('in');
 		pagelist.style.height = 0;
+		page_icon.classList.remove('fa-angle-down');
+		page_icon.classList.add('fa-angle-up');
 	}else {
 		pagelist.classList.add('in');
 		pagelist.style.height = pagelist.children[0].offsetHeight + 'px';
+		page_icon.classList.remove('fa-angle-up');
+		page_icon.classList.add('fa-angle-down');
 	}
 }
 
