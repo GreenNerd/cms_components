@@ -1,10 +1,20 @@
-// function Search(){
-// 	const input = document.getElementsByClassName('default-input')[0];
-// 	const placeholder = document.getElementsByClassName('default-input-placeholder')[0];
-// 	input.onfocus = function(){
-// 		// placeholder.display = 'none';
-// 		placeholder.style.display = "none"
-// 	}
-// }
+function Search(searchId,searchSty){
+	const container = document.getElementById(searchId)
+	const searchStyle = searchSty
 
-// window.Search = Search;
+	const input = container.getElementsByClassName('search-input');
+	input[0].onfocus = function(){
+		container.classList.add(searchStyle);
+		input[0].style.backgroundImage = 'none';
+	}
+	input[0].onblur = function(){
+		if (input[0].value != '') {
+			input[0].style.backgroundImage = 'none';
+		}else{
+			container.classList.remove(searchStyle);
+			input[0].style.backgroundImage = 'url("/assets/library/search.png")';
+		}
+	}
+}
+
+window.Search = Search;

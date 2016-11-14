@@ -912,51 +912,57 @@
       </ol>
     </pre>
   </div>
-  <div class="search-container">
-    <h1 class="component-name">search</h1>
-    <h2 class="sub-component-name">default</h2>
-    
-    <div class="search-cell primary1">
-      <div class="search-cell-left">
-        <i class="fa fa-arrow-left"></i>
+  <div class="example">
+    <h1>search</h1>
+    <div class="subexample">
+      <h2>组件 primary1</h2>
+      <div id="js-search-1" class="search-cell">
+        <div class="search-cell-left">
+          <i class="fa fa-arrow-left"></i>
+        </div>
+        <div class="search-cell-wrapper">
+          <input class="search-input" name="search" placeholder="搜索内容" >
+          <input class="search-button" type="button" name="" value="搜索">
+        </div>
+        <div class="search-cell-right">
+          <i class="fa fa-search"></i>
+        </div>
       </div>
-      <div class="search-cell-wrapper">
-        <input class="search-input" type="" name="search" placeholder="搜索内容" >
-        <input class="search-button" type="button" name="" value="搜索">
+      <h2>组件 primary2</h2>
+      <div id="js-search-2" class="search-cell">
+        <div class="search-cell-left">
+          <i class="fa fa-arrow-left"></i>
+        </div>
+        <div class="search-cell-wrapper">
+          <input class="search-input" type="" name="search" placeholder="搜索内容" >
+          <input class="search-button" type="button" name="" value="搜索">
+        </div>
+        <div class="search-cell-right">
+          <i class="fa fa-search"></i>
+        </div>
       </div>
-      <div class="search-cell-right">
-        <i class="fa fa-search"></i>
-      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="pln">*HTML*</span></li>
+          <li class="L1"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-cell-left"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-arrow-left"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-cell-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-input"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">“search”</span><span class="pln"> </span><span class="atn">placeholder</span><span class="pun">=</span><span class="atv">"搜索内容"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-button"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">“”</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"搜索"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-cell-right"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-search"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="pln">*JS*</span></li>
+          <li class="L24"><span class="atn">var</span><span class="pln"> </span><span class="atv">search</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atn">new</span><span class="pln"> </span><span class="atv">Search('xxx','primary1')</span>
+          </li>
+          <li class="L24"><span class="atn">var</span><span class="pln"> </span><span class="atv">search</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atn">new</span><span class="pln"> </span><span class="atv">Search('xxx','primary2')</span></li>
+        </ol>
+      </pre>
     </div>
-
-<!--     <h2 class="sub-component-name">点击搜索样式一</h2>
-    
-    <div class="search-cell primary1">
-      <div class="search-cell-left">
-        <i class="fa fa-arrow-left"></i>
-      </div>
-      <div class="search-cell-wrapper">
-        <input class="search-input" type="" name="search" placeholder="搜索内容">
-      </div>
-      <div class="search-cell-right">
-        <i class="fa fa-search"></i>
-      </div>
-    </div> -->
-
-<!--     <h2 class="sub-component-name">点击搜索样式二</h2>
-    
-    <div class="search-cell primary2">
-      <div class="search-cell-left">
-        <i class="fa fa-arrow-left"></i>
-      </div>
-      <div class="search-cell-wrapper">
-        <input class="search-input" type="" name="search" placeholder="搜索内容">
-        <input class="search-button" type="button" name="" value="搜索">
-      </div>
-      <div class="search-cell-right">
-      </div>
-    </div> -->
-
   </div>
   <div class="product-container">
     <h1 class="component-name">product</h1>
@@ -1787,13 +1793,17 @@
         );
 
       var pages = new PageSlide(document.querySelector('.pages'))
-      var pagination = new Pagination('js-pagination-select')
-      var pagination = new Pagination('js-pagination-1')
-      var pagination = new Pagination('js-pagination-2')
-      var pagination = new Pagination('js-pagination-3')
-      var pagination = new Pagination('js-pagination-4')
-      var pagination = new Pagination('js-pagination-5')
-      var pagination = new Pagination('js-pagination-6')
+
+      var pagination_select = new Pagination('js-pagination-select')
+      var pagination_1 = new Pagination('js-pagination-1')
+      var pagination_2 = new Pagination('js-pagination-2')
+      var pagination_3 = new Pagination('js-pagination-3')
+      var pagination_4 = new Pagination('js-pagination-4')
+      var pagination_5 = new Pagination('js-pagination-5')
+      var pagination_6 = new Pagination('js-pagination-6')
+
+      var search_1 = new Search('js-search-1','primary1')
+      var search_2 = new Search('js-search-2','primary2')
   </script>
 </body>
 </html>
