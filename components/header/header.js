@@ -1,63 +1,39 @@
-function Header(className){
-	this._className = String(className)
-	this.js
-	this.container
-	this.nav
-	this.icon
+_addEventListener = function (el, eventName, cb, useCapture) {
+	if (window.addEventListener) {
+		el.addEventListener(eventName, cb, Boolean(useCapture));
+	} else {
+		el["on"+ eventName] = cb;
+	}
+}
+function Header(selector){
+	this._selector = String(selector)
+	this.container = document.querySelector(this._selector);
+	this.toggler = this.container.querySelector(".toggler");
+	this.togglerIcon = this.toggler.children[0];
+	this.headerGroup = this.container.querySelector(".header-cell-group");
 	this.init()
 }
 Header.prototype.init = function(){
 	const instance = this;
-	this.container = document.getElementsByClassName(this._className)[0];
-	this.icon = this.container.getElementsByClassName("header-main-right")[0];
-	this.js = document.getElementsByClassName('js')[0];
-	this.nav = document.getElementById('globalnav');
 	
-	const button = this.container.getElementsByClassName("header-main-right");
-	if (window.addEventListener) {
-		button[0].addEventListener("click",function(){
-			instance.toggleDisPlay();
-		},false)
-
-		this.nav.addEventListener("click",function(){
-			instance.toggleMask();
-		},false)
-	}else{
-		button[0].onclick = function(){
-			instance.toggleDisPlay();
-		}
-		this.nav.onclick = function(){
-			instance.toggleMask();
-		}
-	}
+	_addEventListener(this.toggler, 'click', function(){
+		instance.toggleDisplay();
+	});
 }
 
-Header.prototype.toggleDisPlay = function(){
-	const group = this.container.getElementsByClassName("header-cell-group");
-	var handler = function(event){
-		event.preventDefault();
+Header.prototype.toggleDisplay = function(){
+	const group = this.headerGroup;
+	if (group.classList.contains("in")) {
+		group.style.height = "0px";
+		group.classList.remove("in");
+		this.togglerIcon.classList.remove("fa-close");
+		this.togglerIcon.classList.add("fa-navicon");
+	} else {
+		group.classList.add("in");
+		group.style.height = group.children[0].offsetHeight + "px";
+		this.togglerIcon.classList.remove("fa-navicon");
+		this.togglerIcon.classList.add("fa-close");
 	}
-	if (group[0].classList.contains("in")) {
-
-		group[0].style.height = "0px";
-		group[0].classList.remove("in");
-		this.icon.children[0].classList.remove("fa-close");
-		this.icon.children[0].classList.add("fa-navicon");
-	}else{
-		group[0].classList.add("in");
-		group[0].style.height = group[0].children[0].offsetHeight + "px";
-		this.icon.children[0].classList.remove("fa-navicon");
-		this.icon.children[0].classList.add("fa-close");
-	}
-}
-
-Header.prototype.toggleMask = function(){
-	const group = this.container.getElementsByClassName("header-cell-group");
-
-	group[0].style.height = "0px";
-	group[0].classList.remove("in");
-	this.icon.children[0].classList.remove("fa-close");
-	this.icon.children[0].classList.add("fa-navicon");
 }
 
 window.Header = Header;

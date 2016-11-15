@@ -7,20 +7,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
 </head>
 <body>
-  <header class="header-container fixed-top">
+  <header class="header-container fixed-top" data-comp='Header'>
     <div class="header-main">
-      <div class="header-main-left">
-        <img src="assets/library/item_three_l.png" class="logo big"/>
+      <div class="logo">
+        <img src="assets/library/item_three_l.png"/>
       </div>
       <div class="header-main-wrapper">
         <h3>成都了了科技有限公司</h3>
       </div>
-      <div class="header-main-right">
+      <div class="toggler">
         <i class="fa fa-navicon"></i>
       </div>
     </div>
     <div class="header-list">
-      <div id="globalnav" class="header-cell-group header-collapse" style="height:0;">
+      <div class="header-cell-group header-collapse" style="height:0;">
         <ul class="header-ul-nav">
           <li class="header-cell header-cell-item"><a href="#">新闻中心</a href="#"></li>
           <li class="header-cell header-cell-item"><a href="#">廉政建设</a href="#"></li>
@@ -2014,7 +2014,7 @@
       //    arrow:true //两侧箭头}
       //   });
     //导航
-      var myHeader = new Header("header-container");
+      var myHeader = new Header(".header-container");
     //折叠
       var myCollapse_1 = new Collapse(
         "js-collapse-1", //最外层Id
