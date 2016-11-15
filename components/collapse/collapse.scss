@@ -8,16 +8,18 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
 
     .collapse-title{
       width: 100%;
+      padding: 0 20px;
       height: 49px;
       background: white;
       line-height: 49px;
       border-bottom: 0;
-      display: block;
+      display: flex;
       cursor:pointer;
       font-weight: normal;
       z-index:50;
       
       .collapse-title-txt{
+        flex: auto;
         font-weight: 500;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -26,12 +28,22 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
       }
 
       .fa{
+        padding: 0 20px;
         line-height: 49px;
         display: none;
+       
+        &.left {
+          margin-left: -20px;
+        }
+       
+        &.right {
+          margin-right: -20px;
+        }
       }
     }
 
     .collapse-body{
+      height: 0;
       background: #fff;
       transition-timing-function: ease;
       transition-duration: .35s;
@@ -40,7 +52,7 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
     }
 
     .collapse-content{
-      font-size: $h3;
+      font-size: $h3-size;
       border-top: 1px solid #fff;
       padding: 9px 15px;
     }
@@ -61,14 +73,9 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
       background-size: cover;
 
       .collapse-title-txt{
-        float: left;
-        width: 80%;    
-        margin-left: 16px;
       }
       .fa{
         display: block;
-        margin: 0 16px;
-        float: right;
       }
     }
     .collapse-body{
@@ -100,13 +107,9 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
     .collapse-title{
       color: $color-main;
       .collapse-title-txt{
-        float: left;
-        width: 80%;
       }
       .fa{
         display: block;
-        margin: 0 8px;
-        float: left;
       }
     }
     .collapse-body{

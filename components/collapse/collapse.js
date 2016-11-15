@@ -1,146 +1,117 @@
-function Collapse(id,close_prev,default_open){
-  this._elements = [];
-  this._collapseId = id;
-  this._className = 'collapse-div';
-  this._previous = Boolean(close_prev);
-  this._default = typeof(default_open) === 'number' ? default_open:-1;
-  this._skin;
-  this.getCurrent;
-  this.init()
-}
-//获取title对应下的折叠内容
-Collapse.prototype.getCurrent = function(header){
-  var cur;
-  if (window.addEventListener) {
-    cur = header.parentNode;
-  }else{
-    cur = header.parentElement;
+(function(){
+  function Collapse() {
+    const allCollapse = document.querySelectorAll("[data-comp='Collapse']");
+
+    allCollapse.forEach(function(element){
+      new CollapseItem(element);
+    })
   }
-  return cur.getElementsByClassName("collapse-body")[0];
-}
-//初始化，给title添加点击事件，设置icon
-Collapse.prototype.init = function(){
-  var instance = this;
-  this.collectElementbyClass();
-  if (this._elements.length === 0) {
-    return;
+
+  function CollapseItem(element){
+    this.element = element;
+    this.compatible = element.getAttribute('data-compatible') === 'true';
+    this.activeIndex = parseInt(element.getAttribute('data-activeindex'));
+    this.style = this._parseStyle();
+    this.iconClass = this._getIconClass();
+    this.init();
   }
-  for(var i = 0;i<this._elements.length;i++){
-    var h3s = this._elements[i].getElementsByClassName("collapse-title");
-    if (window.addEventListener) {
-      h3s[0].addEventListener("click",function(){
-        instance.toggleDisplay(this);
-      },false);
-    }else{
-      h3s[0].onclick = function(){
-        instance.toggleDisplay(this);
+
+  CollapseItem.prototype._getIconClass = function(){
+    var defaultClass;
+    switch (this.style){
+      case 'default':
+        defaultClass = {
+          open: 'fa fa-caret-down left',
+          close: 'fa fa-caret-right left'
+        }
+        break;
+      case 'primary':
+        defaultClass = {
+          open: 'fa fa-minus right',
+          close: 'fa fa-plus right'
+        }
+        break;
+      default:
+        defaultClass = {}
+    }
+    return defaultClass
+  }
+
+  CollapseItem.prototype._parseStyle = function(){
+    const reg = /\s(default|primary)\s/;
+    const extendClass = ' ' + this.element.className + ' ';
+    if (reg.test(extendClass)) {
+      return extendClass.match(reg)[1];
+    } else {
+      return null;
+    }
+  }
+  //初始化，给title添加点击事件，设置icon
+  CollapseItem.prototype.init = function(){
+    this.addIcon();
+    this.enableActive();
+    this.bindEvents();
+  }
+  CollapseItem.prototype.addIcon = function(){
+    var allTitle = this.element.querySelectorAll('.collapse-title');
+    allTitle.forEach(function(el, index){
+      var newIcon = document.createElement('i');
+      newIcon.className = index === this.activeIndex ? this.iconClass.open : this.iconClass.close;
+      switch (this.style) {
+        case 'default':
+          el.insertBefore(newIcon,el.querySelector('.collapse-title-txt'));
+          break;
+        case 'primary':
+          el.appendChild(newIcon);
+          break;
+        default:
+          break;
       }
-    }
+    }.bind(this))
   }
-
-  this.addIcon();
-}
-//处理折叠
-Collapse.prototype.toggleDisplay = function(header){
-  var cur = this.getCurrent(header);
-
-  if(this.isOpen(cur)){
-    this.close(cur);
-    if (this._skin == 'default') {
-      header.children[0].classList.remove('fa-caret-down');
-      header.children[0].classList.add('fa-caret-right');
-    }
-    if (this._skin == 'primary') {
-      header.children[0].classList.remove('fa-minus');
-      header.children[0].classList.add('fa-plus');
-    }
-  }else{
-    this.open(cur);
-    if (this._skin == 'default') {
-      header.children[0].classList.remove('fa-caret-right');
-      header.children[0].classList.add('fa-caret-down');
-    }
-    if (this._skin == 'primary') {
-      header.children[0].classList.remove('fa-plus');
-      header.children[0].classList.add('fa-minus');
-    }
+  CollapseItem.prototype.enableActive = function(){
+    const active = this.element.querySelectorAll('.collapse-div')[this.activeIndex];
+    active.classList.add('active');
+    this._setHeight(active);
   }
-  if (this._previous) {
-    for(var i = 0;i<this._elements.length;i++){
-      if (this._elements[i]!==(cur.parentNode||cur.parentElement)) {
-        var collapse_body = this._elements[i].getElementsByClassName("collapse-body");
-        collapse_body[0].style.height = "0px";
-        collapse_body[0].style.visibility = "hidden";
-        if (this._skin == 'default') {
-         this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-caret-down');
-         this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-right');
-        }        
-        if (this._skin == 'primary') {
-         this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-minus');
-         this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-plus');
+  CollapseItem.prototype._setHeight = function(element){
+    element.querySelector('.collapse-body').style.height = element.querySelector('.collapse-content').getBoundingClientRect().height + 'px';
+  }
+  CollapseItem.prototype.bindEvents = function(){
+    this.element.addEventListener('click',function(event){
+      var el = event.target;
+      while(!el.classList.contains('collapse-title') && el !== this.element.parentElement) {
+        el = el.parentElement;
+      }
+
+      if (el.classList.contains('collapse-title')) {
+        this._toggleDisplay(el);
+      }
+    }.bind(this),false)
+  }
+  CollapseItem.prototype._hide = function(element){
+    element.classList.remove('active');
+    element.querySelector('.collapse-body').removeAttribute('style');
+    element.querySelector('.fa').className = this.iconClass.close;
+  }
+  //处理折叠
+  CollapseItem.prototype._toggleDisplay = function(title){
+    var target = title.parentElement;
+    if(target.classList.contains('active')){
+      this._hide(target);
+    } else {
+      if (this.compatible) {
+        const otherActive = this.element.querySelector('.active');
+        if (otherActive) {
+          this._hide(otherActive);
         }
       }
+      target.classList.add('active');
+      target.querySelector('.fa').className = this.iconClass.open;
+      this._setHeight(target);
     }
-  }
-}
-//判断是否已经打开折叠
-Collapse.prototype.isOpen = function(elem){
-  return elem.style.visibility === 'visible';
-}
-//关闭折叠
-Collapse.prototype.close = function(elem){
-  elem.style.height = '0px';
-  elem.style.visibility = 'hidden';
-}
-//打开折叠
-Collapse.prototype.open = function(elem){
-  elem.style.height = elem.scrollHeight + 'px';
-  elem.style.visibility = 'visible';
-}
-Collapse.prototype.collectElementbyClass = function(){
-  this._elements = [];
-  var container = document.getElementById(this._collapseId);
-  this._skin = container.classList[0];
-  var allelements = container.getElementsByTagName("div");
 
-  for(var i = 0;i<allelements.length;i++){
-    var collapse_div = allelements[i];
-    if (typeof collapse_div.className === "string" && collapse_div.className === this._className) {
-      var h3s = collapse_div.getElementsByClassName("collapse-title");
-      var collapse_body = collapse_div.getElementsByClassName("collapse-body");
-      if (h3s.length === 1 && collapse_body.length === 1) {
-        h3s[0].style.cursor = "pointer";
-
-        if (this._default === this._elements.length) {
-          collapse_body[0].style.visibility = "visible";
-          collapse_body[0].style.height = collapse_body[0].scrollHeight + "px";
-        }else{
-          collapse_body[0].style.height = "0px";
-          collapse_body[0].style.visibility = "hidden";
-        }
-
-        this._elements[this._elements.length] = collapse_div;
-      }
-    }
   }
-}
-Collapse.prototype.addIcon = function(){
-  for(var i = 0;i<this._elements.length;i++){
-    if (this._skin == 'default'){
-      this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-right')
-    }
-    if (this._skin == 'primary'){
-      this._elements[i].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-plus')
-    }
-  }
-  if (this._skin == 'default'){
-      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-caret-right');
-      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-caret-down');
-  }  
-  if (this._skin == 'primary'){
-      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.remove('fa-plus');
-      this._elements[this._default].getElementsByClassName("collapse-title")[0].children[0].classList.add('fa-minus');
-  }
-}
 
-window.Collapse = Collapse;
+  window.Collapse = Collapse;
+}());
