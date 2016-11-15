@@ -1,6 +1,6 @@
 @import '../parm';
 
-.breadcrumbs-container {
+.breadcrumbs-wrapper {
 
   .breadcrumbs-cell {
     display: inline-block;
@@ -10,40 +10,27 @@
     color: $color-main;
 
     &:before {
+      content: '/';
       position: absolute;
       right: -4px;
       bottom: 1px;
       color: $color-line-dark;
     }
   }
-
-
 }
 
-.breadcrumbs-default {
-  .breadcrumbs-cell {
-    &:before{
-      content: '/';
-    }
-  }
-  >:last-child {
-    color: $color-line-dark;
-      &:before{
-      content: none;
-    }
-  }
-}
-
-.breadcrumbs-primary {
+.breadcrumbs-arrow {
   .breadcrumbs-cell {
     &:before{
       content: '>';
     }
   }
+}
+.breadcrumbs-wrapper,.breadcrumbs-arrow {
   >:last-child {
     color: $color-line-dark;
-      &:before {
-      content: none;
+    &:before {
+     content: none;
     }
   }
 }

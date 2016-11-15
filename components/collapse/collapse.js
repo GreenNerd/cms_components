@@ -1,6 +1,7 @@
-function Collapse(className,close_prev,default_open){
+function Collapse(id,close_prev,default_open){
   this._elements = [];
-  this._className = String(className);
+  this._collapseId = id;
+  this._className = 'collapse-div';
   this._previous = Boolean(close_prev);
   this._default = typeof(default_open) === 'number' ? default_open:-1;
   this._skin;
@@ -98,7 +99,7 @@ Collapse.prototype.open = function(elem){
 }
 Collapse.prototype.collectElementbyClass = function(){
   this._elements = [];
-  var container = document.getElementById('collapse-container');
+  var container = document.getElementById(this._collapseId);
   this._skin = container.classList[0];
   var allelements = container.getElementsByTagName("div");
 
