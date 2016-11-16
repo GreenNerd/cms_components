@@ -38,4 +38,4 @@
 	}
 
 	window.Header = Header;
-}());
+}())
