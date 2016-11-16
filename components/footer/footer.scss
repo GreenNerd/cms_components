@@ -14,7 +14,7 @@
     .footer-button-group {
       display: flex;
       margin-bottom: 12px;
-      font-size: $h5;
+      font-size: $h5-size;
       color: #000;
       justify-content: center;
 
@@ -40,7 +40,7 @@
 
 
     .footer-copyright {
-      font-size: $h6;
+      font-size: $h6-size;
       color: $color-gray;
       text-align: center;
     }

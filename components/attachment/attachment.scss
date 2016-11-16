@@ -22,11 +22,11 @@
       flex-direction: column;
       border-bottom: 1px solid $color-main;
       .item-title {
-        font-size: $h4;
+        font-size: $h4-size;
         color: $color-black;
       }
       .item-size {
-        font-size: $h5;
+        font-size: $h5-size;
         color: $color-gray;
       }
       span {

@@ -7,20 +7,13 @@
 }
 
 $color: #00455f;
+$paddingLeftAndRight: 20px;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-// html.noscroll,html.noscroll body {
-//   overflow: hidden;
-//   height: 100%;
-// }
-// html.noscroll {
-//   margin-top: 0;
-// }
 
 ul {
   list-style: none;
@@ -138,7 +131,7 @@ pre {
     margin-bottom: 45px;
     p {
       color: #fff;
-      font-size: $h4;
+      font-size: $h4-size;
     }    
   }
 }

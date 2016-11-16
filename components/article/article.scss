@@ -16,7 +16,7 @@
 		height: 45px;
 		line-height: 45px;
 		margin-left: 10px;
-		font-size: $h5;
+		font-size: $h5-size;
 		color: $color-gray;
 		border-bottom: 1px solid $color-line;
 
@@ -67,12 +67,12 @@
 
 				}
 				.cell-con-info {
-					font-size: $h5;
+					font-size: $h5-size;
 					color: $color-gray;
 					@include text_overflow(2);
 				}
 				.cell-con-time {
-					font-size: $h5;
+					font-size: $h5-size;
 					color: $color-gray-light;
 				}
 			}
@@ -83,7 +83,7 @@
 		height: 49px;
 		line-height: 49px;
 		color: $color-main;
-		font-size: $h3;
+		font-size: $h3-size;
 		display: flex;
 		margin: 0 10px;
 		justify-content: space-between;
@@ -166,7 +166,7 @@
 		}
 		.cell-con-info {
 			margin-right: 10px;
-			font-size: $h5;
+			font-size: $h5-size;
 			color: $color-gray;
 			@include text_overflow(2)
 		}
@@ -191,7 +191,7 @@
 			flex-direction: column;
 			justify-content: space-around;
 			.cell-con-info {
-				font-size: $h5;
+				font-size: $h5-size;
 				color: $color-gray;
 				margin-right: 10px;
 				@include text_overflow(2)
@@ -202,7 +202,7 @@
 		.cell-con {
 			justify-content: space-between;
 			.cell-con-day,.cell-con-anthor {
-				font-size: $h6;
+				font-size: $h6-size;
 				color: $color-gray-light;
 			}
 		}

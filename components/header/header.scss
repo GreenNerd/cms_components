@@ -64,10 +64,6 @@
           color: $color-main;
         }
       }
-      .header-cell-item {
-        opacity: 1;
-        transform: none;
-      }
       :nth-child(1) {
         a {
           transition-delay: 200ms,200ms;

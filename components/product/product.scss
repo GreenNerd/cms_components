@@ -22,16 +22,16 @@
       flex-direction: column;
       justify-content: space-between;
       .product-title {
-        font-size: $h4;
+        font-size: $h4-size;
         color: $color-black;
         @include text_overflow(3)
 
       }
       .product-price {
-        font-size: $h2;
+        font-size: $h2-size;
         color: $color-main;
         i{
-          font-size: $h4;
+          font-size: $h4-size;
           color: #888;
           margin-right: 4px;
           font-style: normal;
@@ -51,7 +51,7 @@
     flex-direction: column;
     padding: 10px;
     .product-title {
-        font-size: $h5;
+        font-size: $h5-size;
         margin: 4px 0 2px;
         color: $color-black;
         height: 42px;
@@ -59,10 +59,10 @@
         @include text_overflow(2)
       }
     .product-price {
-        font-size: $h3;
+        font-size: $h3-size;
         color: $color-main;
       i {
-        font-size: $h5;
+        font-size: $h5-size;
         color: #888;
         margin-right: 4px;
         font-style: normal;
@@ -83,17 +83,17 @@
       background-position: 50%;
     }
     .product-cell-title {
-      font-size: $h3;
+      font-size: $h3-size;
       color: $color-black;
       margin: 4px 10px 8px 10px;
     }
     .product-cell-price {
-      font-size: $h1;
+      font-size: $h1-size;
       color: $color-main;
       margin-left: 10px;
       i {
         margin-right: 4px;
-        font-size: $h4;
+        font-size: $h4-size;
         font-style: normal;
         color: $color-gray;
       }

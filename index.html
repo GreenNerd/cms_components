@@ -22,11 +22,11 @@
     <div class="header-list">
       <div class="header-cell-group header-collapse" style="height:0;">
         <ul class="header-ul-nav">
-          <li class="header-cell header-cell-item"><a href="#">新闻中心</a href="#"></li>
-          <li class="header-cell header-cell-item"><a href="#">廉政建设</a href="#"></li>
-          <li class="header-cell header-cell-item link-active"><a href="#" class="link-active">年度考核须知</a href="#"></li>
-          <li class="header-cell header-cell-item"><a href="#">政策法规</a href="#"></li>
-          <li class="header-cell header-cell-item"><a href="#">公示公告</a href="#"></li>
+          <li class="header-cell"><a href="#">新闻中心</a></li>
+          <li class="header-cell"><a href="#">廉政建设</a></li>
+          <li class="header-cell link-active"><a href="#" class="link-active">年度考核须知</a></li>
+          <li class="header-cell"><a href="#">政策法规</a></li>
+          <li class="header-cell"><a href="#">公示公告</a></li>
         </ul>
       </div>
     </div>
@@ -150,7 +150,7 @@
       </div>
     </div>
     <nav class="dot-nav-right">
-      <ul id="tablist">
+      <ul class="tablist">
         <li role="presentation" class="on" index="0"></li>
         <li role="presentation" index="1"></li>
         <li role="presentation" index="2"></li>
@@ -2006,18 +2006,9 @@
     //导航
       var myHeader = new Header(".header-container");
     //折叠
-      var myCollapse_1 = new Collapse(
-        "js-collapse-1", //最外层Id
-        true,//是否关闭之前折叠
-        0 //默认开启折叠的序号
-        );
-      var myCollapse_2 = new Collapse(
-        "js-collapse-2", //最外层Id
-        false,//是否关闭之前折叠
-        1 //默认开启折叠的序号
-        );
+      new Collapse();
 
-      var pages = new PageSlide(document.querySelector('.pages'))
+      var pages = new PageSlide('pages-container')
 
       var pagination_select = new Pagination('js-pagination-select')
       var pagination_1 = new Pagination('js-pagination-1')

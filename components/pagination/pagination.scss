@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
   padding: 10px;
-  font-size: $h4;
+  font-size: $h4-size;
   color: $color-black;
 
   .page-cell-wrapper {
@@ -43,7 +43,7 @@
           align-items: center;
           a {
             flex: 1 0 40px;
-            font-size: $h4;
+            font-size: $h4-size;
             width: 100%;
             text-align: center;
             line-height: 40px;

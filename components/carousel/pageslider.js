@@ -1,8 +1,9 @@
-var PageSlide = function(el){
+var PageSlide = function(swiperId){
+  this.swiper = document.getElementById(swiperId)
   this.current = 0 //当前页面索引
   
   this.counter = 0
-  this.pageX 
+  this.pageX
 
   this.width //设备宽度
   this.displacement //滑动的距离
@@ -13,7 +14,7 @@ var PageSlide = function(el){
   this.currentIndex
 
   this.flag //滑动方向
-  this.$el = el
+  this.$el = this.swiper.querySelector('.pages')
   this.init()
   this.bindEvents()
 
@@ -23,7 +24,7 @@ var PageSlide = function(el){
 }
 //初始化
   PageSlide.prototype.init = function(){
-    var pages = document.getElementById('pages')
+    var pages = this.$el;
     w = pages.offsetWidth;
     h = w * 0.5;
     pages.style.height = h + 'px'; 
@@ -32,7 +33,7 @@ var PageSlide = function(el){
     this.$el.style.webkitTransform = 'translate3d(0,0,0)'
     this.total = this.$el.childElementCount
 
-    this.tablist = document.getElementById('tablist')
+    this.tablist = this.swiper.querySelector('.tablist')
 
 
     var currentElement = this.$el.firstElementChild;
@@ -320,11 +321,6 @@ PageSlide.prototype.touchcancel = function(e){
 
 PageSlide.prototype.carousel = function(){
   var self = this
-  // tablist.children[0].children[0].children[0].style.webkitTransform = 'scaleX(0)'
-
-  // for( i = 0 ;i<tablist.childElementCount;i++){
-  //   this.tablist.children[i].children[0].children[0].style.webkitTransform = 'scaleX(0)'
-  // }
 
   this.timer = setInterval(nextImg,3000)
 
@@ -333,7 +329,6 @@ PageSlide.prototype.carousel = function(){
   }
 
   function play(){
-    // this.tablist.children[0].children[0].children[0].style.webkitTransform = 'scaleX(1)'
     self.timer
   }
 
@@ -368,7 +363,6 @@ PageSlide.prototype.animate = function(offset){
   if (this.current < 0) {
     this.current = this.total + this.current
   }
-  // console.log(this.current)
 
   for( i = 0 ;i<this.tablist.childElementCount;i++){
     this.tablist.children[i].classList.remove('on')
@@ -381,9 +375,7 @@ PageSlide.prototype.animate = function(offset){
   getIndexX = this.getX(this.$el.children[index])
   newIndexX = getIndexX + offset * this.width
   this.setX(this.$el.children[this.current],newIndexX,1)
-  // newIndexX = currentX + offset * this.width
-  // this.setX(this.$el.children[this.current],newIndexX,1)
-  // console.log(this.$el.children[this.current])
+
   this.tablist.children[this.current].classList.add('on')
 
   //动态添加class

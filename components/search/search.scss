@@ -6,7 +6,7 @@ $borderRadius: 4px;
 input {
   width: 100%;
   outline: none;
-  font-size: $h4;
+  font-size: $h4-size;
   color: $color-black;
 }
 .search-cell {
@@ -22,10 +22,6 @@ input {
       background-size: 16px;
       background-position: 37%;
       background-repeat: no-repeat;
-      // &:focus {
-      //   background-image: none;
-      //   // text-align: left;
-      // }
     }
     .search-button {
       display: none;

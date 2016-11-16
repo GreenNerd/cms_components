@@ -5,8 +5,8 @@
 	overflow: hidden;
 	
 	.moving{
-		transition-timing-function: ease;
-		transition-duration: .25s;
+		transition-timing-function: ease-out;
+		transition-duration: .6s;
 		transition-property: transform
 	}
 

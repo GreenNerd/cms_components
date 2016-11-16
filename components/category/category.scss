@@ -8,7 +8,7 @@
 .category-main{
   display: flex;
   justify-content:space-around;
-  padding: 10px;
+  padding: 10px 20px;
   background: #fff;
 
 
@@ -23,7 +23,7 @@
 
     p{
       position: absolute;
-      font-size: $h3;
+      font-size: $h3-size;
       color: #fff;
       line-height: 49px;
       left: 10px;
@@ -57,12 +57,13 @@
   display: flex;
 
   .category-item{
+    padding: 0 10px;
     flex: 1;
     text-align: center;
     overflow: hidden;
 
     p{
-      font-size: $h5;
+      font-size: $h5-size;
       color: $color-black;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -82,7 +83,7 @@
   padding: 10px 0;
   background: #fff;
   display: flex;
-  overflow: scroll;
+  overflow: auto;
   .category-item{
     flex: 1 0 20%;
     text-align: center;
@@ -100,7 +101,7 @@
       }
     }
     p{
-      font-size: $h6;
+      font-size: $h6-size;
       color: $color-black;
       margin: auto;
       overflow: hidden;
@@ -141,11 +142,11 @@
         }
         .item-con-title{
           color: #000;
-          font-size: $h3;
+          font-size: $h3-size;
         }
         .item-con-info{
           color:$color-gray;
-          font-size: $h6;
+          font-size: $h6-size;
         }
       }
       i{
@@ -191,11 +192,11 @@
 
         .item-con-title{
           color: #000;
-          font-size: $h3;
+          font-size: $h3-size;
         }
         .item-con-info{
           color:$color-gray;
-          font-size: $h6;
+          font-size: $h6-size;
         }
       }
 
@@ -264,11 +265,11 @@
           word-break: keep-all;
         }
         .item-con-title {
-          font-size: $h4;
+          font-size: $h4-size;
           color: #000;
         }
         .item-con-info {
-          font-size: $h6;
+          font-size: $h6-size;
           color: $color-gray;
         }
       }
@@ -312,7 +313,7 @@
           word-break: keep-all;
         }
         .item-con-title{
-          font-size: $h3;
+          font-size: $h3-size;
           color: #000;
         }
       }
@@ -350,7 +351,7 @@
           word-break: keep-all;
         }
         .item-con-title{
-          font-size: $h3;
+          font-size: $h3-size;
           color: #000;
         }
       }
