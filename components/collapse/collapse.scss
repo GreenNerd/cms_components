@@ -3,63 +3,71 @@
 $collapse-bg:url('/assets/library/collapse_bg.jpg');
 
 .collapse-div{
-    border-top: 1px solid #000;
-    overflow:hidden;
+  border-top: 1px solid #000;
+  overflow:hidden;
 
-    .collapse-title{
-      width: 100%;
+  &.active {
+
+    .collapse-body {
+      visibility: visible;
+    }
+  }
+
+  .collapse-title{
+    width: 100%;
+    padding: 0 20px;
+    height: 49px;
+    background: white;
+    line-height: 49px;
+    border-bottom: 0;
+    display: flex;
+    cursor:pointer;
+    font-weight: normal;
+    z-index:50;
+    
+    .collapse-title-txt{
+      flex: auto;
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: keep-all;
+    }
+
+    .fa{
       padding: 0 20px;
-      height: 49px;
-      background: white;
       line-height: 49px;
-      border-bottom: 0;
-      display: flex;
-      cursor:pointer;
-      font-weight: normal;
-      z-index:50;
-      
-      .collapse-title-txt{
-        flex: auto;
-        font-weight: 500;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        word-break: keep-all;
+      display: none;
+     
+      &.left {
+        margin-left: -20px;
       }
-
-      .fa{
-        padding: 0 20px;
-        line-height: 49px;
-        display: none;
-       
-        &.left {
-          margin-left: -20px;
-        }
-       
-        &.right {
-          margin-right: -20px;
-        }
+     
+      &.right {
+        margin-right: -20px;
       }
     }
+  }
 
-    .collapse-body{
-      height: 0;
-      background: #fff;
-      transition-timing-function: ease;
-      transition-duration: .35s;
-      transition-property: height, visibility;
-      position: relative;
-    }
+  .collapse-body{
+    visibility: hidden;
+    height: 0;
+    background: #fff;
+    transition-timing-function: ease;
+    transition-duration: .35s;
+    transition-property: height, visibility;
+    position: relative;
+  }
 
-    .collapse-content{
-      font-size: $h3-size;
-      border-top: 1px solid #fff;
-      padding: 9px 15px;
-    }
+  .collapse-content{
+    font-size: $h3-size;
+    border-top: 1px solid #fff;
+    padding: 9px 15px;
+  }
 
-    &:first-child{
-      border-top: none;
-    }
+  &:first-child{
+    border-top: none;
+  }
 }
 
 .primary{
