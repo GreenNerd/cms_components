@@ -117,46 +117,41 @@
       </pre>
     </div>
   </div>
-  <div class="pages-container" id="pages-container">
-    <h1 class="component-name">swiper</h1>
-    <div class="pages" id="pages">
-      <div class="page currentitem">
-        <div class="item-content" style="background-image:url('assets/banner/default.png')">
-          <div class="mask">
-            <h4>科学镜头下的不可思议之美</h4>
+  <!-- swiper -->
+  <div class="example">
+    <h1>Swiper</h1>
+    <div data-comp="Swiper" data-autotime="3000" data-widget="mid" class="pages-container">
+      <div class="pages" id="pages">
+        <div class="page currentitem">
+          <div class="item-content" style="background-image:url('assets/banner/default.png')">
+            <div class="mask">
+              <h4>科学镜头下的不可思议之美</h4>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="page nextitem">
-        <div class="item-content" style="background-image: url('assets/banner/bg_1.jpg')">
-          <div class="mask">
-            <h4>科学镜头下的不可思议之美</h4>
+        <div class="page nextitem">
+          <div class="item-content" style="background-image: url('assets/banner/bg_1.jpg')">
+            <div class="mask">
+              <h4>科学镜头下的不可思议之美</h4>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="page ">
-        <div class="item-content" style="background-image: url('assets/banner/bg_2.jpg')">
-          <div class="mask">
-            <h4>科学镜头下的不可思议之美</h4>
+        <div class="page ">
+          <div class="item-content" style="background-image: url('assets/banner/bg_2.jpg')">
+            <div class="mask">
+              <h4>科学镜头下的不可思议之美</h4>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="page previousitem">
-        <div class="item-content" style="background-image: url('assets/banner/bg_3.jpg')">
-          <div class="mask">
-            <h4>科学镜头下的不可思议之美</h4>
+        <div class="page previousitem">
+          <div class="item-content" style="background-image: url('assets/banner/bg_3.jpg')">
+            <div class="mask">
+              <h4>科学镜头下的不可思议之美</h4>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <nav class="dot-nav-middle">
-      <ul class="tablist">
-        <li role="presentation" class="on" index="0"></li>
-        <li role="presentation" index="1"></li>
-        <li role="presentation" index="2"></li>
-        <li role="presentation" index="3"></li>
-      </ul>
-    </nav>
   </div>
   <!-- library -->
   <div class="example">
@@ -1990,25 +1985,12 @@
   
   <script src="/assets/bundle.js"></script>
   <script>
-    //轮播
-      // myCarousel({
-      //   parentDivId:'carousel-container',
-      //   images:[
-      //     "assets/banner/default.png",
-      //     "assets/banner/bg_1.jpg",
-      //     "assets/banner/bg_2.jpg",
-      //     "assets/banner/bg_3.jpg"
-      //   ]
-      // },{autoTime:5000, //轮播间隔时间
-      //    paganation:true, //下方序列
-      //    arrow:true //两侧箭头}
-      //   });
     //导航
       var myHeader = new Header(".header-container");
     //折叠
       new Collapse();
 
-      var pages = new PageSlide('pages-container')
+      new Swiper();
 
       var pagination_select = new Pagination('js-pagination-select')
       var pagination_1 = new Pagination('js-pagination-1')
