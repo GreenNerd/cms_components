@@ -838,32 +838,87 @@
       </pre>
     </div>
     <div class="subexample">
-      <h2>disabled</h2>
-      <button type="button" class="btn btn-default" disabled>default</button>
-      <button type="button" class="btn btn-primary" disabled>primary</button>
-      <button type="button" class="btn btn-default-line" disabled>default-line</button>
-      <button type="button" class="btn btn-primary-line" disabled>primary-line</button>
+      <h2>尺寸</h2>
+      <button type="button" class="btn btn-default btn-large">large button</button>
+      <button type="button" class="btn btn-default btn-mini ">mini button</button>
       <pre class="usage">
         <ol class="linenums">
-          <li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">disabled</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default btn-large"</span><span class="tag">&gt;</span><span class="pln">large button</span><span class="tag">&lt;/button&gt;</span></li>
           <li class="L1"></li>
-          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary"</span><span class="pln"> </span><span class="atn">disabled</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/button&gt;</span></li>
-          <li class="L3"></li>
-          <li class="L4"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default-line"</span><span class="pln"> </span><span class="atn">disabled</span><span class="tag">&gt;</span><span class="pln">default-line</span><span class="tag">&lt;/button&gt;</span></li>
-          <li class="L5"></li>
-          <li class="L6"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary-line"</span><span class="pln"> </span><span class="atn">disabled</span><span class="tag">&gt;</span><span class="pln">primary-line</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default btn-mini"</span><span class="tag">&gt;</span><span class="pln">mini button</span><span class="tag">&lt;/button&gt;</span></li>
         </ol>
       </pre>
     </div>
     <div class="subexample">
-      <h2>尺寸</h2>
-      <button type="button" class="btn btn-default btn-large">default</button>
-      <button type="button" class="btn btn-default btn-mini ">default</button>
+      <h2>激活状态</h2>
+      <h4>当按钮处于激活状态时，其表现为被按压下去（底色更深、边框夜色更深、向内投射阴影）。对于 &lt;button&gt; 元素，是通过 :active 状态实现的。对于 &lt;a&gt; 元素，是通过 .active 类实现的。然而，你还可以将 .active 应用到 &lt;button&gt; 上，并通过编程的方式使其处于激活状态。</h4>
+      <button type="button" class="btn btn-default active">default</button>
+      <button type="button" class="btn btn-primary active">primary</button>
       <pre class="usage">
         <ol class="linenums">
-          <li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default btn-large"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default active"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/button&gt;</span></li>
           <li class="L1"></li>
-          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default btn-mini"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary active"</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/button&gt;</span></li>
+        </ol>
+      </pre>
+      <h4>链接(&lt;a&gt;)元素</h4>
+      <a href="#" class="btn btn-default active">default</a>
+      <a href="#" class="btn btn-primary active">primary</a>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default active"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary active"</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/a&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>禁用状态</h2>
+      <h4>button元素</h4>
+      <h4>为 &lt;button&gt; 元素添加 disabled 属性，使其表现出禁用状态。</h4>
+      <button type="button" class="btn btn-default" disabled="disabled">default</button>
+      <button type="button" class="btn btn-primary" disabled="disabled">primary</button>
+      <button type="button" class="btn btn-default-line" disabled="disabled">default-line</button>
+      <button type="button" class="btn btn-primary-line" disabled="disabled">primary-line</button>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pun">=</span><span class="atv">"disabled"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pun">=</span><span class="atv">"disabled"</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L3"></li>
+          <li class="L4"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default-line"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pun">=</span><span class="atv">"disabled"</span><span class="tag">&gt;</span><span class="pln">default-line</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L5"></li>
+          <li class="L6"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary-line"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pun">=</span><span class="atv">"disabled"</span><span class="tag">&gt;</span><span class="pln">primary-line</span><span class="tag">&lt;/button&gt;</span></li>
+        </ol>
+      </pre>
+      <h4>链接（&lt;a&gt;）元素</h4>
+      <a href="#" class="btn btn-default disabled">default</a>
+      <a href="#" class="btn btn-primary disabled">primary</a>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default disabled"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary disabled"</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/a&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>按钮类</h2>
+      <h4>为 &lt;a&gt;、&lt;button&gt; 或 &lt;input&gt; 元素应用按钮类</h4>
+      <a class="btn btn-default" href="#" role="button">Link</a>
+      <button class="btn btn-default" type="submit">Button</button>
+      <input class="btn btn-default" type="button" value="Input">
+      <input class="btn btn-default" type="submit" value="Submit">
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">role</span><span class="pun">=</span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">Link</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="tag">&gt;</span><span class="pln">Button</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L3"></li>
+          <li class="L4"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Input"</span><span class="tag">&gt;</span></li>
+          <li class="L5"></li>
+          <li class="L6"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Submit"</span><span class="tag">&gt;</span></li>
+          <li class="L5"></li>
         </ol>
       </pre>
     </div>
