@@ -59,20 +59,34 @@
   }
   CollapseItem.prototype.addIcon = function(){
     var allTitle = this.element.querySelectorAll('.collapse-title');
-    allTitle.forEach(function(el, index){
+    for (var i = allTitle.length - 1; i >= 0; i--) {
       var newIcon = document.createElement('i');
-      newIcon.className = index === this.activeIndex ? this.iconClass.open : this.iconClass.close;
+      newIcon.className = i === this.activeIndex ? this.iconClass.open : this.iconClass.close;
       switch (this.style) {
         case 'default':
-          el.insertBefore(newIcon,el.querySelector('.collapse-title-txt'));
+          allTitle[i].insertBefore(newIcon,allTitle[i].querySelector('.collapse-title-txt'));
           break;
         case 'primary':
-          el.appendChild(newIcon);
+          allTitle[i].appendChild(newIcon);
           break;
         default:
           break;
       }
-    }.bind(this))
+    }
+    // allTitle.forEach(function(el, index){
+    //   var newIcon = document.createElement('i');
+    //   newIcon.className = index === this.activeIndex ? this.iconClass.open : this.iconClass.close;
+    //   switch (this.style) {
+    //     case 'default':
+    //       el.insertBefore(newIcon,el.querySelector('.collapse-title-txt'));
+    //       break;
+    //     case 'primary':
+    //       el.appendChild(newIcon);
+    //       break;
+    //     default:
+    //       break;
+    //   }
+    // }.bind(this))
   }
   CollapseItem.prototype.enableActive = function(){
     const active = this.element.querySelectorAll('.collapse-div')[this.activeIndex];
