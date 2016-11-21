@@ -3,15 +3,18 @@
 $inputHeight: 34px;
 $borderRadius: 4px; 
 
-input {
-  width: 100%;
-  outline: none;
-  font-size: $h4-size;
-  color: $color-black;
-}
+
 .search-cell {
   margin-bottom: 10px;
   padding: 5px 10px;
+
+  input {
+    width: 100%;
+    outline: none;
+    font-size: $h4-size;
+    color: $color-black;
+  }
+  
   >.search-cell-wrapper {
     .search-input {
       height: $inputHeight;
