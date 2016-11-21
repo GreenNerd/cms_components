@@ -2,9 +2,14 @@
   function Collapse() {
     const allCollapse = document.querySelectorAll("[data-comp='Collapse']");
 
-    allCollapse.forEach(function(element){
-      new CollapseItem(element);
-    })
+    for (var i = allCollapse.length - 1; i >= 0; i--) {
+      new CollapseItem(allCollapse[i]);
+    }
+    // const mountedElements = document.querySelectorAll("[data-comp]");
+    // mountedElements.forEach(element){
+    //   new SlpComp[element.getAttribute('data-comp')](element, args)
+    // }
+
   }
 
   function CollapseItem(element){
