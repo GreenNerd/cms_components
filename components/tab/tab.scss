@@ -1,4 +1,5 @@
 @import '../parm';
+
 .tab-cell {
   display: flex;
   .tab-item {
@@ -15,7 +16,7 @@
       height: 100%;
       line-height: 49px;
       position: relative;
-      p {
+      a {
         position: relative;
         display: inline-block;
         font-size: $h4-size;
@@ -23,7 +24,7 @@
       }
     }
     .active {
-      p {
+      a {
         color: $color-main;
         &:before {
           content: '';
@@ -46,7 +47,7 @@
     .tab-item {
       flex: 1 0 20%;
 
-      p {
+      a {
         font-size: $h4-size;
         padding: 0 14px;
         height: 34px;
