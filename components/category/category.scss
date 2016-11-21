@@ -22,13 +22,13 @@
     border-radius: 4px;
 
     p{
+      color: #fff;
       position: absolute;
       font-size: $h3-size;
       color: #fff;
       line-height: 49px;
       left: 10px;
       z-index: 10;
-      color: $color-black;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
