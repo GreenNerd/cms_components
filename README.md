@@ -2,5 +2,5 @@
 - npm start
 - npm run dev
 - webapck-dev-server --port 3000 --host IP
-- Collapse 手风琴
-- 最外层DIV设置class来选择皮肤，default,primary两种
+
+-每个组件添加了usage
