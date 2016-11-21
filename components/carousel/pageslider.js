@@ -9,6 +9,9 @@
     for (var i = allSwiper.length - 1; i >= 0; i--) {
       new SwiperItem(allSwiper[i]);
     }
+    // _.each(allSwiper,function(element){
+    //   new SwiperItem(element);
+    // })
   }
   function SwiperItem(element){
     this.swiper = element;
@@ -20,7 +23,6 @@
     this.pageX;
 
     this.width; //设备宽度
-    this.displacement; //滑动的距离
 
     this.total; //图片总数
     this.nowDistance = 0; //起始$el的x值
@@ -35,32 +37,29 @@
 //初始化
   SwiperItem.prototype.init = function(){
     const pages = this.$el;
-    w = pages.offsetWidth;
-    h = w * 0.5;
-    pages.style.height = h + 'px'; 
 
-    this.width = this.$el.clientWidth
-    this.$el.style.webkitTransform = 'translate3d(0,0,0)'
-    this.total = this.$el.childElementCount
+    this.width = this.$el.clientWidth;
+    this.$el.style.webkitTransform = 'translate3d(0,0,0)';
+    this.total = this.$el.childElementCount;
 
     var currentElement = this.$el.firstElementChild;
-    currentElement.style.webkitTransform = 'translate3d(0,0,0)'
-    currentElement.children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
+    currentElement.style.webkitTransform = 'translate3d(0,0,0)';
+    currentElement.querySelector('.item-content').style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)';
 
     for(var i = 1 ; i < this.total ; i++){
-      this.setX(this.$el.children[i],this.width,i)
+      this.setX(this.$el.children[i],this.width,i);
     }
     this.setX(this.$el.children[this.total-1],-this.width,1)
 
-    this.setXAndScale(this.$el.children[1].children[0],0,1)
-    this.setXAndScale(this.$el.children[this.total-1].children[0],this.width * 0.9,0.9)
+    this.setXAndScale(this.$el.children[1].querySelector('.item-content'),0,1)
+    this.setXAndScale(this.$el.children[this.total-1].querySelector('.item-content'),this.width * 0.9,0.9)
     if (this.total > 3) {
-      this.setXAndScale(this.$el.children[this.total-2].children[0],this.width*0.9,0.9)
+      this.setXAndScale(this.$el.children[this.total-2].querySelector('.item-content'),this.width*0.9,0.9)
     }
     
-    this.addWidget();
+    // this.addWidget();
     this.bindEvents();
-    this.carousel();
+    // this.carousel();
   }
   SwiperItem.prototype.addWidget = function(){
     var promo_nav = document.createElement('nav');
@@ -146,8 +145,8 @@
     var touches = e.touches[0]
 
     //触控开始
-    this.flag = null
     this.pageX = touches.pageX;
+
     //moving类名在样式中作滑动效果
     this.$el.classList.remove('moving')
     for(var i = 0;i < this.total; i++){
@@ -162,11 +161,7 @@
     var displacement = touches.pageX - this.pageX //位移
     var total = this.total
     var index = this.current
-
-    if (displacement < 0) this.flag = 'left'
-    if (displacement > 0) this.flag = 'right'
   
-
     //计算当前索引值与执行动画索引值
       var currentIndex, //当前索引值
           counter //执行动画索引值
@@ -202,7 +197,7 @@
       next.classList.add('nextitem')
       prev.classList.add('previousitem')
       
-      if(this.tablist !== null) {
+      if(this.tablist) {
         for( i = 0 ;i<this.tablist.childElementCount;i++){
           this.tablist.children[i].classList.remove('on')
         }
@@ -250,12 +245,12 @@
       }
   }
 
-  SwiperItem.prototype.touchend = function(){
-    var minRange = this.width / 2
-    var move = this.displacement
+  SwiperItem.prototype.touchend = function(e){
+    var minRange = this.width / 2;
+    var move = e.changedTouches[0].pageX - this.pageX;
 
-    var n = parseInt(-move / this.width)
-    var remainder = move % this.width
+    var n = parseInt(-move / this.width);
+    var remainder = move % this.width;
 
     var current = this.current
     if (Math.abs(remainder) >= minRange && move > 0) {
@@ -276,20 +271,14 @@
     }
   }
 
-SwiperItem.prototype.touchcancel = function(e){
-
-}
+  SwiperItem.prototype.touchcancel = function(e){
+  }
 //去往索引值页面的go方法，接收三个参数:最终索引值，最终需要进行缩放的索引值，索引值是否改变
   SwiperItem.prototype.go = function(i,n,boolean){
     var targetX = parseInt(this.nowDistance) + n * this.width
     this.nowDistance = targetX
     this.current = i
     var parent = this.$el
-
-    // for(var b = 0 ;b<this.tablist.childElementCount;b++){
-    //   this.tablist.children[b].children[0].children[0].style.webkitTransform = 'scaleX(0)'
-    // }
-    // this.tablist.children[this.current].children[0].children[0].style.webkitTransform = 'scaleX(1)'
 
     //结束动画
       if (boolean) {
@@ -355,7 +344,7 @@ SwiperItem.prototype.touchcancel = function(e){
 
     current.children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
     next.children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
-    this.setXAndScale(prev.children[0],this.width * 0.9,0.9)
+    this.setXAndScale(prev.children[0],this.width * 0.9,0.9);
   }
 
   SwiperItem.prototype.carousel = function(){
@@ -370,7 +359,7 @@ SwiperItem.prototype.touchcancel = function(e){
       self.timer
     }
 
-    if (this.tablist !== null) {
+    if (this.tablist) {
       for(var i = 0;i < this.tablist.childElementCount;i++){
         this.tablist.children[i].onclick = function(){
           if (this.className == 'on') {
@@ -404,7 +393,7 @@ SwiperItem.prototype.touchcancel = function(e){
       this.current = this.total + this.current
     }
 
-    if (this.tablist !== null) {
+    if (this.tablist) {
       for( i = 0 ;i<this.tablist.childElementCount;i++){
         this.tablist.children[i].classList.remove('on')
       }
@@ -419,7 +408,7 @@ SwiperItem.prototype.touchcancel = function(e){
     newIndexX = getIndexX + offset * this.width
     this.setX(this.$el.children[this.current],newIndexX,1)
 
-    if (this.tablist !== null) {
+    if (this.tablist) {
       this.tablist.children[this.current].classList.add('on')
     }
 
