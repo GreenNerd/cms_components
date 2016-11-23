@@ -4,68 +4,71 @@
   margin: 20px;
   border: 1px solid $color-main;
   
-  .attach-items {
+  .attachment-items {
     display: flex;
+    padding: 10px 0 0 10px;
 
-    .attach-item-left {
-      margin: 10px;
+    .attachment-item-left {
       height: 50px;
+
       .fa {
         font-size: 2em;
         margin: 10px;
         color: #fff;
       }
     }
-    .attach-item-right {
+    .attachment-item-right {
       flex: auto;
       display: flex;
       flex-direction: column;
       border-bottom: 1px solid $color-main;
+      padding-bottom: 10px;
+      margin-left: 10px;
+      width: 1em;
+
       .item-title {
         font-size: $h4-size;
         color: $color-black;
+        @include text_ellipsis;
       }
       .item-size {
         font-size: $h5-size;
         color: $color-gray;
       }
-      span {
-        padding: 7px;
-      }
     }
   }
-  :last-child .attach-item-right {
+  :last-child .attachment-item-right {
     border-bottom: none;
   }
 }
 
 .excel {
-  .attach-item-left {
+  .attachment-item-left {
     background: #549e3b;
   }
 }
 .pdf {
-  .attach-item-left {
+  .attachment-item-left {
     background: #f91b00;
   }
 }
 .ppt {
-  .attach-item-left {
+  .attachment-item-left {
     background: #ce4217;
   }
 }
 .zip {
-  .attach-item-left {
+  .attachment-item-left {
     background: #f8b848;
   }
 }
 .word {
-  .attach-item-left {
+  .attachment-item-left {
     background: #2162ab;
   }
 }
 .other {
-  .attach-item-left {
+  .attachment-item-left {
     background: $color-main;
   }
 }
