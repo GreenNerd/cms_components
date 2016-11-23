@@ -2,35 +2,42 @@
 
 $lineHeight: 1.6em;
 
-html{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
   font-size: 16px;
-}
-h1{
   line-height: $lineHeight;
-  font-size: 22px;  
 }
-h2{
+h1 {
+  font-size: 22px;
   line-height: $lineHeight;
+}
+h2 {
   font-size: 18px;
-}
-h3{
   line-height: $lineHeight;
+}
+h3 {
   font-size: 17px;
-}
-h4{
   line-height: $lineHeight;
+}
+h4 {
   font-size: 16px;
-}
-h5{
   line-height: $lineHeight;
+}
+h5 {
   font-size: 14px;
-}
-h6{
   line-height: $lineHeight;
+}
+h6 {
   font-size: 13px;
+  line-height: $lineHeight;
 }
 
-input{
+input {
   -webkit-appearance: none;
   border-radius: 0;
 }
@@ -39,9 +46,18 @@ input[type="button"], input[type="submit"], input[type="reset"] {
   -webkit-appearance: button;
 }
 
-textarea {  
+textarea {
   -webkit-appearance: none;
-}   
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 
 
 // .button-group{
