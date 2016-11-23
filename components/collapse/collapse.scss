@@ -2,7 +2,7 @@
 
 $collapse-bg:url('/assets/library/collapse_bg.jpg');
 
-.collapse-div{
+.collapse-panel {
   border-top: 1px solid #000;
   overflow:hidden;
 
@@ -13,7 +13,7 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
     }
   }
 
-  .collapse-title{
+  .collapse-heading {
     width: 100%;
     padding: 0 20px;
     height: 49px;
@@ -24,7 +24,7 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
     font-weight: normal;
     z-index:50;
     
-    .collapse-title-txt{
+    .collapse-title {
       line-height: 49px;
       flex: auto;
       font-weight: 500;
@@ -34,7 +34,7 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
       word-break: keep-all;
     }
 
-    .fa{
+    .fa {
       padding: 0 20px;
       line-height: 49px;
       display: none;
@@ -49,7 +49,7 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
     }
   }
 
-  .collapse-body{
+  .collapse-body {
     visibility: hidden;
     height: 0;
     background: #fff;
@@ -59,35 +59,35 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
     position: relative;
   }
 
-  .collapse-content{
+  .collapse-content {
     font-size: $h3-size;
     border-top: 1px solid #fff;
     padding: 9px 15px;
   }
 
-  &:first-child{
+  &:first-child {
     border-top: none;
   }
 }
 
-.primary{
-  .collapse-div{
+.primary {
+  .collapse-panel {
     border-top: 1px solid #fff;
     background-color: $color-main;
 
-    .collapse-title{
+    .collapse-heading {
       color: white;
       background: $collapse-bg;
       background-size: cover;
 
-      .collapse-title-txt{
+      .collapse-title {
       }
-      .fa{
+      .fa {
         display: block;
       }
     }
-    .collapse-body{
-      .collapse-content::before{
+    .collapse-body {
+      .collapse-content::before {
         content: "";
         height: 0px;
         width: 0px;
@@ -102,25 +102,25 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
         left: 18px;
       }
     }
-    &:first-child{
+    &:first-child {
       border-top: none;
     }
   }
 }
 
-.default{
-  .collapse-div{
+.default {
+  .collapse-panel {
     border-top: 1px solid $color-line;
     background-color: #fff;
-    .collapse-title{
+    .collapse-heading {
       color: $color-main;
-      .collapse-title-txt{
+      .collapse-title {
       }
-      .fa{
+      .fa {
         display: block;
       }
     }
-    .collapse-body{
+    .collapse-body {
       border-top: 1px solid $color-line;
     }
   }

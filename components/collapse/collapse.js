@@ -58,13 +58,13 @@
     this.bindEvents();
   }
   CollapseItem.prototype.addIcon = function(){
-    var allTitle = this.element.querySelectorAll('.collapse-title');
+    var allTitle = this.element.querySelectorAll('.collapse-heading');
     for (var i = allTitle.length - 1; i >= 0; i--) {
       var newIcon = document.createElement('i');
       newIcon.className = i === this.activeIndex ? this.iconClass.open : this.iconClass.close;
       switch (this.style) {
         case 'default':
-          allTitle[i].insertBefore(newIcon,allTitle[i].querySelector('.collapse-title-txt'));
+          allTitle[i].insertBefore(newIcon,allTitle[i].querySelector('.collapse-title'));
           break;
         case 'primary':
           allTitle[i].appendChild(newIcon);
@@ -89,7 +89,7 @@
     // }.bind(this))
   }
   CollapseItem.prototype.enableActive = function(){
-    const active = this.element.querySelectorAll('.collapse-div')[this.activeIndex];
+    const active = this.element.querySelectorAll('.collapse-panel')[this.activeIndex];
     active.classList.add('active');
     this._setHeight(active);
   }
@@ -99,11 +99,11 @@
   CollapseItem.prototype.bindEvents = function(){
     this.element.addEventListener('click',function(event){
       var el = event.target;
-      while(!el.classList.contains('collapse-title') && el !== this.element.parentElement) {
+      while(!el.classList.contains('collapse-heading') && el !== this.element.parentElement) {
         el = el.parentElement;
       }
 
-      if (el.classList.contains('collapse-title')) {
+      if (el.classList.contains('collapse-heading')) {
         this._toggleDisplay(el);
       }
     }.bind(this),false)
