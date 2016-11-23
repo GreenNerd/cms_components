@@ -1145,7 +1145,7 @@
     <h1>search</h1>
     <div class="subexample">
       <h2>组件 primary1</h2>
-      <div id="js-search-1" class="search-cell">
+      <div data-comp="SearchBox" data-style="primary1" class="search-cell">
         <div class="search-cell-left">
           <i class="fa fa-arrow-left"></i>
         </div>
@@ -1158,7 +1158,7 @@
         </div>
       </div>
       <h2>组件 primary2</h2>
-      <div id="js-search-2" class="search-cell">
+      <div data-comp="SearchBox" data-style="primary2" class="search-cell">
         <div class="search-cell-left">
           <i class="fa fa-arrow-left"></i>
         </div>
@@ -2069,8 +2069,7 @@
 
       new Pagination();
 
-      var search_1 = new Search('js-search-1','primary1')
-      var search_2 = new Search('js-search-2','primary2')
+      new Search();
   </script>
 </body>
 </html>
