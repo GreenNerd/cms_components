@@ -1319,7 +1319,7 @@
     <h1>pagination</h1>
     <div class="subexample">
       <h2>基础组件</h2>
-      <div id="js-pagination-select" class="pagination page-default">
+      <div data-comp="Pagination" class="pagination page-default">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -1376,7 +1376,7 @@
     </div>
     <div class="subexample">
       <h2>预定义样式</h2>
-      <div id="js-pagination-1" class="pagination page-default">
+      <div data-comp="Pagination" class="pagination page-default">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -1401,7 +1401,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="js-pagination-2" class="pagination page-default-normal">
+      <div data-comp="Pagination" class="pagination page-default-normal">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -1426,7 +1426,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="js-pagination-3" class="pagination page-default-bg">
+      <div data-comp="Pagination" class="pagination page-default-bg">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -1451,7 +1451,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="js-pagination-4" class="pagination page-main">
+      <div data-comp="Pagination" class="pagination page-main">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -1476,7 +1476,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="js-pagination-5" class="pagination page-main-normal">
+      <div data-comp="Pagination" class="pagination page-main-normal">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -1501,7 +1501,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="js-pagination-6" class="pagination page-main-bg">
+      <div data-comp="Pagination" class="pagination page-main-bg">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -1539,7 +1539,7 @@
     </div>
     <div class="subexample">
       <h2>不可点击</h2>
-      <div id="" class="pagination page-default">
+      <div data-comp="Pagination" class="pagination page-default">
         <div class="page-cell-left disable">
           <span>上一页</span>
         </div>
@@ -1564,7 +1564,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="" class="pagination page-default-normal">
+      <div data-comp="Pagination" class="pagination page-default-normal">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -1589,7 +1589,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="" class="pagination page-default-bg">
+      <div data-comp="Pagination" class="pagination page-default-bg">
         <div class="page-cell-left disable">
           <span>上一页</span>
         </div>
@@ -1614,7 +1614,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="" class="pagination page-main">
+      <div data-comp="Pagination" class="pagination page-main">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -1639,7 +1639,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="" class="pagination page-main-normal">
+      <div data-comp="Pagination" class="pagination page-main-normal">
         <div class="page-cell-left disable">
           <span>上一页</span>
         </div>
@@ -1664,7 +1664,7 @@
           <span>下一页</span>
         </div>
       </div>
-      <div id="" class="pagination page-main-bg">
+      <div data-comp="Pagination" class="pagination page-main-bg">
         <div class="page-cell-left">
           <span>上一页</span>
         </div>
@@ -2067,13 +2067,7 @@
 
       new Swiper();
 
-      var pagination_select = new Pagination('js-pagination-select')
-      var pagination_1 = new Pagination('js-pagination-1')
-      var pagination_2 = new Pagination('js-pagination-2')
-      var pagination_3 = new Pagination('js-pagination-3')
-      var pagination_4 = new Pagination('js-pagination-4')
-      var pagination_5 = new Pagination('js-pagination-5')
-      var pagination_6 = new Pagination('js-pagination-6')
+      new Pagination();
 
       var search_1 = new Search('js-search-1','primary1')
       var search_2 = new Search('js-search-2','primary2')
