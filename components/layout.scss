@@ -77,13 +77,18 @@ pre {
     >h4 {
       margin: 10px 20px;
     }
-    >.btn {
-      margin-bottom: 10px;
+    .button-container {
+      padding: 10px;
+
+      .btn {
+        margin-bottom: 10px;
+      }
     }
   }
 }
 
-.fixed-top,.fixed-bottom {
+.fixed-top,
+.fixed-bottom {
   position: fixed;
   right: 0;
   left: 0;

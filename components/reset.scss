@@ -76,6 +76,9 @@ a {
     border: none;
     outline: none;
     box-sizing: border-box;
+    line-height: 1;
+    font-size: 13px;
+
     &.disabled {
       pointer-events: none;
       cursor: not-allowed;
@@ -86,10 +89,10 @@ a {
     width: 100%;
     padding: 14px 0px;
     font-size: $h2-size;
-    font-weight: bold;
   }
   .btn-mini {
-    padding: 12px 15px;
+    padding: 6px 15px;
+    font-size: $h5-size;
   }
   // .disabled {
   //  opacity: $disable;
