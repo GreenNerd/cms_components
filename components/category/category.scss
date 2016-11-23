@@ -5,6 +5,7 @@
   flex-wrap: wrap;
 }
 @mixin p_ellipsis {
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -17,8 +18,24 @@
   padding: 10px 20px;
   background: #fff;
 
+  &.scroll {
+    justify-content: flex-start;
+    overflow: scroll;
+
+    &::after{
+      content: '';
+      display: inline-table;
+      height: 49px;
+      width: 10px;
+    }
+
+    .category-item {
+      flex: 1 0 30%;
+    }
+  }
+
   .category-item{
-    flex:1;
+    flex: 1;
     overflow: hidden;
     position: relative;
     background: $color-main;
@@ -26,7 +43,7 @@
     margin-right: 10px;
     border-radius: 4px;
 
-    p{
+    span {
       @include p_ellipsis;
       color: #fff;
       position: absolute;
@@ -48,7 +65,7 @@
     }
   }
 
-  :last-child{
+  >:last-child{
     margin-right: 0;
   }
 }
@@ -62,9 +79,11 @@
   
   &.nobg i {
     color: $color-black;
+    font-size: 1.6em;
   }
   &.withbg i {
     color: #fff;
+    font-size: 1.3em;
   }
   .category-item{
     flex: 1 0 20%;
@@ -79,11 +98,10 @@
 
       i{
         line-height: 37px;
-        font-size: 1em;
       }
     }
-    p{
-      padding: 5px;
+    span {
+      padding: 4px;
       font-size: $h6-size;
       color: $color-black;
       margin: auto;
@@ -110,7 +128,7 @@
         flex: auto;
         overflow: hidden;
 
-        p{
+        span {
           @include p_ellipsis;
         }
 
@@ -139,7 +157,7 @@
           i{
             text-align: center;
             flex: 0 0 1.3em;
-            font-size: 2.6em;
+            font-size: 2em;
           }
         }
       }
@@ -166,8 +184,9 @@
           line-height: 37px;
           
           i{
-            font-size: 1em;
+            font-size: 1.3em;
             color: #fff;
+            line-height: 37px;
           }
         }
 
@@ -205,11 +224,12 @@
         border-radius: 50%;
         text-align: center;
         line-height: 37px;
-        
-        i {
-          font-size: 1em;
-          color: #fff;
-        }
+      }
+      
+      i {
+        font-size: 1.3em;
+        color: #fff;
+        line-height: 37px;
       }
 
       .info {
@@ -219,7 +239,7 @@
         overflow: hidden;
         border-bottom: 1px solid $color-line;
 
-        p {
+        span {
           width: 100%;
           @include p_ellipsis;
         }
