@@ -9,7 +9,7 @@
 	function Header(){
 		this.container = document.querySelector("[data-comp='Header']");
 		this.toggler = this.container.querySelector(".toggler");
-		this.togglerIcon = this.toggler.children[0];
+		this.togglerIcon = this.toggler.querySelector(".fa");
 		this.headerGroup = this.container.querySelector(".header-cell-group");
 		this.init()
 	}
