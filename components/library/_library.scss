@@ -1,22 +1,15 @@
-@mixin flex-space-around {
+.library-list {
   display: flex;
   justify-content: space-around;
-}
-
-$color: #000;
-
-.library-item-list {
-  @include flex-space-around;
   padding: 20px 10px;
   padding-bottom: 0;
 
-  .library-item {
+  .list-item {
     flex: 1;
-
     background-size: cover;
     background-position: 50%;
     text-decoration: none;
-    color: $color;
+    color: #000;
     display: block;
     margin-right: 8px;
     margin-bottom: 8px;
@@ -26,7 +19,7 @@ $color: #000;
     overflow: hidden;
     padding-bottom: 6%;
 
-    .library-item-name {
+    .item-name {
       position: absolute;
       font-size: 19px;
       font-family: Microsoft YaHei;
@@ -37,7 +30,7 @@ $color: #000;
       line-height: 1.3em;
     }
 
-    .library-item-icon {
+    .item-icon {
       position: absolute;
       font-size: 36px;
       bottom: 14px;
@@ -45,7 +38,7 @@ $color: #000;
       color: #fff;
     }
 
-    .library-item-mask {
+    .item-mask {
       width: 100%;
       height: 100%;
       background-color: #888;
