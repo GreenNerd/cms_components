@@ -1,7 +1,7 @@
 .library-list {
   display: flex;
   justify-content: space-around;
-  padding: 20px 10px;
+  padding: 0 10px;
   padding-bottom: 0;
 
   .list-item {
@@ -15,9 +15,8 @@
     margin-bottom: 8px;
     position: relative;
     max-height: 164px;
-    min-height: 120px;
+    min-height: 148px;
     overflow: hidden;
-    padding-bottom: 6%;
 
     .item-name {
       position: absolute;
@@ -41,8 +40,8 @@
     .item-mask {
       width: 100%;
       height: 100%;
-      background-color: #888;
-      opacity: .6;
+      background-color: #666;
+      opacity: .5;
       
       position: absolute;
     }
