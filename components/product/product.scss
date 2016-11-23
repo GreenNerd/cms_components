@@ -21,15 +21,17 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       .product-title {
         font-size: $h4-size;
         color: $color-black;
         @include text_overflow(3)
-
       }
+
       .product-price {
         font-size: $h2-size;
         color: $color-main;
+
         i{
           font-size: $h4-size;
           color: #888;
@@ -50,17 +52,18 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+
     .product-title {
         font-size: $h5-size;
         margin: 4px 0 2px;
         color: $color-black;
-        height: 42px;
-
         @include text_overflow(2)
       }
+
     .product-price {
         font-size: $h3-size;
         color: $color-main;
+
       i {
         font-size: $h5-size;
         color: #888;
@@ -91,6 +94,7 @@
       font-size: $h1-size;
       color: $color-main;
       margin-left: 10px;
+
       i {
         margin-right: 4px;
         font-size: $h4-size;
