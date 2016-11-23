@@ -4,13 +4,6 @@
   display: flex;
   flex-wrap: wrap;
 }
-@mixin p_ellipsis {
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-break: keep-all;
-}
 
 .category-main{
   display: flex;
@@ -44,7 +37,7 @@
     border-radius: 4px;
 
     span {
-      @include p_ellipsis;
+      @include text_ellipsis;
       color: #fff;
       position: absolute;
       font-size: $h3-size;
@@ -105,7 +98,7 @@
       font-size: $h6-size;
       color: $color-black;
       margin: auto;
-      @include p_ellipsis;
+      @include text_ellipsis;
     }
   }
   :last-child{
@@ -129,7 +122,7 @@
         overflow: hidden;
 
         span {
-          @include p_ellipsis;
+          @include text_ellipsis;
         }
 
         .title{
@@ -225,7 +218,7 @@
         text-align: center;
         line-height: 37px;
       }
-      
+
       i {
         font-size: 1.3em;
         color: #fff;
@@ -241,7 +234,7 @@
 
         span {
           width: 100%;
-          @include p_ellipsis;
+          @include text_ellipsis;
         }
         .title {
           font-size: $h4-size;

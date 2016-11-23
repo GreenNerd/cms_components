@@ -25,3 +25,11 @@ $h6-size:13px;
 	width: $side;
 	height: $side;
 }
+
+@mixin text_ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: keep-all;
+}
