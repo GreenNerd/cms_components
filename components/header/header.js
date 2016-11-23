@@ -6,9 +6,8 @@
 			el["on"+ eventName] = cb;
 		}
 	}
-	function Header(selector){
-		this._selector = String(selector)
-		this.container = document.querySelector(this._selector);
+	function Header(){
+		this.container = document.querySelector("[data-comp='Header']");
 		this.toggler = this.container.querySelector(".toggler");
 		this.togglerIcon = this.toggler.children[0];
 		this.headerGroup = this.container.querySelector(".header-cell-group");
