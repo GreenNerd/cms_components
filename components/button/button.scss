@@ -1,0 +1,86 @@
+@import '../parm';
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: 13px;
+
+  &.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+.btn-large {
+  width: 100%;
+  padding: 14px 0px;
+  font-size: $h2-size;
+}
+.btn-mini {
+  padding: 6px 15px;
+  font-size: $h5-size;
+}
+//btn-primary
+  .btn-primary {
+    background: $color-main;
+    color: #fff;
+
+    &.active,&:active {
+      background: $color-main-dark;
+      color: #fff;
+    }
+    &.disabled,&:disabled {
+      opacity: $disable;
+      color: #fff;
+    }
+  }
+//btn-primary-line
+  .btn-primary-line{
+    border: 1px solid $color-main;
+    color: $color-main;
+    background: #fff;
+    &.active,&:active {
+      border: 1px solid $color-main-dark;
+      color: $color-main-dark;
+      background: #fff;
+    }
+    &.disabled,&:disabled {
+      border: 1px solid $color-main-dark;
+      color: $color-main-dark;
+      background: #fff;
+      opacity: $disable;
+    }
+  }
+//btn-default
+  .btn-default{
+    background: $color-line;
+    color: #000;
+    &.active,&:active {
+      background: $color-line-dark;
+      color: #000;
+    }
+    &.disabled,&:disabled {
+      background: $color-line;
+      color: #000;
+      opacity: $disable;
+    }
+  }
+//btn-default-line
+  .btn-default-line{
+    background: #fff;
+    border: 1px solid $color-gray;
+    color: #000;
+    &.active,&:active {
+      border: 1px solid #000;
+    }
+    &.disabled,&:disabled {
+      border: 1px solid #000;
+      opacity: $disable;
+    }
+  }
