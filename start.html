@@ -3,15 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
-  <title>start</title>
+  <title>langding</title>
+  <style type="text/css">
+    .langding-page {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: -webkit-gradient(linear,0% 0%,0% 100%,from($color-main-dark),to($color-main));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .langding-logo {
+      background-image: url('/assets/library/item_three_l.png');
+      background-size: cover;
+      width: 80%;
+      height: 0;
+      padding-top: 53.5%;
+      margin-top: 20%;
+    }
+    .langding-info {
+      text-align: center;
+      margin-bottom: 45px;
+      p {
+        color: #fff;
+        font-size: $h4-size;
+      }    
+    }
+  </style>
 </head>
 <body>
-  <nav class="start-page">
-    <div class="start-logo">
+  <nav class="landing-page">
+    <div class="landing-logo">
     </div>
-    <div class="start-info">
-      <p class="start-version">v2.0</p>
-      <p class="start-copyright">copyright@Skylark</p>
+    <div class="landing-info">
+      <p class="landing-version">v2.0</p>
+      <p class="landing-copyright">copyright@Skylark</p>
     </div>
   </nav>
   <script src="assets/bundle.js"></script>
