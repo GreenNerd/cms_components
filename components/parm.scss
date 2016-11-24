@@ -33,3 +33,17 @@ $h6-size:13px;
   white-space: nowrap;
   word-break: keep-all;
 }
+
+.fixed-top,
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.fixed-top {
+  top: 0;
+}
+.fixed-bottom {
+  bottom: 0
+}
