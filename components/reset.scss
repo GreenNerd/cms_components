@@ -10,7 +10,10 @@ $lineHeight: 1.6em;
   -webkit-tap-highlight-color: transparent;
   -webkit-overflow-scrolling: touch;
 }
-html,
+
+html {
+  font-size: 10px;
+}
 body {
   font-size: 16px;
   line-height: $lineHeight;
