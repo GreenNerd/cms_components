@@ -7,111 +7,117 @@ $borderRadius: 4px;
 .search-cell {
   margin-bottom: 10px;
   padding: 5px 10px;
+  background: $color-background;
 
-  input {
+  .search-form {
     width: 100%;
-    outline: none;
+    height: $inputHeight;
+    line-height: $inputHeight;
+    text-align: center;
+    background: #fff;
+    border: 1px solid $color-line;
+    border-radius: $borderRadius;
+    color: $color-gray;
     font-size: $h4-size;
-    color: $color-black;
-  }
-  
-  >.search-cell-wrapper {
-    .search-input {
-      height: $inputHeight;
-      text-align: center;
-      border: 1px solid $color-line;
-      border-radius: $borderRadius;
-      background-image: url("/assets/library/search.png");
-      background-size: 16px;
-      background-position: 37%;
-      background-repeat: no-repeat;
+    i {
+      margin-right: 4px;
     }
-    .search-button {
-      display: none;
-    }
-  }
-  .search-cell-left {
-    display: none;
-  }
-  .search-cell-right {
-    display: none;
   }
 }
 
+
 .primary1 {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
   text-align: center;
+  padding: 0;
 
-  .search-cell-left {
-    display: block;
-    flex: .2;
-    padding: 5px 20px;
-    border-right: 1px solid $color-line;
+  .search-bar {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-    i{
-      color: $color-gray-light;
-      font-size: 2.2rem;
+    .search-cell-left {
+      padding: 5px 20px;
+      border-right: 1px solid $color-line;
+
+      i{
+        color: $color-gray-light;
+        font-size: 2.2rem;
+      }
+    }
+    .search-cell-right {
+      padding: 0 16px;
+      border-left: 1px solid $color-line-dark;
+      i{
+        color: $color-main;
+        font-size: 1.5em;
+      }
+    }
+    .search-cell-wrapper {
+      flex: auto;
+      .search-input {
+        width: 100%;
+        height: $inputHeight;
+        outline: none;
+        font-size: $h4-size;
+        color: $color-black;
+        border: none;
+        text-indent: 10px;
+      }
+      .search-button {
+        display: none;
+      }
     }
   }
-  .search-cell-right {
-    display: block;
-    flex: .2;
-    padding: 0 16px;
-    border-left: 1px solid $color-line-dark;
-    i{
-      color: $color-main;
-      font-size: 1.5em;
-    }
-  }
-  .search-cell-wrapper {
-    flex: auto;
-    .search-input {
-      border: none;
-      text-align: left;
-      text-indent: 10px;
-      height: $inputHeight;
-    }
-  }
+
 }
 
 .primary2 {
-  background: $color-line;
-  display: flex;
-  align-items: center;
-  text-align: center;
   padding: 10px 0;
-  >.search-cell-left {
-    display: block;
-    flex: .2;
-    padding: 5px 20px;
-    i{
-      color: $color-gray-light;
-      font-size: 1.5em;
-    }
-  }
-  >.search-cell-wrapper {
-    flex: auto;
-    display: flex;
-    margin-right: 10px;
+  background: $color-line;
 
-    .search-input {
-      height: $inputHeight;
-      text-align: left;
-      border: none;
-      border-bottom-left-radius: $borderRadius;
-      border-top-left-radius: $borderRadius;
-      text-indent: 10px;
+  .search-bar {
+    width: 100%;
+    display: flex;
+    flex-direction :row;
+    align-items: center;
+    .search-cell-left {
+      padding: 5px 20px;
+      i{
+        color: $color-gray-light;
+        font-size: 1.5em;
+      }
     }
-    .search-button {
-      display: block;
-      flex: 0 0 20%;
-      color: #fff;
-      background: $color-main;
-      border: none;
-      border-bottom-right-radius: $borderRadius;
-      border-top-right-radius: $borderRadius;
+    .search-cell-wrapper {
+      flex: auto;
+      display: flex;
+      margin-right: 10px;
+
+      .search-input {
+        width: 100%;
+        height: $inputHeight;
+        text-align: left;
+        outline: none;
+        font-size: $h4-size;
+        color: $color-black;
+        border: none;
+        border-bottom-left-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+        text-indent: 10px;
+      }
+      .search-button {
+        display: block;
+        padding: 0 15px;
+        color: #fff;
+        background: $color-main;
+        border: none;
+        border-bottom-right-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+      }
+    }
+    .search-cell-right {
+      display: none;
     }
   }
 }

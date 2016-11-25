@@ -8,22 +8,21 @@
   }
 
   function Search(element) {
-    const container = element;
     const searchStyle = element.getAttribute('data-style');
-
-    const input = container.querySelector('.search-input');
-    input.onfocus = function(){
-      container.classList.add(searchStyle);
-      input.style.backgroundImage = 'none';
-    }
-    input.onblur = function(){
-      if (input.value != '') {
-        input.style.backgroundImage = 'none';
-      }else{
-        container.classList.remove(searchStyle);
-        input.style.backgroundImage = 'url("/assets/library/search.png")';
-      }
-    }
+    const form = element.querySelector('.search-form');
+    const bar = element.querySelector('.search-bar');
+    const input = bar.querySelector('.search-input');
+    form.addEventListener('click',function(e){
+      element.classList.add(searchStyle);
+      form.style.display = 'none';
+      bar.style = 'none';
+      input.focus();
+    },false);
+    input.addEventListener('blur',function(e){
+      element.classList.remove(searchStyle);
+      form.style.display = 'block';
+      bar.style.display = 'none';
+    },false)
   }
 
   window.slpComp.Search = SearchBox;
