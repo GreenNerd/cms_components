@@ -26,5 +26,5 @@
     }
   }
 
-  window.Search = SearchBox;
+  window.slpComp.Search = SearchBox;
 }());

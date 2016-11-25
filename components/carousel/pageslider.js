@@ -451,5 +451,5 @@
       this.$el.children[nextDiv].children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
   }
 
-  window.Swiper = Swiper;
+  window.slpComp.Swiper = Swiper;
 }());

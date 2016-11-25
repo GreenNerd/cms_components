@@ -1,3 +1,4 @@
+require('./components/slpComp.js');
 require('./components/reset.scss');
 require('./components/parm.scss');
 require('./components/layout.scss');

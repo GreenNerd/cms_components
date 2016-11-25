@@ -132,5 +132,5 @@
 
   }
 
-  window.Collapse = Collapse;
+  window.slpComp.Collapse = Collapse;
 }());

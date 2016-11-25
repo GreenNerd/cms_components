@@ -39,5 +39,5 @@
     }
   }
 
-  window.Pagination = Pagination;
+  window.slpComp.Pagination = Pagination;
 }());

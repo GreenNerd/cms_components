@@ -6,6 +6,7 @@
 			el["on"+ eventName] = cb;
 		}
 	}
+
 	function Header(){
 		this.container = document.querySelector("[data-comp='Header']");
 		this.toggler = this.container.querySelector(".toggler");
@@ -35,6 +36,5 @@
 			this.togglerIcon.classList.add("fa-close");
 		}
 	}
-
-	window.Header = Header;
-}())
+	window.slpComp.Header = Header
+}());
