@@ -6,122 +6,185 @@
     text-align: center;
   }
 }
-  .tab-lof5-default {
-    height: 49px;
-    margin: 0 10px;
-    overflow: hidden;
-    .tab-item {
-      flex: 1 0 20%;
-      margin: auto;
-      height: 100%;
-      line-height: 49px;
+.tab-lof5-default {
+  height: 49px;
+  margin: 0 10px;
+  overflow: hidden;
+  .tab-item {
+    flex: 1 0 20%;
+    margin: auto;
+    height: 100%;
+    line-height: 49px;
+    position: relative;
+    a {
       position: relative;
-      a {
-        position: relative;
-        display: inline-block;
-        font-size: $h4-size;
-        color: #000;
+      display: inline-block;
+      font-size: $h4-size;
+      color: #000;
+    }
+  }
+  .active {
+    a {
+      color: $color-main;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background: $color-main;
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
     }
-    .active {
-      a {
-        color: $color-main;
+  }
+}
+.tab-lof5-primary {
+  height: 49px;
+  margin: 0 10px;
+  overflow: hidden;
+  align-items: center;
 
-        &:before {
-          content: '';
-          position: absolute;
-          height: 2px;
-          background: $color-main;
-          bottom: 0;
-          left: 0;
-          right: 0;
+  .tab-item {
+    flex: 1 0 20%;
+    border-radius: 4px;
+
+    a {
+      font-size: $h4-size;
+      padding: 0 14px;
+      height: 34px;
+      line-height: 34px;
+      display: inline-block;
+    }
+  }
+  .active {
+    color: #fff;
+    background: $color-main;
+  }
+}
+.tab-label {
+  margin: 5px 0;
+  flex-wrap: wrap;
+  .tab-item {
+
+    flex: 1 0 25%;
+    width: 100%;
+    font-size: $h4-size;
+    padding: 5px 0;
+    position: relative;
+
+    a {
+      display: block;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      height: 15px;
+      width: 1px;
+      background: $color-line;
+      right: 0;
+      top: 10px;
+    }
+  }
+  .active {
+    color: $color-main;
+  }
+  :nth-child(4n):after {
+    display: none;
+  }
+}
+.tab-lof4 {
+  margin: 10px 0;
+  overflow: hidden;
+  width: 75%;
+  height: 34px;
+  border: 1px solid $color-main;
+  border-radius: 4px;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .tab-item {
+    flex: 1 0 24%;
+    width: 100%;
+    line-height: 34px;
+    border-right: 1px solid $color-main;
+    color: #000;
+
+    a{
+      display: block;
+    }
+  }
+
+  :last-child {
+    border-right: none;
+  }
+
+  .active {
+    color: white;
+    background: $color-main;
+  }
+}
+.tab-list {
+    color: $color-black;
+    
+  .tab-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 49px;
+    position: relative;
+    border-top: 1px solid $color-line;
+    border-bottom: 1px solid $color-line;
+
+    .tab-item {
+      flex: 1;
+      text-align: center;
+      border-right: 1px solid $color-line;
+      
+      &.active {
+        color: $color-main;
+      }
+      .title {
+        font-size: $h4-size;
+
+        .fa {
+          margin-left: 4px;
+        }
+      }
+    }
+
+    >:last-child {
+      border-right: none;
+    }
+  }
+  .tab-box {
+    .tab-content{
+      display: none;
+
+      &.selected {
+        display: block;
+      }
+      .box-ul {
+        li {
+          position: relative;
+          font-size: $h4-size;
+          height: 49px;
+          line-height: 49px;
+          border-bottom: 1px solid $color-line;
+          
+          span {
+            position: absolute;
+            left: 40px;
+          }
+          i {
+            margin-left: 12px;
+          }
+        }
+        .active {
+          color: $color-main;
         }
       }
     }
   }
-  .tab-lof5-primary {
-    height: 49px;
-    margin: 0 10px;
-    overflow: hidden;
-    align-items: center;
-
-    .tab-item {
-      flex: 1 0 20%;
-      border-radius: 4px;
-
-      a {
-        font-size: $h4-size;
-        padding: 0 14px;
-        height: 34px;
-        line-height: 34px;
-        display: inline-block;
-      }
-    }
-    .active {
-      color: #fff;
-      background: $color-main;
-    }
-  }
-  .tab-label {
-    margin: 5px 0;
-    flex-wrap: wrap;
-    .tab-item {
-
-      flex: 1 0 25%;
-      width: 100%;
-      font-size: $h4-size;
-      padding: 5px 0;
-      position: relative;
-
-      a {
-        display: block;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        height: 15px;
-        width: 1px;
-        background: $color-line;
-        right: 0;
-        top: 10px;
-      }
-    }
-    .active {
-      color: $color-main;
-    }
-    :nth-child(4n):after {
-      display: none;
-    }
-  }
-  .tab-lof4 {
-    margin: 10px 0;
-    overflow: hidden;
-    width: 75%;
-    height: 34px;
-    border: 1px solid $color-main;
-    border-radius: 4px;
-    margin: auto;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    .tab-item {
-      flex: 1 0 24%;
-      width: 100%;
-      line-height: 34px;
-      border-right: 1px solid $color-main;
-      color: #000;
-
-      a{
-        display: block;
-      }
-    }
-
-    :last-child {
-      border-right: none;
-    }
-
-    .active {
-      color: white;
-      background: $color-main;
-    }
-  }
+}
