@@ -8,13 +8,14 @@
 
 	function Tab(element) {
 		this.tabMenu = element.querySelector(".tab-menu");
-		this.tabBox = element.querySelector(".tab-box");
-
-		this.menuBindEvents(this.tabMenu);
-		this.boxBindEvents();
+		this.titleBindEvents(this.tabMenu);
+		this.iconClass = {
+			open: 'fa fa-angle-down',
+			close: 'fa fa-angle-up'
+		}
 	}
 
-	Tab.prototype.menuBindEvents = function(element) {
+	Tab.prototype.titleBindEvents = function(element) {
 		element.addEventListener('click',function(event){
 			var el = event.target;
 			while(!el.classList.contains('tab-item') && el !== element) {
@@ -27,47 +28,49 @@
 		}.bind(this),false);
 	}
 	Tab.prototype._toggleDisplay = function(el) {
-		const otherActive = this.tabMenu.querySelectorAll('.active');
-		for (var i = otherActive.length - 1; i >= 0; i--) {
-			otherActive[i].classList.remove('active');
+		var target = el;
+		if (target.classList.contains('active')) {
+			this._hide(target);
+		} else {
+			const otherActive = this.tabMenu.querySelector('.active');
+			if (otherActive) {
+				this._hide(otherActive);
+			} 
+			target.classList.add('active');
+			target.querySelector('.fa').className = this.iconClass.open;
+			target.parentElement.querySelector('.tab-content').classList.add('show');
 		}
-		el.classList.add('active');
 
-		var index = this._getIndex(el);
-		const otherBox = this.tabBox.querySelectorAll('.selected');
-		for (var i = otherBox.length - 1; i >= 0; i--) {
-			otherBox[i].classList.remove('selected');
-		}
-		this.tabBox.querySelectorAll('.tab-content')[index].classList.add('selected');
+		this.contentBindEvents();
 	}
-	Tab.prototype._getIndex = function(element) {
-		const menuItem = this.tabMenu.querySelectorAll('.tab-item');
-		for (var i = menuItem.length - 1; i >= 0; i--) {
-			if(menuItem[i] === element){
-				return i;
-			}
-		}
+	Tab.prototype._hide = function(element) {
+		element.classList.remove('active');
+		element.querySelector('.fa').className = this.iconClass.close;
+		element.parentElement.querySelector('.tab-content').classList.remove('show');
 	}
-	Tab.prototype.boxBindEvents = function() {
-		this.tabBox.addEventListener('click',function(event){
-			var el = event.target;
-			while(el.tagName !== 'LI' && el !== this.tabBox) {
-			  el = el.parentElement;
-			}
+	Tab.prototype.contentBindEvents = function() {
+		var curActive = this.tabMenu.querySelector('.active');
+		if (curActive) {
+			curActive.parentElement.addEventListener('click',function(event){
+				var el = event.target;
+				while(el.tagName !== 'LI' && el !== this.tabMenu) {
+				  el = el.parentElement;
+				}
 
-			if (el.tagName === 'LI') {
-			  this._toggleIcon(el);
-			}
-		}.bind(this),false);
+				if (el.tagName === 'LI') {
+				  this._toggleIcon(el);
+				}
+			}.bind(this),false);
+		}
 	}
 	Tab.prototype._toggleIcon = function(el) {
-		var prevActive = el.parentElement.querySelector('.active');
+		var prevActive = el.parentElement.querySelector('.selected');
 		var Icon = prevActive.querySelector('i');
-		prevActive.removeChild(Icon);
-		prevActive.classList.remove('active');
+		prevActive.querySelector('.blank').removeChild(Icon);
+		prevActive.classList.remove('selected');
 
-		el.classList.add('active');
-		el.insertBefore(Icon,el.querySelector('span'));
+		el.classList.add('selected');
+		el.querySelector('.blank').appendChild(Icon);
 	}
 
 	window.slpComp.Tab = AllTab;

@@ -137,54 +137,66 @@
     border-top: 1px solid $color-line;
     border-bottom: 1px solid $color-line;
 
-    .tab-item {
+    .subtab {
       flex: 1;
-      text-align: center;
-      border-right: 1px solid $color-line;
-      
-      &.active {
-        color: $color-main;
-      }
-      .title {
-        font-size: $h4-size;
-
-        .fa {
-          margin-left: 4px;
+      .tab-item {
+        text-align: center;
+        border-right: 1px solid $color-line;
+        
+        &.active {
+          .title {
+            color: $color-main;
+          }
         }
-      }
-    }
-
-    >:last-child {
-      border-right: none;
-    }
-  }
-  .tab-box {
-    .tab-content{
-      display: none;
-
-      &.selected {
-        display: block;
-      }
-      .box-ul {
-        li {
-          position: relative;
+        .title {
           font-size: $h4-size;
-          height: 49px;
-          line-height: 49px;
-          border-bottom: 1px solid $color-line;
-          
-          span {
-            position: absolute;
-            left: 40px;
+
+          .fa {
+            margin-left: 4px;
           }
-          i {
-            margin-left: 12px;
-          }
-        }
-        .active {
-          color: $color-main;
         }
       }
+      .tab-content{
+        display: none;
+        position: absolute;
+        top: 49px;
+        left: 0;
+        right: 0;
+        z-index: 500;
+        background: #fff;
+
+        &.show {
+          display: block;
+        }
+        .box-ul {
+          li {
+            display: flex;
+            font-size: $h4-size;
+            height: 49px;
+            line-height: 49px;
+            border-bottom: 1px solid $color-line;
+            
+            span {
+              flex: auto;
+              @include text_ellipsis;            
+              left: 40px;
+
+            }
+            .blank {
+              flex: 0 0 40px;
+              line-height: 49px;
+              text-align: center;
+            }
+          }
+          .selected {
+            color: $color-main;
+          }
+        }
+      }
+    }
+
+    >:last-child .tab-item {
+      border-right: none;
     }
   }
 }
