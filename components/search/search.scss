@@ -36,6 +36,8 @@ $borderRadius: 4px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 5px 0;
+    border: 1px solid $color-line;
 
     .search-cell-left {
       padding: 5px 20px;
