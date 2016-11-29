@@ -36,3 +36,4 @@ require('./components/pagination/pagination.scss');
 require('./components/pagination/pagination.js');
 
 require('./components/article/article.scss');
+require('./components/map/map.scss');
