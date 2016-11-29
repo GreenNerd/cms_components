@@ -35,7 +35,6 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
     }
 
     .fa {
-      width: 20px;
       padding: 0 20px;
       line-height: 49px;
       display: none;
@@ -119,6 +118,7 @@ $collapse-bg:url('/assets/library/collapse_bg.jpg');
       }
       .fa {
         display: block;
+        width: 20px;
       }
     }
     .collapse-body {
