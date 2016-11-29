@@ -112,7 +112,8 @@
     border: 1px solid $color-main;
     a {
       color: $color-main;
-      &:hover {
+      &:hover,
+      &.active {
         background: $color-main;
         color: #fff;
       }
@@ -125,7 +126,8 @@
     box-shadow: .4px .4px rgba(0,0,0,.15);
     a {
       color: $color-black;
-      &:hover {
+      &:hover,
+      &.active {
         background: $color-line;
       }
     }
