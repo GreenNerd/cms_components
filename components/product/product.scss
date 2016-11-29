@@ -9,9 +9,14 @@
 }
 
 .product-row {
+  border-top: 1px solid $color-line;
+  border-bottom: 1px solid $color-line;
+  
   .product-row-cell {
     padding: 10px;
     display: flex;
+    border-bottom: 1px solid $color-line;
+
     .product-cell-left {
       height: 110px;
       flex: 0 0 110px;
@@ -40,6 +45,9 @@
         }
       }
     }
+  }
+  >:last-child {
+    border-bottom: none;
   }
 }
 .product-column {
