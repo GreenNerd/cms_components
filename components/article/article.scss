@@ -17,7 +17,7 @@
 .article-smimg {
   background: #fff;
 
-  header {
+  .head {
     height: 45px;
     line-height: 45px;
     margin-left: 10px;
@@ -117,6 +117,8 @@
   }
 }
 .article-lgimg {
+  border-top: 1px solid $color-line;
+
   .article-cell {
     padding: 15px 10px;
     position: relative;
@@ -149,6 +151,8 @@
   }
 }
 .article-onlytitle{
+  border-top: 1px solid $color-line;
+  
   .noinfo {
     height: 49px;
     padding: 0 10px;
@@ -177,6 +181,8 @@
   }
 }
 .article-midimg {
+  border-top: 1px solid $color-line;
+  
   .article-cell {
     display: flex;
     flex-direction: row;
