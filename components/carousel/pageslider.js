@@ -57,9 +57,9 @@
       this.setXAndScale(this.$el.children[this.total-2].querySelector('.item-content'),this.width*0.9,0.9)
     }
     
-    // this.addWidget();
+    this.addWidget();
     this.bindEvents();
-    // this.carousel();
+    this.carousel();
   }
   SwiperItem.prototype.addWidget = function(){
     var promo_nav = document.createElement('nav');
