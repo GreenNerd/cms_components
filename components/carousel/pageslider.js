@@ -1,4 +1,6 @@
-(function(){ 
+(function(){
+
+
   function Swiper() {
     const allSwiper = document.querySelectorAll("[data-comp='Swiper']");
 
@@ -114,6 +116,21 @@
     'touchstart touchmove touchend touchcancel'.split(' ').forEach(function(evn){
       self.$el.addEventListener(evn,self[evn].bind(self),false)
     })
+    addEventListener('orientationchange',function(){
+      self.orientationChange();
+    },false)
+  }
+  SwiperItem.prototype.orientationChange = function(){
+      switch(window.orientation) {
+      // 　　case 0:
+      //   case 180: 
+      //     alert("横");
+      //     break;
+      　　case -90:
+        case 90:
+          this.resize();
+          break;
+      }
   }
 
 //获取当前触控页面对象
@@ -327,6 +344,7 @@
 
 //调整当前页面
   SwiperItem.prototype.resize = function(){
+    this.width = this.$el.clientWidth;
     for(var i = 0;i < this.total; i++){
       this.$el.children[i].classList.remove('currentitem','nextitem','previousitem')
     }
