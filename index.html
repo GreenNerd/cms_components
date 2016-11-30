@@ -1,0 +1,2394 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+  <title>cms</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+</head>
+<body>
+  <header class="header-container fixed-top" data-comp='Header'>
+    <div class="header-main">
+      <div class="logo">
+        <img src="assets/library/item_three_l.png"/>
+      </div>
+      <div class="header-main-wrapper">
+        <h3>成都了了科技有限公司</h3>
+      </div>
+      <div class="toggler">
+        <i class="fa fa-navicon"></i>
+      </div>
+    </div>
+    <div class="header-list">
+      <div class="header-cell-group header-collapse" style="height:0;">
+        <ul class="header-ul-nav">
+          <li class="header-cell link-active"><a href="#library" class="link-active">library</a></li>
+          <li class="header-cell"><a href="#collapse">collapse</a></li>
+          <li class="header-cell"><a href="#category">category</a></li>
+          <li class="header-cell"><a href="#tab">tab</a></li>
+          <li class="header-cell"><a href="#button">button</a></li>
+          <li class="header-cell"><a href="#profile">profile</a></li>
+          <li class="header-cell"><a href="#attachment">attachment</a></li>
+          <li class="header-cell"><a href="#search">search</a></li>
+          <li class="header-cell"><a href="#article">article</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- breadcrumbs -->
+  <div id="breadcrumbs" class="example">
+    <h1>breadcrumbs</h1>
+    <div class="subexample">
+      <h2>default</h2>
+      <div class="breadcrumbs-wrapper">
+        <div class="breadcrumbs-cell">
+          <i class="fa fa-home"></i>
+          <span>主页</span>
+        </div>
+        <div class="breadcrumbs-cell">
+          <span>培训考核</span>
+        </div>
+        <div class="breadcrumbs-cell">
+          <span>考核评价</span>
+        </div>
+        <div class="breadcrumbs-cell">
+          <span>考核评价考核评价</span>
+        </div>
+        <div class="breadcrumbs-cell">
+          <span>考核评价</span>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-home"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L3"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">主页</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">培训考核</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L7"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L8"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L9"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">考核评价</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L10"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L11"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L12"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">...</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L13"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"><span class="pln">  ...</span></li>
+          <li class="L15"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>arrow</h2>
+      <div class="breadcrumbs-wrapper breadcrumbs-arrow">
+        <div class="breadcrumbs-cell">
+          <i class="fa fa-home"></i>
+          <span>主页</span>
+        </div>
+        <div class="breadcrumbs-cell">
+          <span>培训考核</span>
+        </div>
+        <div class="breadcrumbs-cell">
+          <span>考核评价</span>
+        </div>
+        <div class="breadcrumbs-cell">
+          <span>考核评价考核评价</span>
+        </div>
+        <div class="breadcrumbs-cell">
+          <span>考核评价</span>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-wrapper breadcrumbs-arrow"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-home"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L3"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">主页</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">培训考核</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L7"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L8"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L9"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">考核评价</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L10"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L11"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"breadcrumbs-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L12"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">...</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L13"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"><span class="pln">  ...</span></li>
+          <li class="L15"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+  </div>
+  <!-- swiper -->
+  <div id="swiper" class="example">
+    <h1>Swiper</h1>
+    <div data-comp="Swiper" data-autotime="3000" data-widget="right" class="pages-container">
+      <div class="pages" id="pages">
+        <div class="page currentitem">
+          <a href="#" class="item-content" style="background-image:url('./assets/banner/default.png')">
+            <div class="mask">
+              <h4>科学镜头下的不可思议之美</h4>
+            </div>
+          </a>
+        </div>
+        <div class="page nextitem">
+          <a href="#" class="item-content" style="background-image: url('./assets/banner/bg_1.jpg')">
+            <div class="mask">
+              <h4>科学镜头下的不可思议之美</h4>
+            </div>
+          </a>
+        </div>
+        <div class="page ">
+          <a href="#" class="item-content" style="background-image: url('./assets/banner/bg_2.jpg')">
+            <div class="mask">
+              <h4>科学镜头下的不可思议之美</h4>
+            </div>
+          </a>
+        </div>
+        <div class="page previousitem">
+          <a href="#" class="item-content" style="background-image: url('assets/banner/bg_3.jpg')">
+            <div class="mask">
+              <h4>科学镜头下的不可思议之美</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- library -->
+  <div id="library" class="example">
+    <h1>library</h1>
+    <div class="subexample">
+      <div class="library-list">
+        <a href="#" class="list-item" style="background-image:url('./assets/library/item_two_l.png')">
+          <div class="item-mask"></div>
+          <span class="item-name">政法</br>法规</span>
+          <i class="item-icon fa fa-bullhorn"></i>
+        </a>
+        <a href="#" class="list-item" style="background-image:url('./assets/library/item_two_r.png')">
+          <div class="item-mask"></div>
+          <span class="item-name">职业</br>卫生</span>
+          <i class="item-icon fa fa-briefcase"></i>
+        </a>
+      </div>
+      <div class="library-list">
+        <a href="" class="list-item" style="background-image:url('./assets/library/item_three_l.png')">
+          <div class="item-mask"></div>
+          <span class="item-name">标准化</br>建设</span>
+          <i class="item-icon fa fa-wpforms"></i>
+        </a>
+        <a href="" class="list-item" style="background-image:url('./assets/library/item_three_m.png')">
+          <div class="item-mask"></div>
+          <span class="item-name">社区</br>安全</span>
+          <i class="item-icon fa fa-shield"></i>
+        </a>
+        <a href="" class="list-item" style="background-image:url('./assets/library/item_three_r.png')">
+          <div class="item-mask"></div>
+          <span class="item-name">经验</br>交流</span>
+          <i class="item-icon fa fa-smile-o"></i>
+        </a>
+      </div>
+    </div>
+    <pre class="usage">
+      <ol class="linenums">
+        <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"library-list"</span><span class="tag">&gt;</span></li>
+        <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"list-item"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-image:url(...)"</span><span class="tag">&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-mask"</span><span class="tag">&gt;&lt;/div&gt;</span></li>
+        <li class="L3"><span class="pln">    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-name"</span><span class="tag">&gt;<span class="pln">职业</span><span class="tag">&lt;/br&gt;</span><span class="pln">卫生</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L4"><span class="pln">    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-icon fa fa-briefcase"</span><span class="tag">&gt;</span><span class="tag">&lt;/i&gt;</span></li>
+        <li class="L5"><span class="pln">  </span><span class="tag">&lt;/a&gt;</span></li>
+        <li class="L6"><span class="pln">  ...</span></li>
+        <li class="L7"><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L8"></li>
+        <li class="L9"><span class="tag">*可放置2-3个元素*</span></li>
+      </ol>
+    </pre>
+    <div class="subexample">
+      <div class="library-squared">
+        <a class="squared-item">
+          <i class="fa fa-bullhorn"></i>
+          <span>市民诉求</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-font-awesome"></i>
+          <span>市民诉求市</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-glide"></i>
+          <span>市民诉求市民</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-houzz"></i>
+          <span>市民诉求市民诉</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-facebook"></i>
+          <span>市民诉求市民诉求</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-medium"></i>
+          <span>市民诉求市民诉求市</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-flickr"></i>
+          <span>市民诉</br>求</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-google"></i>
+          <span>市民诉求</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-edge"></i>
+          <span>市民诉求</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-digg"></i>
+          <span>市民诉求</span>
+        </a>
+        <a class="squared-item">
+          <i class="fa fa-empire"></i>
+          <span>市民诉求</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- collapse -->
+  <div id="collapse" class="example">
+    <h1>collapse</h1>
+    <div class="subexample">
+      <h2>default</h2>
+      <div data-comp="Collapse" data-compatible="true" data-activeindex="0" class="default">
+        <div class="collapse-panel">
+          <div class="collapse-heading">
+            <h3 class="collapse-title">股权架构股权架构股权架构股权架构股权架构股权架构股权架构股权架构股权架构股权架构</h3>
+          </div>
+          <div class="collapse-body">
+            <div class="collapse-content">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+            </div>
+          </div>
+        </div>
+        <div class="collapse-panel">
+          <div class="collapse-heading">
+            <h3 class="collapse-title">股权架构</h3>
+          </div>
+          <div class="collapse-body">
+            <div class="collapse-content">
+              2009年9月，国科控股通过北京产权交易所公开挂牌，以27.55亿元的价格，将联想控股有限公司29%的股份转让给中国泛海控股集团有限公司，转让后的股权结构为：国科控股持股36%。
+            </div>
+          </div>
+        </div>
+        <div class="collapse-panel">
+          <div class="collapse-heading">
+            <h3 class="collapse-title">股权架构</h3>
+          </div>
+          <div class="collapse-body">
+            <div class="collapse-content">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="pln">*HTML*</span></li>
+          <li class="L1"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">Collapse</span><span class="pln"> </span><span class="atn">data-compatible</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">data-activeindex</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"default"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-panel"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">"class"</span><span class="pun">=</span><span class="atv">"collapse-heading"</span><span class="tag">&gt;</span></li>
+          <li class="L5"><span class="pln">      </span><span class="tag">&lt;h3</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-title"</span><span class="tag">&gt;</span><span class="pln">股权架构</span><span class="tag">&lt;/h3&gt;</span></li>
+          <li class="L6"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L7"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">"class"</span><span class="pun">=</span><span class="atv">"collapse-body"</span><span class="tag">&gt;</span></li>
+          <li class="L8"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-content"</span><span class="tag">&gt;</span><span class="pln">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L9"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L10"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L11"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-panel"</span><span class="tag">&gt;</span></li>
+          <li class="L12"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">"class"</span><span class="pun">=</span><span class="atv">"collapse-heading"</span><span class="tag">&gt;</span></li>
+          <li class="L14"><span class="pln">      </span><span class="tag">&lt;h3</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-title"</span><span class="tag">&gt;</span><span class="pln">股权架构</span><span class="tag">&lt;/h3&gt;</span></li>
+          <li class="L15"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L16"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">"class"</span><span class="pun">=</span><span class="atv">"collapse-body"</span><span class="tag">&gt;</span></li>
+          <li class="L17"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-content"</span><span class="tag">&gt;</span><span class="pln">2009年9月，国科控股通过北京产权交易所公开挂牌，以27.55亿元的价格，将联想控股有限公司29%的股份转让给中国泛海控股集团有限公司，转让后的股权结构为：国科控股持股36%。</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L18"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L19"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L20"><span class="pln">  ...</span></li>
+          <li class="L21"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>primary</h2>
+      <div data-comp="Collapse" data-compatible="false" data-activeindex="0" class="primary">
+        <div class="collapse-panel">
+          <div class="collapse-heading">
+            <h3 class="collapse-title">股权架构股权架构股权架构股权架构股权架构股权架构股权架构股权架构股权架构股权架构</h3>
+          </div>
+          <div class="collapse-body">
+            <div class="collapse-content">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+            </div>
+          </div>
+        </div>
+        <div class="collapse-panel">
+          <div class="collapse-heading">
+            <h3 class="collapse-title">股权架构</h3>
+          </div>
+          <div class="collapse-body">
+            <div class="collapse-content">
+              2009年9月，国科控股通过北京产权交易所公开挂牌，以27.55亿元的价格，将联想控股有限公司29%的股份转让给中国泛海控股集团有限公司，转让后的股权结构为：国科控股持股36%。
+            </div>
+          </div>
+        </div>
+        <div class="collapse-panel">
+          <div class="collapse-heading">
+            <h3 class="collapse-title">股权架构</h3>
+          </div>
+          <div class="collapse-body">
+            <div class="collapse-content">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="pln">*HTML*</span></li>
+          <li class="L1"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">Collapse</span><span class="pln"> </span><span class="atn">data-compatible</span><span class="pun">=</span><span class="atv">"false"</span><span class="pln"> </span><span class="atn">data-activeindex</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"primary"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-panel"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">"class"</span><span class="pun">=</span><span class="atv">"collapse-heading"</span><span class="tag">&gt;</span></li>
+          <li class="L5"><span class="pln">      </span><span class="tag">&lt;h3</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-title"</span><span class="tag">&gt;</span><span class="pln">股权架构</span><span class="tag">&lt;/h3&gt;</span></li>
+          <li class="L6"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L7"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">"class"</span><span class="pun">=</span><span class="atv">"collapse-body"</span><span class="tag">&gt;</span></li>
+          <li class="L8"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-content"</span><span class="tag">&gt;</span><span class="pln">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L9"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L10"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L11"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-panel"</span><span class="tag">&gt;</span></li>
+          <li class="L12"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">"class"</span><span class="pun">=</span><span class="atv">"collapse-heading"</span><span class="tag">&gt;</span></li>
+          <li class="L14"><span class="pln">      </span><span class="tag">&lt;h3</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-title"</span><span class="tag">&gt;</span><span class="pln">股权架构</span><span class="tag">&lt;/h3&gt;</span></li>
+          <li class="L15"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L16"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">"class"</span><span class="pun">=</span><span class="atv">"collapse-body"</span><span class="tag">&gt;</span></li>
+          <li class="L17"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse-content"</span><span class="tag">&gt;</span><span class="pln">2009年9月，国科控股通过北京产权交易所公开挂牌，以27.55亿元的价格，将联想控股有限公司29%的股份转让给中国泛海控股集团有限公司，转让后的股权结构为：国科控股持股36%。</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L18"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L19"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L20"><span class="pln">  ...</span></li>
+          <li class="L21"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+  </div>
+  <!-- category -->
+  <div id="category" class="example">
+    <h1>category</h1>
+    <div class="subexample">
+      <h2>category-main</h2>
+      <div class="category main">
+        <a href="#" class="category-item">
+          <span>重要文章</span>
+          <i class="fa fa-anchor"></i>
+        </a>
+        <a href="#" class="category-item">
+          <span>最新文章</span>
+          <i class="fa fa-commenting"></i>
+        </a>
+        <a href="#" class="category-item">
+          <span>精华文章</span>
+          <i class="fa fa-fort-awesome"></i>
+        </a>
+      </div>
+      <div class="category main scroll">
+        <a href="#" class="category-item">
+          <span>重要文章</span>
+          <i class="fa fa-anchor"></i>
+        </a>
+        <a href="#" class="category-item">
+          <span>最新文章</span>
+          <i class="fa fa-commenting"></i>
+        </a>
+        <a href="#" class="category-item">
+          <span>精华文章</span>
+          <i class="fa fa-fort-awesome"></i>
+        </a>
+        <a href="#" class="category-item">
+          <span>精华文章</span>
+          <i class="fa fa-fort-awesome"></i>
+        </a>
+        <a href="#" class="category-item">
+          <span>精华文章</span>
+          <i class="fa fa-fort-awesome"></i>
+        </a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-main"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-item"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;p&gt;</span><span class="pln">重要文章</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L3"><span class="pln">    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-anchor"</span><span class="tag">&lt;/i&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;/a&gt;</span><span class="pln"> </span><span class="atn"></li>
+          <li class="L5"><span class="pln">  ...</span></li>
+          <li class="L6"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L7"></li>
+          <li class="L8"><span class="tag">*可放置2-3个元素*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>category-bg</h2>
+      <div class="category scroll">
+        <a href="#" class="category-item" style="background-image:url('./assets/library/item_two_l.png')">
+          <div class="mask"></div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item" style="background-image:url('./assets/library/item_two_l.png')">
+          <div class="mask"></div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item" style="background-image:url('./assets/library/item_two_l.png')">
+          <div class="mask"></div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item" style="background-image:url('./assets/library/item_two_l.png')">
+          <div class="mask"></div>
+          <span>重要文章</span>
+        </a>
+      </div>
+      <pre class="usage"></pre>
+    </div>
+    <div class="subexample">
+      <h2>category-lof5 nobg</h2>
+      <div class="category-lof5 nobg">
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>            
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>            
+          </div>
+          <span>重要文章</span>
+        </a>
+      </div>
+      <div class="category-lof5 nobg scroll">
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:transparent">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-lof5"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-item"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-bg"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background:transparent"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-anchor"</span><span class="tag">&lt;/i&gt;</span></li>
+          <li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="pln">    </span><span class="tag">&lt;p&gt;</span><span class="pln">重要文章</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L6"><span class="tag">  &lt;/a&gt;</span></li>
+          <li class="L7"><span class="tag">  ...</span></li>
+          <li class="L8"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L9"></li>
+          <li class="L10"><span class="tag">*最多放置5个元素*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>category-lof5 withbg</h2>
+      <div class="category-lof5 withbg">
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:#ffc306">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:#fb7e59">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章重要文章重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:#5bb5ec">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+        <a href="#" class="category-item">
+          <div class="icon-bg" style="background:#73bec1">
+            <i class="fa fa-anchor"></i>
+          </div>
+          <span>重要文章</span>
+        </a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-lof5"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-item"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-bg"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background:#f7b7e59"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-anchor"</span><span class="tag">&lt;/i&gt;</span></li>
+          <li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="pln">    </span><span class="tag">&lt;p&gt;</span><span class="pln">重要文章</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L6"><span class="tag">  &lt;/a&gt;</span></li>
+          <li class="L7"><span class="tag">  ...</span></li>
+          <li class="L8"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L9"></li>
+          <li class="L10"><span class="tag">*最多放置5个元素*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>category-lof2 left</h2>
+      <div class="category-lof2 left">
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="backgorund:transparent">
+              <i class="fa fa-bullhorn" style="color:#fd7e59"></i>
+            </div>
+            <div class="info">
+              <span class="title">政策法规政策法规政策法规政策法规</span>
+              <span class="describes">描述文字描述文字描述文字描述文字描述文字</span>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="backgorund:transparent">
+              <i class="fa fa-bullhorn" style="color:#fd7e59"></i>
+            </div>
+            <div class="info">
+              <span class="title">政策法规</span>
+              <span class="describes">描述文字描述文字描述文字描述文字描述文字</span>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="backgorund:transparent">
+              <i class="fa fa-bullhorn" style="color:#fd7e59"></i>
+            </div>
+            <div class="info">
+              <span class="title">政策法规</span>
+              <span class="describes">描述文字描述文字描述文字描述文字描述文字</span>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="backgorund:transparent">
+              <i class="fa fa-bullhorn" style="color:#fd7e59"></i>
+            </div>
+            <div class="info">
+              <span class="title">政策法规</span>
+              <span class="describes">描述文字描述文字描述文字描述文字描述文字</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-lof2 left"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-item"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-bg"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background:transparent"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L4"><span class="pln">        </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-bullhorn"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L5"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"info"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">政策法规</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"describes"</span><span class="tag">&gt;</span><span class="pln">描述文字</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L9"><span class="tag">      &lt;/div&gt;</span></li>
+          <li class="L10"><span class="tag">    &lt;/div&gt;</span></li>
+          <li class="L11"><span class="tag">  &lt;/a&gt;</span></li>
+          <li class="L12"><span class="tag">  ...</span></li>
+          <li class="L13"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"></li>
+          <li class="L15"><span class="tag">*放置2个以上偶数个元素*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>category-lof2 right</h2>
+      <div class="category-lof2 right">
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="background:#fb7e59">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="info">
+              <span class="title">政策法规政策法规政策法规政策法规政策法规</span>
+              <span class="describes">描述文字描述文字描述文字描述文字描述文字</span>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="background:#ffc306">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="info">
+              <span class="title">政策法规</span>
+              <span class="describes">描述文字描述文字描述文字描述文字描述文字</span>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="background:#5bb5ec">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="info">
+              <span class="title">政策法规</span>
+              <span class="describes">描述文字描述文字描述文字描述文字描述文字</span>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="background:#5bb5ec">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="info">
+              <span class="title">政策法规</span>
+              <span class="describes">描述文字描述文字描述文字描述文字描述文字</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-lof2 right"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-item"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-bg"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background:#5bb5ec"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L4"><span class="pln">        </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-bullhorn"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L5"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"info"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">政策法规</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"describes"</span><span class="tag">&gt;</span><span class="pln">描述文字</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L9"><span class="tag">      &lt;/div&gt;</span></li>
+          <li class="L10"><span class="tag">    &lt;/div&gt;</span></li>
+          <li class="L11"><span class="tag">  &lt;/a&gt;</span></li>
+          <li class="L12"><span class="tag">  ...</span></li>
+          <li class="L13"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"></li>
+          <li class="L15"><span class="tag">*放置2个以上偶数个元素*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>category-lof1</h2>
+      <div class="category-lof1">
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="background:#ffc306">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="info">
+              <div class="content">
+                <span class="title">政策法规政策法规政策法规政策法规政策法规</span>
+                <span class="describes">描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字</span>
+              </div>
+              <div class="icon-arrow">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="background:#5bb5ec">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="info">
+              <div class="content">
+                <span class="title">政策法规政策法规政策法规政策法规政策法规</span>
+                <span class="describes">描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字</span>
+              </div>
+              <div class="icon-arrow">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="background:#73bec1">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="info">
+              <div class="content">
+                <span class="title">政策法规政策法规政策法规政策法规政策法规</span>
+                <span class="describes">描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字</span>
+              </div>
+              <div class="icon-arrow">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-lof1"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-item"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-bg"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background:#5bb5ec"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L4"><span class="pln">        </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-bullhorn"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L5"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"info"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">政策法规</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"describes"</span><span class="tag">&gt;</span><span class="pln">描述文字</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L9"><span class="tag">      &lt;/div&gt;</span></li>
+          <li class="L10"><span class="tag">    &lt;/div&gt;</span></li>
+          <li class="L11"><span class="tag">  &lt;/a&gt;</span></li>
+          <li class="L12"><span class="tag">  ...</span></li>
+          <li class="L13"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>category-lof1</h2>
+      <div class="category-lof1">
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="background:#ffc306">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="info">
+              <div class="content">
+                <span class="title">政策法规政策法规政策法规政策法规政策法规</span>
+              </div>
+              <div class="icon-arrow">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <div class="icon-bg" style="background:#ffc306">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="info">
+              <div class="content">
+                <span class="title">政策法规政策法规政策法规政策法规政策法规</span>
+              </div>
+              <div class="icon-arrow">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-lof1"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-item"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-bg"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background:#5bb5ec"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L4"><span class="pln">        </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-bullhorn"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L5"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"info"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">政策法规</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L8"><span class="tag">      &lt;/div&gt;</span></li>
+          <li class="L9"><span class="tag">    &lt;/div&gt;</span></li>
+          <li class="L10"><span class="tag">  &lt;/a&gt;</span></li>
+          <li class="L11"><span class="tag">  ...</span></li>
+          <li class="L12"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>category-lof1</h2>
+      <div class="category-lof1">
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <i class="fa fa-bullhorn" style="color:#ffc306"></i>
+            <div class="info">
+              <div class="content">
+                <span class="title">政策法规政策法规政策法规政策法规政策法规</span>
+              </div>
+              <div class="icon-arrow">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="category-item">
+          <div class="item-wrapper">
+            <i class="fa fa-bullhorn" style="color:#ffc306"></i>
+            <div class="info">
+              <div class="content">
+                <span class="title">政策法规政策法规政策法规政策法规政策法规</span>
+              </div>
+              <div class="icon-arrow">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-lof1"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span></span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category-item"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-bullhorn"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"color:#73bec1"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L4"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"info"</span><span class="tag">&gt;</span></li>
+          <li class="L5"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">政策法规</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L6"><span class="tag">      &lt;/div&gt;</span></li>
+          <li class="L7"><span class="tag">    &lt;/div&gt;</span></li>
+          <li class="L8"><span class="tag">  &lt;/a&gt;</span></li>
+          <li class="L9"><span class="tag">  ...</span></li>
+          <li class="L10"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>    
+      </div>
+  </div>
+  <!-- tab -->
+  <div id="tab" class="example">
+    <h1>tab</h1>
+    <div class="subexample">
+      <h2>tab-lof5-default</h2>
+      <ul class="tab-cell tab-lof5-default">
+        <li class="tab-item active"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+      </ul>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-cell tab-lof5-default"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item active"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">首页</span><span class="tag">&lt;/a</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln"> </span><span class="tag">&lt;/li&gt;</span></li>
+          <li class="L4"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li>
+          <li class="L5"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li>
+          <li class="L6"><span class="pln"> ...</span></li>
+          <li class="L7"><span class="tag">&lt;/ul&gt;</span></li>
+          <li class="L8"></li>
+          <li class="L9"><span class="tag">*最多放置5个元素*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>tab-lof5-primary</h2>
+      <ul class="tab-cell tab-lof5-primary">
+        <li class="tab-item active"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+      </ul>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-cell tab-lof5-primary"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item active"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">首页</span><span class="tag">&lt;/a</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln"> </span><span class="tag">&lt;/li&gt;</span></li>
+          <li class="L4"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li>
+          <li class="L5"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li>
+          <li class="L6"><span class="pln"> ...</span></li>
+          <li class="L7"><span class="tag">&lt;/ul&gt;</span></li>
+          <li class="L8"></li>
+          <li class="L9"><span class="tag">*最多放置5个元素*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>tab-label</h2>
+      <ul class="tab-cell tab-label">
+        <li class="tab-item active"><a>重要文章</a></li>
+        <li class="tab-item"><a>重要文章</a></li>
+        <li class="tab-item"><a>重要文章</a></li>
+        <li class="tab-item"><a>重要文章</a></li>
+      </ul>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-cell tab-label"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item active"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">重要文章</span><span class="tag">&lt;/a</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln"> </span><span class="tag">&lt;/li&gt;</span></li>
+          <li class="L4"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li>
+          <li class="L5"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li>
+          <li class="L6"><span class="pln"> ...</span></li>
+          <li class="L7"><span class="tag">&lt;/ul&gt;</span></li>
+          <li class="L8"></li>
+          <li class="L9"><span class="tag">*最多放置4个元素*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>tab-lof4</h2>
+      <ul class="tab-cell tab-lof4">
+        <li class="tab-item active"><a>首首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+        <li class="tab-item"><a>首页</a></li>
+      </ul>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-cell tab-lof4"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item active"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">首页</span><span class="tag">&lt;/a</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln"> </span><span class="tag">&lt;/li&gt;</span></li>
+          <li class="L4"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li>
+          <li class="L5"><span class="pln"> </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tab-item"</span><span class="tag">&gt;</span><span class="tag">&lt;a</span><span class="tag">></span><span class="pln">...</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li>
+          <li class="L6"><span class="pln"> ...</span></li>
+          <li class="L7"><span class="tag">&lt;/ul&gt;</span></li>
+          <li class="L8"></li>
+          <li class="L9"><span class="tag">*最多放置4个元素*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>tab</h2>
+      <div data-comp="Tab" class="tab-list">
+        <div class="tab-menu">
+          <div class="subtab">
+            <div class="tab-item">
+              <span class="title">重要<i class="fa fa-angle-up"></i></span>
+            </div>
+            <div class="tab-content">
+              <ul class="box-ul">
+                <li class="selected"><div class="blank"><i class="fa fa-check"></i></div><span>重要</span></li>
+                <li><div class="blank"></div><span>次要</span></li>
+                <li><div class="blank"></div><span>忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略忽略</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="subtab">
+            <div class="tab-item">
+              <span class="title">最新<i class="fa fa-angle-up"></i></span>
+            </div>
+            <div class="tab-content">
+              <ul class="box-ul">
+                <li class="selected"><div class="blank"><i class="fa fa-check"></i></div><span>重要1</span></li>
+                <li><div class="blank"></div><span>次要2</span></li>
+                <li><div class="blank"></div><span>忽略3</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="subtab">
+            <div class="tab-item">
+              <span class="title">精华<i class="fa fa-angle-up"></i></span>
+            </div>
+            <div class="tab-content">
+              <ul class="box-ul">
+                <li class="selected"><div class="blank"><i class="fa fa-check"></i></div><span>重要4</span></li>
+                <li><div class="blank"></div><span>次要5</span></li>
+                <li><div class="blank"></div><span>忽略66</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="subtab">
+            <div class="tab-item">
+              <span class="title">活动<i class="fa fa-angle-up"></i></span>
+            </div>
+            <div class="tab-content">
+              <ul class="box-ul">
+                <li class="selected"><div class="blank"><i class="fa fa-check"></i></div><span>重要77</span></li>
+                <li><div class="blank"></div><span>次要888</span></li>
+                <li><div class="blank"></div><span>忽略99999999999</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- button -->
+  <div id="button" class="example">
+    <h1>button</h1>
+    <div class="subexample">
+      <h2>预定义样式</h2>
+      <div class="button-container">
+        <button type="button" class="btn btn-default">default</button>
+        <button type="button" class="btn btn-primary">primary</button>
+        <button type="button" class="btn btn-default-line">default-line</button>
+        <button type="button" class="btn btn-primary-line">primary-line</button>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary"</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L3"></li>
+          <li class="L4"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default-line"</span><span class="tag">&gt;</span><span class="pln">default-line</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L5"></li>
+          <li class="L6"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary-line"</span><span class="tag">&gt;</span><span class="pln">primary-line</span><span class="tag">&lt;/button&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>尺寸</h2>
+      <div class="button-container">
+        <button type="button" class="btn btn-default btn-large">large button</button>
+        <button type="button" class="btn btn-default btn-mini ">mini button</button>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default btn-large"</span><span class="tag">&gt;</span><span class="pln">large button</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default btn-mini"</span><span class="tag">&gt;</span><span class="pln">mini button</span><span class="tag">&lt;/button&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>激活状态</h2>
+      <h4>当按钮处于激活状态时，其表现为被按压下去（底色更深、边框夜色更深、向内投射阴影）。对于 &lt;button&gt; 元素，是通过 :active 状态实现的。对于 &lt;a&gt; 元素，是通过 .active 类实现的。然而，你还可以将 .active 应用到 &lt;button&gt; 上，并通过编程的方式使其处于激活状态。</h4>
+      <div class="button-container">
+        <button type="button" class="btn btn-default active">default</button>
+        <button type="button" class="btn btn-primary active">primary</button>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default active"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary active"</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/button&gt;</span></li>
+        </ol>
+      </pre>
+      <h4>链接(&lt;a&gt;)元素</h4>
+      <div class="button-container">
+      <a href="#" class="btn btn-default active">default</a>
+      <a href="#" class="btn btn-primary active">primary</a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default active"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary active"</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/a&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>禁用状态</h2>
+      <h4>button元素</h4>
+      <h4>为 &lt;button&gt; 元素添加 disabled 属性，使其表现出禁用状态。</h4>
+      <div class="button-container">
+        <button type="button" class="btn btn-default" disabled="disabled">default</button>
+        <button type="button" class="btn btn-primary" disabled="disabled">primary</button>
+        <button type="button" class="btn btn-default-line" disabled="disabled">default-line</button>
+        <button type="button" class="btn btn-primary-line" disabled="disabled">primary-line</button>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pun">=</span><span class="atv">"disabled"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pun">=</span><span class="atv">"disabled"</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L3"></li>
+          <li class="L4"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default-line"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pun">=</span><span class="atv">"disabled"</span><span class="tag">&gt;</span><span class="pln">default-line</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L5"></li>
+          <li class="L6"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary-line"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pun">=</span><span class="atv">"disabled"</span><span class="tag">&gt;</span><span class="pln">primary-line</span><span class="tag">&lt;/button&gt;</span></li>
+        </ol>
+      </pre>
+      <h4>链接（&lt;a&gt;）元素</h4>
+      <div class="button-container">
+        <a href="#" class="btn btn-default disabled">default</a>
+        <a href="#" class="btn btn-primary disabled">primary</a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default disabled"</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary disabled"</span><span class="tag">&gt;</span><span class="pln">primary</span><span class="tag">&lt;/a&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>按钮类</h2>
+      <h4>为 &lt;a&gt;、&lt;button&gt; 或 &lt;input&gt; 元素应用按钮类</h4>
+      <div class="button-container">
+        <a class="btn btn-default" href="#" role="button">Link</a>
+        <button class="btn btn-default" type="submit">Button</button>
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="submit" value="Submit">
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">role</span><span class="pun">=</span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">Link</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L1"></li>
+          <li class="L2"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="tag">&gt;</span><span class="pln">Button</span><span class="tag">&lt;/button&gt;</span></li>
+          <li class="L3"></li>
+          <li class="L4"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Input"</span><span class="tag">&gt;</span></li>
+          <li class="L5"></li>
+          <li class="L6"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Submit"</span><span class="tag">&gt;</span></li>
+          <li class="L5"></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <div class="button-container">
+        <button type="button" class="btn btn-primary btn-large">正常按钮</button>
+        <button type="button" class="btn btn-primary btn-large active">高亮按钮</button>
+        <button type="button" class="btn btn-primary btn-large" disabled="disabled">至灰按钮</button>
+        <button type="button" class="btn btn-primary-line btn-large">正常按钮</button>
+        <button type="button" class="btn btn-primary-line btn-large active">高亮按钮</button>
+        <button type="button" class="btn btn-primary-line btn-large" disabled="disabled">至灰按钮</button>
+        <button type="button" class="btn btn-default btn-large">正常按钮</button>
+        <button type="button" class="btn btn-default btn-large active">高亮按钮</button>
+        <button type="button" class="btn btn-default btn-large" disabled="disabled">至灰按钮</button>
+        <button type="button" class="btn btn-default-line btn-large">正常按钮</button>
+        <button type="button" class="btn btn-default-line btn-large active">高亮按钮</button>
+        <button type="button" class="btn btn-default-line btn-large" disabled="disabled">至灰按钮</button>
+      </div>
+      <div class="button-container">
+       <button type="button" class="btn btn-primary btn-mini">正常</button>
+        <button type="button" class="btn btn-primary btn-mini active">高亮</button>
+        <button type="button" class="btn btn-primary btn-mini" disabled="disabled">至灰</button>
+        <button type="button" class="btn btn-primary-line btn-mini">正常</button>
+        <button type="button" class="btn btn-primary-line btn-mini active">高亮</button>
+        <button type="button" class="btn btn-primary-line btn-mini" disabled="disabled">至灰</button>
+        <button type="button" class="btn btn-default btn-mini">正常</button>
+        <button type="button" class="btn btn-default btn-mini active">高亮</button>
+        <button type="button" class="btn btn-default btn-mini" disabled="disabled">至灰</button>
+        <button type="button" class="btn btn-default-line btn-mini">正常</button>
+        <button type="button" class="btn btn-default-line btn-mini active">高亮</button>
+        <button type="button" class="btn btn-default-line btn-mini" disabled="disabled">至灰</button>
+      </div>
+    </div>
+  </div>
+  <!-- profile -->
+  <div id="profile" class="example">
+    <h1>profile</h1>
+    <div class="profile">
+      <div class="profile-cell">
+        <div class="cell-title"><span>头像</span></div>
+        <a class="cell-value">
+          <i class="fa fa-angle-right"></i>
+          <div class="head"><img src="assets/library/item_three_l.png"></div>
+        </a>
+      </div>
+      <div class="profile-cell">
+        <div class="cell-title"><span>昵称</span></div>
+        <a class="cell-value">
+          <i class="fa fa-angle-right"></i>
+          <span>鹿老头</span>
+        </a>
+      </div>
+      <div class="profile-cell">
+        <div class="cell-title"><span>电话</span></div>
+        <a href="tel:18200501125" class="cell-value">
+          <i class="fa fa-angle-right"></i>
+          <span>18200501125</span>
+        </a>
+      </div>
+      <div class="profile-cell">
+        <div class="cell-title"><span>邮件</span></div>
+        <a class="cell-value">
+          <i class="fa fa-angle-right"></i>
+          <span>ljx@skylark.com</span>
+        </a>
+      </div>
+      <div class="profile-cell">
+        <div class="cell-title"><span>新地理位置</span></div>
+        <a class="cell-value">
+          <i class="fa fa-angle-right"></i>
+          <span>新地理位置新地理位置新地理位置新地理位置</span>
+        </a>
+      </div>
+    </div>
+    <pre class="usage"></pre>
+  </div>
+  <!-- spinner -->
+  <div id="spinner" class="example">
+    <h1>spinner</h1>
+    <div class="subexample">
+      <div class="spinner-cell">
+        <div class="cell-title"><span>rolling</span></div>
+        <div class="cell-value"><span><div class="spinner-rolling" style="border-top-color: black;border-left-color: black;border-bottom-color: black;height: 28px;width: 28px;"></div></span></div>
+      </div>
+      <pre class="usage"></pre>
+    </div>
+    <div class="subexample">
+      <div class="spinner-cell">
+        <div class="cell-title"><span>snake</span></div>
+        <div class="cell-value">
+          <span>
+            <div class="colorcircle">
+              <div></div> 
+              <div></div> 
+              <div></div> 
+              <div></div> 
+              <div></div> 
+              <div></div>
+              <div class="centerWrap"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <pre class="usage"></pre>
+    </div>
+    <div class="subexample">
+      <div class="spinner-cell">
+        <div class="cell-title"><span>ring</span></div>
+        <div class="cell-value">
+          <span>
+            <div class="spinner-ring" style="transform:scale(0.96)">
+              <div></div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <pre class="usage"></pre>
+    </div>
+  </div>
+  <!-- picture -->
+  <div id="picture" class="example">
+    <h1>picture</h1>
+    <div class="subexample">
+      <div class="picture-wrapper">
+        <a href="#" class="picture-item" style="background-image:url('./assets/library/item_three_l.png')">
+        </a>
+        <a href="#" class="picture-item" style="background-image:url('./assets/library/item_three_m.png')">
+        </a>
+        <a href="#" class="picture-item" style="background-image:url('./assets/library/item_three_r.png')">
+        </a>
+        <a href="#" class="picture-item" style="background-image:url('./assets/library/item_three_l.png')">
+        </a>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"picture-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"picture-item"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-image:url(...)"</span><span class="tag">&gt;&lt;/a&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"picture-item"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-image:url(...)"</span><span class="tag">&gt;&lt;/a&gt;</span></li>
+          <li class="L3"><span class="pln">  ...</span></li>
+          <li class="L4"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+  </div>
+  <!-- attachment -->
+  <div id="attachment" class="example">
+    <h1>attachment</h1>
+    <div class="attachment-wrap">
+      <a href="" class="attachment-items excel">
+        <div class="attachment-item-left">
+          <i class="fa fa-file-excel-o"></i>
+        </div>
+        <div class="attachment-item-right">
+          <span class="item-title">2016附件文件标题2016附件文件标题2016附件文件标题2016附件文件标题2016附件文件标题.xlsx</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </a>
+      <a href="" class="attachment-items pdf">
+        <div class="attachment-item-left">
+          <i class="fa fa-file-pdf-o"></i>
+        </div>
+        <div class="attachment-item-right">
+          <span class="item-title">2016附件文件标题.pdf</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </a>
+      <a href="" class="attachment-items ppt">
+        <div class="attachment-item-left">
+          <i class="fa fa-file-powerpoint-o"></i>
+        </div>
+        <div class="attachment-item-right">
+          <span class="item-title">2016附件文件标题.ppt</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </a>
+      <a href="" class="attachment-items zip">
+        <div class="attachment-item-left">
+          <i class="fa fa-file-zip-o"></i>
+        </div>
+        <div class="attachment-item-right">
+          <span class="item-title">2016附件文件标题.zip</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </a>
+      <a href="" class="attachment-items word">
+        <div class="attachment-item-left">
+          <i class="fa fa-file-word-o"></i>
+        </div>
+        <div class="attachment-item-right">
+          <span class="item-title">2016附件文件标题.word</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </a>
+      <a href="" class="attachment-items other">
+        <div class="attachment-item-left">
+          <i class="fa fa-file"></i>
+        </div>
+        <div class="attachment-item-right">
+          <span class="item-title">2016附件文件标题.jpg</span>
+          <span class="item-size">20kb</span>
+        </div>
+      </a>
+    </div>
+    <pre class="usage">
+      <ol class="linenums">
+        <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attachment-wrap"</span><span class="tag">&gt;</span></li>
+        <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-items excel"</span><span class="tag">&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-left"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-file-excel-o"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-right"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-title"</span><span class="tag">&gt;</span><span class="pln">2016附件文件标题.xlsx</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-size"</span><span class="tag">&gt;</span><span class="pln">20kb</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L0"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-items pdf"</span><span class="tag">&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-left"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-file-pdf-o"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-right"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-title"</span><span class="tag">&gt;</span><span class="pln">2016附件文件标题.pdf</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-size"</span><span class="tag">&gt;</span><span class="pln">20kb</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L0"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-items ppt"</span><span class="tag">&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-left"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-file-powerpoint-o"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-right"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-title"</span><span class="tag">&gt;</span><span class="pln">2016附件文件标题.ppt</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-size"</span><span class="tag">&gt;</span><span class="pln">20kb</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L0"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-items zip"</span><span class="tag">&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-left"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-file-zip-o"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-right"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-title"</span><span class="tag">&gt;</span><span class="pln">2016附件文件标题.zip</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-size"</span><span class="tag">&gt;</span><span class="pln">20kb</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L0"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-items word"</span><span class="tag">&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-left"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-file-word-o"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-right"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-title"</span><span class="tag">&gt;</span><span class="pln">2016附件文件标题.word</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-size"</span><span class="tag">&gt;</span><span class="pln">20kb</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L0"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-items other"</span><span class="tag">&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-left"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-file"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"attach-item-right"</span><span class="tag">&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-title"</span><span class="tag">&gt;</span><span class="pln">2016附件文件标题.jpg</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"item-size"</span><span class="tag">&gt;</span><span class="pln">20kb</span><span class="tag">&lt;/span&gt;</span></li>
+        <li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L0"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+        <li class="L0"><span class="tag">&lt;/div&gt;</span></li>
+      </ol>
+    </pre>
+  </div>
+  <!-- search -->
+  <div id="search" class="example">
+    <h1>search</h1>
+    <div class="subexample">
+      <h2>组件 primary1</h2>
+      <div data-comp="SearchBox" data-style="primary1" class="search-cell">
+        <div class="search-form">
+          <i class="fa fa-search"></i><span>搜索内容</span>
+        </div>
+        <div class="search-bar" style="display:none;">
+          <div class="search-cell-left">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+          <div class="search-cell-wrapper">
+            <input class="search-input" name="search" placeholder="搜索内容" >
+            <input class="search-button" type="button" name="" value="搜索">
+          </div>
+          <div class="search-cell-right">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+      </div>
+      <h2>组件 primary2</h2>
+      <div data-comp="SearchBox" data-style="primary2" class="search-cell">
+        <div class="search-form">
+          <i class="fa fa-search"></i><span>搜索内容</span>
+        </div>
+        <div class="search-bar" style="display:none;">
+          <div class="search-cell-left">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+          <div class="search-cell-wrapper">
+            <input class="search-input" name="search" placeholder="搜索内容" >
+            <input class="search-button" type="button" name="" value="搜索">
+          </div>
+          <div class="search-cell-right">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="pln">*HTML*</span></li>
+          <li class="L1"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"xxx"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-cell-left"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-arrow-left"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-cell-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-input"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">“search”</span><span class="pln"> </span><span class="atn">placeholder</span><span class="pun">=</span><span class="atv">"搜索内容"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-button"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">“”</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"搜索"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"search-cell-right"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">    </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-search"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="pln">*JS*</span></li>
+          <li class="L24"><span class="atn">var</span><span class="pln"> </span><span class="atv">search</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atn">new</span><span class="pln"> </span><span class="atv">Search('xxx','primary1')</span>
+          </li>
+          <li class="L24"><span class="atn">var</span><span class="pln"> </span><span class="atv">search</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atn">new</span><span class="pln"> </span><span class="atv">Search('xxx','primary2')</span></li>
+        </ol>
+      </pre>
+    </div>
+  </div>
+  <!-- product -->
+  <div id="product" class="example">
+    <h1>product</h1>
+    <div class="subexample">
+      <h2>product-row</h2>
+      <ul class="product-row">
+        <li class="product-row-cell">
+          <div class="product-cell-left">
+            <img src="assets/library/item_three_l.png" width="100%">
+          </div>
+          <div class="product-cell-right">
+            <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本 Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
+            <span class="product-price"><i>&yen;</i>6188.00</span>
+          </div>
+        </li>
+        <li class="product-row-cell">
+          <div class="product-cell-left">
+            <img src="assets/library/item_three_l.png" width="100%">
+          </div>
+          <div class="product-cell-right">
+            <span class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</span>
+            <span class="product-price"><i>&yen;</i>6188.00</span>
+          </div>
+        </li>
+      </ul>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-row"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-row-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"produce-cell-left"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"100%"</span><span class="tag">&gt;</span></li>
+          <li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"produce-cell-right"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-title"</span><span class="tag">&gt;</span><span class="pln">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L7"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="atv">"product-price"</span><span class="tag">&gt;&lt;i&gt;</span><span class="pln">&</span><span class="pln">yen;</span><span class="pln">&lt;/i&gt;</span><span class="pln">6188.00</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L8"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L9"><span class="pln">  </span><span class="tag">&lt;/li&gt;</span></li>
+          <li class="L10"><span class="pln">  </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-row-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"produce-cell-left"</span><span class="tag">&gt;</span></li>
+          <li class="L12"><span class="pln">      </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"100%"</span><span class="tag">&gt;</span></li>
+          <li class="L13"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"produce-cell-right"</span><span class="tag">&gt;</span></li>
+          <li class="L15"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-title"</span><span class="tag">&gt;</span><span class="pln">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L16"><span class="pln">      </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="atv">"product-price"</span><span class="tag">&gt;&lt;i&gt;</span><span class="pln">&</span><span class="pln">yen;</span><span class="pln">&lt;/i&gt;</span><span class="pln">6188.00</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L17"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L18"><span class="pln">  </span><span class="tag">&lt;/li&gt;</span></li>
+          <li class="L19"><span class="pln">  ...</span></li>
+          <li class="L20"><span class="tag">&lt;/ul&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>product-column</h2>
+      <ul class="product-column">
+        <li class="product-column-cell">
+          <div class="product-cell-img">
+            <img src="assets/library/item_three_l.png" width="100%">
+          </div>
+          <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
+          <span class="product-price"><i>&yen;</i>6188.00</span>
+        </li>
+        <li class="product-column-cell">
+          <div class="product-cell-img">
+            <img src="assets/library/item_three_l.png" width="100%">
+          </div>
+          <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
+          <span class="product-price"><i>&yen;</i>6188.00</span>
+        </li>
+        <li class="product-column-cell">
+          <div class="product-cell-img">
+            <img src="assets/library/item_three_l.png" width="100%">
+          </div>
+          <a href="#" class="product-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
+          <span class="product-price"><i>&yen;</i>6188.00</span>
+        </li>
+      </ul>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-column"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-column-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-cell-img"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"100%"</span><span class="tag">&gt;</span></li>
+          <li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="pln">    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-title"</span><span class="tag">&gt;</span><span class="pln">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L6"><span class="pln">    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-price"</span><span class="tag">&gt;&lt;i&gt;</span><span class="pln">&</span><span class="pln">yen;</span><span class="tag">&lt;/i&gt;</span><span class="pln">6188.00</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L7"><span class="pln">  </span><span class="tag">&lt;/li&gt;</span></li>
+          <li class="L8"><span class="pln">  </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-column-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L9"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-cell-img"</span><span class="tag">&gt;</span></li>
+          <li class="L10"><span class="pln">      </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"100%"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L12"><span class="pln">    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-title"</span><span class="tag">&gt;</span><span class="pln">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L13"><span class="pln">    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-price"</span><span class="tag">&gt;&lt;i&gt;</span><span class="pln">&</span><span class="pln">yen;</span><span class="tag">&lt;/i&gt;</span><span class="pln">6188.00</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L14"><span class="pln">  </span><span class="tag">&lt;/li&gt;</span></li>
+          <li class="L15"><span class="pln">  ...</span></li>
+          <li class="L16"><span class="tag">&lt;/ul&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>product-details</h2>
+      <div class="product-details">
+        <div class="product-details-cell">
+          <div class="product-cell-img" style="background-image:url('./assets/library/item_three_l.png')">
+          </div>
+          <a href="#" class="product-cell-title">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</a>
+          <span class="product-cell-price"><i>&yen;</i>6188.00</span>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-details"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-details-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-cell-img"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-image:url(...)"</span><span class="tag">&gt;&lt;/div&gt;</span></li>
+          <li class="L3"><span class="pln">    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-cell-title"</span><span class="tag">&gt;</span><span class="pln">Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本Lenovo/联想 YOGA4 Pro yo-ga900-13 i7处理器 固态 触屏 超级本</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L4"><span class="pln">    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-cell-price"</span><span class="tag">&gt;&lt;i&gt;</span><span class="pln">&</span><span class="pln">yen;</span><span class="tag">&lt;/i&gt;</span><span class="pln">6188.00</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L5"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L6"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+  </div>
+  <!-- pagination -->
+  <div id="pagination" class="example">
+    <h1>pagination</h1>
+    <div class="subexample">
+      <h2>基础组件</h2>
+      <div data-comp="Pagination" class="pagination page-default">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="pln">*HTML*</span></li>
+          <li class="L1"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">date-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-deault"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-left"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">上一页</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-wrapper"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-menu"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagenumber"</span><span class="tag">&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;span&gt;</span><span class="pln">1</span><span class="tag">&lt;/span&gt;</span><span class="pln">/</span><span class="tag">&lt;span&gt;</span><span class="pln">6</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="atv">"fa fa-angle-up"</span><span class="tag">&lt;/i&gt;</span></li>
+          <li class="L9"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L10"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagenumber-alt"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"height:0;"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li>
+          <li class="L12"><span class="pln">          </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">1</span><span class="tag">&lt;/a&gt;</span></li>
+          <li class="L13"><span class="pln">          ...</span></li>
+          <li class="L14"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li>
+          <li class="L15"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L16"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L17"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L18"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-right"</span><span class="tag">&gt;</span></li>
+          <li class="L19"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">下一页</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L20"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L21"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L22"></li>
+          <li class="L23"><span class="tag">*JS*</span></li>
+          <li class="L24"><span class="atn">var</span><span class="pln"> </span><span class="atv">pagination</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atn">new</span><span class="pln"> </span><span class="atv">Pagination('js-pagination-select')</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>预定义样式</h2>
+      <div data-comp="Pagination" class="pagination page-default">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-default-normal">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-default-bg">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-main">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-main-normal">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-main-bg">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L1"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default-normal"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L2"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default-bg"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L3"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L4"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main-default"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L5"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main-bg"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>不可点击</h2>
+      <div data-comp="Pagination" class="pagination page-default">
+        <div class="page-cell-left disable">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-default-normal">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>6</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a class="active">6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right disable">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-default-bg">
+        <div class="page-cell-left disable">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-main">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>6</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a class="active">6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right disable">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-main-normal">
+        <div class="page-cell-left disable">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>1</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a class="active">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a>6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right">
+          <span>下一页</span>
+        </div>
+      </div>
+      <div data-comp="Pagination" class="pagination page-main-bg">
+        <div class="page-cell-left">
+          <span>上一页</span>
+        </div>
+        <div class="page-cell-wrapper">
+          <div class="page-menu">
+            <div class="pagenumber">
+              <span>6</span>/<span>6</span><i class="fa fa-angle-up"></i>
+            </div>
+            <div class="pagenumber-alt" style="height:0;">
+              <ul>
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+                <a class="active">6</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-cell-right disable">
+          <span>下一页</span>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-left disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L2"><span class="pln">  ...</span></li>
+          <li class="L3"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L4"></li>
+          <li class="L5"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default-normal"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">  ...</span></li>
+          <li class="L7"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-right disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L8"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L9"></li>
+          <li class="L10"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-default-bg"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-left disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L12"><span class="pln">  ...</span></li>
+          <li class="L13"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"></li>
+          <li class="L15"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main"</span><span class="tag">&gt;</span></li>
+          <li class="L16"><span class="pln">  ...</span></li>
+          <li class="L17"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-right disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L18"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L19"></li>
+          <li class="L20"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main-normal"</span><span class="tag">&gt;</span></li>
+          <li class="L21"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-left disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L22"><span class="pln">  ...</span></li>
+          <li class="L23"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L24"></li>
+          <li class="L25"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">data-comp</span><span class="pun">=</span><span class="atv">"Pagination"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"pagination page-main-bg"</span><span class="tag">&gt;</span></li>
+          <li class="L26"><span class="pln">  ...</span></li>
+          <li class="L27"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-cell-right disable"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L28"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L29"></li>
+        </ol>
+      </pre>
+    </div>
+  </div>
+  <!-- article -->
+  <div id="article" class="example">
+    <h1>article</h1>
+    <div class="subexample">
+      <h2>article-smimg article-default</h2>
+      <div class="article-smimg article-default">
+        <div class="head">
+          <span>图/标题/正文组合</span>
+        </div>
+        <nav>
+          <div class="article-cell">
+            <div class="content">
+              <p class="title">
+                文化建设的“六个一”文化建设的“六个一”
+              </p>
+              <p class="describes">
+                文化大思路主要包括“六个一”为主题内容的基本框架
+              </p>
+            </div>
+            <div class="cell-img">
+              <img src="assets/library/item_two_r.png" width="100%" />
+            </div>
+          </div>
+          <div class="article-cell">
+            <div class="content">
+              <p class="title">
+                文化建设的“六个一”
+              </p>
+              <p class="describes">
+                文化大思路主要包括“六个一”为主题内容的基本框架
+              </p>
+            </div>
+            <div class="cell-img">
+              <img src="assets/library/item_two_r.png" width="100%">
+            </div>
+          </div>
+        </nav>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-smimg article-default"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;header&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">图/标题/正文组合</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L3"><span class="pln">  </span><span class="tag">&lt;/header&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;nav&gt;</span></li>
+          <li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"content"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">文化建设的“六个一”</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"describes"</span><span class="tag">&gt;</span><span class="pln">文化建设的“六个一”</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L9"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L10"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-img"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">        </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"width:100%;"</span><span class="tag"> /&gt;</span></li>
+          <li class="L12"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L13"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"><span class="pln">    ...</span></li>
+          <li class="L15"><span class="pln">  </span><span class="tag">&lt;/nav&gt;</span></li>
+          <li class="L16"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>article-smimg article-more</h2>
+      <div class="article-smimg article-more">
+        <div class="head">
+          <span>图/标题/加载更多</span>
+        </div>
+        <nav>
+          <div class="article-cell">
+            <div class="content">
+              <p class="title">
+                文化建设的“六个一”文化建设的“六个一”
+                文化建设的“六个一”文化建设的“六个一”
+              </p>
+              <p class="time">
+                2016-08-19 20:09
+              </p>
+            </div>
+            <div class="cell-img">
+              <img src="assets/library/item_two_r.png" width="100%">
+            </div>
+          </div>
+          <div class="article-cell">
+            <div class="content">
+              <p class="title">
+                文化建设的“六个一”文化建设的“六个一”
+              </p>
+              <p class="time">
+                2016-08-19 20:09
+              </p>
+            </div>
+            <div class="cell-img">
+              <img src="assets/library/item_two_r.png" width="100%">
+            </div>
+          </div>
+        </nav>
+        <div class="more-tag">
+          <div class="tag-cell-left">
+            <span>查看更多</span>
+          </div>
+          <div class="tag-cell-right">
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-smimg article-more"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;header&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;span&gt;</span><span class="pln">图/标题/加载更多</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L3"><span class="pln">  </span><span class="tag">&lt;/header&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;nav&gt;</span></li>
+          <li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"content"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">文化建设的“六个一”</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"time"</span><span class="tag">&gt;</span><span class="pln">2016-08-19 20:09</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L9"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L10"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-img"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">        </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"width:100%;"</span><span class="tag"> /&gt;</span></li>
+          <li class="L12"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L13"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"><span class="pln">    ...</span></li>
+          <li class="L15"><span class="pln">  </span><span class="tag">&lt;/nav&gt;</span></li>
+          <li class="L16"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"more-tag"</span><span class="tag">&gt;</span></li>
+          <li class="L17"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">tag-cell-left</span><span class="tag">&gt;</span></li>
+          <li class="L18"><span class="pln">      </span><span class="tag">&lt;span&gt;</span><span class="pln">查看更多</span><span class="tag">&lt;/span&gt;</span></li>
+          <li class="L19"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L20"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">tag-cell-right</span><span class="tag">&gt;</span></li>
+          <li class="L21"><span class="pln">      </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-angle-right"</span><span class="tag">&gt;&lt;/i&gt;</span></li>
+          <li class="L22"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L23"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L24"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>article lgimg</h2>
+      <div class="article-lgimg">
+        <div class="article-cell article-with-anthor">
+          <div class="cell-img" style="background-image:url('./assets/library/item_two_r.png')">
+          </div>
+          <div class="content">
+            <h2 class="title">文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”
+            </h2>
+            <div class="describes">
+              <div class="date">
+                <p>2015-07-27</p>
+              </div>
+              <div class="anthor">
+                <p>Always</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article-cell">
+          <div class="cell-img" style="background-image:url('./assets/library/item_two_l.png')">
+          </div>
+          <div class="content">
+            <h2 class="title">文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”
+            </h2>
+            <div class="describes">
+              <div class="date">
+                <p>创建时间：2015-07-27</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-lgimg"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell article-with-anthor"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-img"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-image:url(...)"</span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L3"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"content"</span><span class="tag">&gt;</span></li>
+          <li class="L4"><span class="pln">      </span><span class="tag">&lt;h2</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">xxxxxx</span><span class="tag">&lt;/h2&gt;</span></li>
+          <li class="L5"><span class="pln">      </span><span class="tag">&lt;/div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"describes"</span><span class="tag">&gt;</span></li>
+          <li class="L6"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"date"</span><span class="tag">&gt;</span></li>
+          <li class="L7"><span class="pln">          </span><span class="tag">&lt;p&gt;</span><span class="pln">2015-07-27</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L8"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L9"><span class="pln"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"anthor"</span><span class="tag">&gt;</span></li>
+          <li class="L10"><span class="pln">          </span><span class="tag">&lt;p&gt;</span><span class="pln">anthor</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L11"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L12"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L13"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L14"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L15"><span class="pln">  </span><span class="pln">...</span></li>
+          <li class="L16"><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L17"></li>
+          <li class="L18"><span class="pln">*省略作者可不需要添加class 'article-with-anthor'*</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>article onlytitle</h2>
+      <div class="article-onlytitle">
+        <div class="article-cell noinfo">
+          <h4 class="title">
+            文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”
+          </h4>
+        </div>
+        <div class="article-cell noinfo">
+          <h4 class="title">
+            文化建设的“六个一”文化建设的“六个一”
+          </h4>
+        </div>
+        <div class="article-cell withinfo">
+          <h2 class="title">文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”</h2>
+          <p class="describes">
+            文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”
+          </p>
+        </div>
+        <div class="article-cell withinfo">
+          <h2 class="title">文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”</h2>
+          <p class="describes">
+            文化建设的“六个一”文化建设的“六个一”
+          </p>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-onlytitle"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell noinfo"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;h4</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">xxxxxx</span><span class="tag">&lt;/h4&gt;</span></li>
+          <li class="L3"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L4"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell withinfo"</span><span class="tag">&gt;</span></li>
+          <li class="L5"><span class="pln">    </span><span class="tag">&lt;h2</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">xxxxxx</span><span class="tag">&lt;/h2&gt;</span></li>
+          <li class="L6"><span class="pln">    </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"describes"</span><span class="tag">&gt;</span><span class="pln">xxxxxx</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L7"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L8"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+    <div class="subexample">
+      <h2>article-midimg</h2>
+      <div class="article-midimg">
+        <div class="article-cell with-title-day">
+          <div class="content">
+            <h2 class="title">
+              文化建设的“六个一”文化建设的“六个一”
+            </h2>
+            <div class="describes">
+              <p class="date">
+                创建时间:2015-07-27
+              </p>
+            </div>
+          </div>
+          <div class="cell-img" style="background-image:url('./assets/library/item_three_r.png')">
+          </div>
+        </div>
+        <div class="article-cell with-info">
+          <div class="content">
+            <h2 class="title">
+              文化建设的“六个一”文化建设的“六个一”
+            </h2>
+            <div class="describes">
+              文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”文化建设的“六个一”
+            </div>
+          </div>
+          <div class="cell-img">
+            <img src="assets/library/item_three_r.png" width="100%">
+          </div>
+        </div>
+        <div class="article-cell with-title-day">
+          <div class="content">
+            <h2 class="title">
+              文化建设的“六个一”文化建设的“六个一”
+            </h2>
+            <div class="describes">
+              <p class="date">
+                作者:老师
+              </p>
+              <p class="date">
+                创建时间:2015-07-27
+              </p>
+            </div>
+          </div>
+          <div class="cell-img">
+            <img src="assets/library/item_three_r.png" width="100%">
+          </div>
+        </div>
+      </div>
+      <pre class="usage">
+        <ol class="linenums">
+          <li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-midimg"</span><span class="tag">&gt;</span></li>
+          <li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell with-title-day"</span><span class="tag">&gt;</span></li>
+          <li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"content"</span><span class="tag">&gt;</span></li>
+          <li class="L3"><span class="pln">      </span><span class="tag">&lt;h2</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">xxxxxx</span><span class="tag">&lt;/h2&gt;</span></li>
+          <li class="L4"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"describes"</span><span class="tag">&gt;</span></li>
+          <li class="L5"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"date"</span><span class="tag">&gt;</span><span class="pln">创建时间:205-07-27</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L6"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L7"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-img"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-image:url()"</span><span class="tag">&gt;&lt;/div&gt;</span></li>
+          <li class="L8"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          </li>
+          <li class="L9"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell with-info"</span><span class="tag">&gt;</span></li>
+          <li class="L10"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"content"</span><span class="tag">&gt;</span></li>
+          <li class="L11"><span class="pln">      </span><span class="tag">&lt;h2</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">xxxxxx</span><span class="tag">&lt;/h2&gt;</span></li>
+          <li class="L12"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"describes"</span><span class="tag">&gt;</span><span class="pln">xxxxxx</span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L13"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-img"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-image:url()"</span><span class="tag">&gt;&lt;/div&gt;</span></li>
+          <li class="L14"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          </li>
+          <li class="L15"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"article-cell with-title-day"</span><span class="tag">&gt;</span></li>
+          <li class="L16"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"content"</span><span class="tag">&gt;</span></li>
+          <li class="L17"><span class="pln">      </span><span class="tag">&lt;h2</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">xxxxxx</span><span class="tag">&lt;/h2&gt;</span></li>
+          <li class="L18"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"describes"</span><span class="tag">&gt;</span></li>
+          <li class="L19"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"anthor"</span><span class="tag">&gt;</span><span class="pln">作者：anthor</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L20"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"date"</span><span class="tag">&gt;</span><span class="pln">创建时间:205-07-27</span><span class="tag">&lt;/p&gt;</span></li>
+          <li class="L21"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li>
+          <li class="L22"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell-img"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"background-image:url()"</span><span class="tag">&gt;&lt;/div&gt;</span></li>
+          <li class="L23"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li>
+          </li>
+          <li class="L24"><span class="tag">&lt;/div&gt;</span></li>
+        </ol>
+      </pre>
+    </div>
+  </div>
+  <!-- map -->
+  <div class="example">
+    <h1>map</h1>
+    <div class="subexample">
+      <div class="map-container">
+        <div class="mapscreenshot">
+          <img src="assets/library/item_three_r.png" width="100%">
+        </div>
+        <div class="location">
+          <div class="nowposition">
+            <span class="title">当前位置</span>
+            <span class="address">成都市东大街芷泉段时代豪庭8号9栋成都市东大街芷泉段时代豪庭8号9栋</span>
+          </div>
+          <div class="goto">
+            <input type="button" class="btn btn-primary" value="到这去">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-container">
+    <div class="footer">
+      <div class="footer-button-group">
+        <div class="footer-button">
+          <label>关于我们</label>
+        </div>
+        <div class="footer-button">
+          <label>联系我们</label>
+        </div>
+        <div class="footer-button">
+          <label>友情链接</label>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        Powered by &copy; 2016 Skylark
+      </div>
+    </div>
+  </footer>
+  
+  <script src="bundle.js"></script>
+  <script>
+    //导航
+      new slpComp.Header();
+    //折叠
+      new slpComp.Collapse();
+    //轮播
+      new slpComp.Swiper();
+    //tab
+      new slpComp.Tab();
+    //分页
+      new slpComp.Pagination();
+    //搜索框
+      new slpComp.Search();
+  </script>
+</body>
+</html>
