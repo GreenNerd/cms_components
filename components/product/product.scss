@@ -54,6 +54,8 @@
   margin-top: 5px;
   display: flex;
   flex-flow: row wrap;
+  border-top: 1px solid $color-line;
+  border-bottom: 1px solid $color-line;
 
   .product-column-cell {
     flex: 0 0 50%;

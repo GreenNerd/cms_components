@@ -15,7 +15,8 @@
 }
 
 .article-smimg {
-  background: #fff;
+  border-top: 1px solid $color-line;  
+  border-bottom: 1px solid $color-line;  
 
   .head {
     height: 45px;
