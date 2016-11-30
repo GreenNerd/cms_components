@@ -6,7 +6,7 @@ module.exports = {
     output: {
       path: __dirname,
       filename: "bundle.js",
-      publicPath: "./cms_components/"
+      publicPath: "./"
     },
     module: {
       loaders: [
