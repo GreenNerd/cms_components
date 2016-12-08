@@ -2371,7 +2371,20 @@
     </pre>
   </div>
   <!-- video -->
-  <div class=""></div>
+  <div class="example">
+    <h1>video</h1>
+    <div data-comp="video" class="video">
+      <video poster="/assets/library/item_two_l.png" width="100%" height="200px;">
+        <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4">
+        <p>没有视频</p>
+      </video>
+      <div class="control">
+        <div class="play">
+          <i class="fa fa-caret-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="footer-container">
     <div class="footer">
       <div class="footer-button-group">
@@ -2405,6 +2418,8 @@
       new slpComp.Pagination();
     //搜索框
       new slpComp.Search();
+
+      new slpComp.Video();
   </script>
 </body>
 </html>

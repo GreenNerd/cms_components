@@ -21,6 +21,7 @@ require('./components/product/product.scss');
 require('./components/pagination/pagination.scss');
 require('./components/article/article.scss');
 require('./components/map/map.scss');
+require('./components/video/video.scss');
 /*JS*/
 require('./components/slpComp.js');
 require('./components/header/header.js');
@@ -29,3 +30,4 @@ require('./components/collapse/collapse.js');
 require('./components/tab/tab.js');
 require('./components/search/search.js');
 require('./components/pagination/pagination.js');
+require('./components/video/video.js');
