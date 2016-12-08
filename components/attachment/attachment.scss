@@ -16,6 +16,24 @@
         margin: 10px;
         color: #fff;
       }
+      &.excel {
+        background: #549e3b;
+      }
+      &.pdf {
+        background: #f91b00;
+      }
+      &.ppt {
+        background: #ce4217;
+      }
+      &.zip {
+        background: #f8b848;
+      }
+      &.word {
+        background: #2162ab;
+      }
+      &.other {
+        background: $color-main;
+      }
     }
     .attachment-item-right {
       flex: auto;
@@ -43,33 +61,3 @@
   }
 }
 
-.excel {
-  .attachment-item-left {
-    background: #549e3b;
-  }
-}
-.pdf {
-  .attachment-item-left {
-    background: #f91b00;
-  }
-}
-.ppt {
-  .attachment-item-left {
-    background: #ce4217;
-  }
-}
-.zip {
-  .attachment-item-left {
-    background: #f8b848;
-  }
-}
-.word {
-  .attachment-item-left {
-    background: #2162ab;
-  }
-}
-.other {
-  .attachment-item-left {
-    background: $color-main;
-  }
-}
