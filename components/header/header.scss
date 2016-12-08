@@ -12,13 +12,9 @@
 
     .logo {
       margin-right: 20px;
-      text-align: center;
-      img {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: $color-main;
-      }
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
     }
     .header-main-wrapper {
       flex: 1;
@@ -110,25 +106,25 @@
         }
       }
     }
-  }
 
-}
-.header-collapse {
-  overflow-y: hidden;
-  .header-ul-nav {
-    .header-cell {
-      a {
-        opacity: 0.5;
+    &.header-collapse {
+      overflow-y: hidden;
+      .header-ul-nav {
+        .header-cell {
+          a {
+            opacity: 0.5;
+          }
+        }
       }
     }
-  }
-}
-.in {
-  visibility: visible;
-  .header-ul-nav {
-    .header-cell {
-      a {
-        opacity: 1;
+    &.in {
+      visibility: visible;
+      .header-ul-nav {
+        .header-cell {
+          a {
+            opacity: 1;
+          }
+        }
       }
     }
   }
