@@ -105,7 +105,7 @@
       opacity: $disable;
     }
   }
-  &.page-main,.page-main-normal,.page-main-bg {
+  &.page-main,&.page-main-normal,&.page-main-bg {
     .pagenumber-alt {
       border: 1px solid $color-main;
       a {
@@ -118,7 +118,7 @@
       }
     }
   }
-  &.page-default,.page-default-normal,.page-default-bg {
+  &.page-default,&.page-default-normal,&.page-default-bg {
     .pagenumber-alt {
       border: 1px solid $color-line;
       box-shadow: .4px .4px rgba(0,0,0,.15);
