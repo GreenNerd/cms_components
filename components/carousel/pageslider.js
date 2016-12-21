@@ -39,8 +39,21 @@
 //初始化
   SwiperItem.prototype.init = function(){
     const pages = this.$el;
-
     this.width = this.$el.clientWidth;
+    
+    //根据图片大小修改pages大小
+    var img = pages.querySelector('.item-content');
+    var style = img.currentStyle || window.getComputedStyle(img,false);
+    var bi = style.backgroundImage.slice(4,-1).replace(/"/g,"");
+    var newImg = new Image;
+    newImg.src = bi;
+    var webwidth = this.width;
+    newImg.onload = function(){
+      var pad = newImg.height/newImg.width;
+      var height = webwidth*pad;
+      pages.style.height = height + "px";
+    }
+
     this.$el.style.webkitTransform = 'translate3d(0,0,0)';
     this.total = this.$el.childElementCount;
 
