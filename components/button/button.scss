@@ -28,11 +28,13 @@
 }
 //btn-primary
   .btn-primary {
-    background: $color-main;
+    background-color: $color-main;
+    border: 1px solid $color-main;
     color: #fff;
 
     &.active,&:active {
-      background: $color-main-dark;
+      background-color: $color-main-dark;
+      border: 1px solid $color-main-dark;
       color: #fff;
     }
     &.disabled,&:disabled {
@@ -44,36 +46,39 @@
   .btn-primary-line{
     border: 1px solid $color-main;
     color: $color-main;
-    background: #fff;
+    background-color: #fff;
     &.active,&:active {
       border: 1px solid $color-main-dark;
       color: $color-main-dark;
-      background: #fff;
+      background-color: #fff;
     }
     &.disabled,&:disabled {
       border: 1px solid $color-main-dark;
       color: $color-main-dark;
-      background: #fff;
+      background-color: #fff;
       opacity: $disable;
     }
   }
 //btn-default
   .btn-default{
-    background: $color-line;
+    background-color: $color-line;
+    border: 1px solid $color-line;
     color: #000;
     &.active,&:active {
-      background: $color-line-dark;
+      background-color: $color-line-dark;
+      border: 1px solid $color-line-dark;
       color: #000;
     }
     &.disabled,&:disabled {
-      background: $color-line;
+      background-color: $color-line;
+      border: 1px solid $color-line;
       color: #000;
       opacity: $disable;
     }
   }
 //btn-default-line
   .btn-default-line{
-    background: #fff;
+    background-color: #fff;
     border: 1px solid $color-gray;
     color: #000;
     &.active,&:active {
@@ -84,3 +89,42 @@
       opacity: $disable;
     }
   }
+
+a[disabled],
+input[disabled],
+button[disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+a[disabled][class~="btn-primary"],
+input[disabled][class~="btn-primary"],
+button[disabled][class~="btn-primary"] {
+  background-color: $color-main;
+  border: 1px solid $color-main;
+  color: #fff;
+  opacity: $disable;
+}
+a[disabled][class~="btn-primary-line"],
+input[disabled][class~="btn-primary-line"],
+button[disabled][class~="btn-primary-line"] {
+  border: 1px solid $color-main-dark;
+  color: $color-main-dark;
+  opacity: $disable;
+}
+a[disabled][class~="btn-default"],
+input[disabled][class~="btn-default"],
+button[disabled][class~="btn-default"] {
+  background-color: $color-line;
+  border: 1px solid $color-line;
+  color: #000;
+  opacity: $disable;
+}
+a[disabled][class~="btn-default-line"],
+input[disabled][class~="btn-default-line"],
+button[disabled][class~="btn-default-line"] {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  opacity: $disable;
+}
