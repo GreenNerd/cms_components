@@ -107,9 +107,11 @@
       height: 37px;
       border-radius: 50%;
       margin: 5px auto 0;
+      display: table;
 
       i{
-        line-height: 37px;
+        display: table-cell;
+        vertical-align: middle;
       }
     }
     span {
@@ -193,12 +195,13 @@
           height: 37px;
           border-radius: 50%;
           text-align: center;
-          line-height: 37px;
+          display: table;
           
           i{
             font-size: 2rem;
             color: #fff;
-            line-height: 37px;
+            display: table-cell;
+            vertical-align: middle;
           }
         }
 
@@ -235,11 +238,12 @@
         height: 37px;
         border-radius: 50%;
         text-align: center;
-        line-height: 37px;
+        display: table;
         i {
           font-size: 2rem;
           color: #fff;
-          line-height: 37px;
+          display: table-cell;
+          vertical-align: middle;
         }
       }
 
