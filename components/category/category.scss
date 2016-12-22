@@ -176,7 +176,11 @@
         }
       }
     }
-
+    :nth-child(2n) {
+      .item-wrapper {
+        border-right: none;
+      }
+    }
   }
   &.right {
     .category-item{
@@ -213,11 +217,6 @@
       }
     }
 
-  }
-  :nth-child(2n) {
-    .item-wrapper {
-      border-right: none;
-    }
   }
 }
 
