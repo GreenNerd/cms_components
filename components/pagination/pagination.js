@@ -1,7 +1,6 @@
 (function(){
   function Pagination() {
     const allPagination = document.querySelectorAll("[data-comp='Pagination']");
-    
     for (var i = allPagination.length - 1; i >= 0; i--) {
       new PaginationItem(allPagination[i]);
     }

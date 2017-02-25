@@ -25,18 +25,16 @@
         visibility: hidden;
         position: absolute;
         bottom: 30px;
-
         width: 100%;
         max-height: 280px;
         overflow: scroll;
         margin: 5px 0;
         background: #fff;
         border-radius: 4px;
-
         transition-timing-function: ease-out;
         transition-duration: .35s;
         transition-property: height visibility;
-        
+
         ul {
           display: flex;
           flex-direction: column;
