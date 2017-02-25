@@ -4,7 +4,7 @@
   margin: 10px;
   border: 1px solid $color-main;
   padding: 10px;
-  
+
   .attachment-items {
     display: flex;
     margin-bottom: 10px;
@@ -40,12 +40,9 @@
       flex: auto;
       display: flex;
       flex-direction: column;
-      // border-bottom: 1px solid $color-main;
-      // padding-bottom: 10px;
       margin-left: 10px;
       width: 1em;
-      // padding-right: 20px;
-      
+
       .item-title {
         font-size: $h4-size;
         color: $color-black;
