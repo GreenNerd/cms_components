@@ -1,12 +1,11 @@
 @import '../parm';
 
 .header-container {
-  
   .header-main {
     height: 54px;
     padding: 0 20px;
     display: flex;
-    border-bottom: 1px solid $color-line;  
+    border-bottom: 1px solid $color-line;
     background: #fff;
     align-items: center;
 
@@ -41,7 +40,7 @@
     transition-timing-function: ease-out;
     transition-duration: .35s;
     transition-property: height;
-    
+
     .header-ul-nav {
       background: #fff;
       .header-cell {

@@ -16,7 +16,7 @@
 	}
 	Header.prototype.init = function(){
 		const instance = this;
-		
+
 		_addEventListener(this.toggler, 'click', function(){
 			instance.toggleDisplay();
 		});
