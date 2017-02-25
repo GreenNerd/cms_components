@@ -141,7 +141,7 @@
       .tab-item {
         text-align: center;
         border-right: 1px solid $color-line;
-        
+
         &.active {
           .title {
             color: $color-main;
@@ -174,10 +174,10 @@
             height: 49px;
             line-height: 49px;
             border-bottom: 1px solid $color-line;
-            
+
             span {
               flex: auto;
-              @include text_ellipsis;            
+              @include text_ellipsis;
               left: 40px;
               padding-right: 20px;
 
