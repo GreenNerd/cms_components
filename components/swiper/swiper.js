@@ -3,24 +3,16 @@
 
   function Swiper() {
     const allSwiper = document.querySelectorAll("[data-comp='Swiper']");
-
-    // allSwiper.forEach(function(element){
-    //   new SwiperItem(element);
-    // })
-
     for (var i = allSwiper.length - 1; i >= 0; i--) {
       new SwiperItem(allSwiper[i]);
     }
-    // _.each(allSwiper,function(element){
-    //   new SwiperItem(element);
-    // })
   }
   function SwiperItem(element){
     this.swiper = element;
     this._autoTime = parseInt(element.getAttribute('data-autoTime'));
     this._widget = element.getAttribute('data-widget');
     this.current = 0; //当前页面索引
-    
+
     this.counter = 0;
     this.pageX;
 
@@ -40,7 +32,7 @@
   SwiperItem.prototype.init = function(){
     const pages = this.$el;
     this.width = this.$el.clientWidth;
-    
+
     //根据图片大小修改pages大小
     var img = pages.querySelector('.item-content');
     var style = img.currentStyle || window.getComputedStyle(img,false);
@@ -71,7 +63,7 @@
     if (this.total > 3) {
       this.setXAndScale(this.$el.children[this.total-2].querySelector('.item-content'),this.width*0.9,0.9)
     }
-    
+
     this.addWidget();
     this.bindEvents();
     this.carousel();
@@ -135,10 +127,6 @@
   }
   SwiperItem.prototype.orientationChange = function(){
       switch(window.orientation) {
-      // 　　case 0:
-      //   case 180: 
-      //     alert("横");
-      //     break;
       　　case -90:
         case 90:
           this.resize();
@@ -150,24 +138,6 @@
   SwiperItem.prototype.getCurrent = function(){
     return this.$el.children[this.current]
   }
-
-// //获取下一个子节点
-//   SwiperItem.prototype.getNextElement = function(node){
-//     var NextElementNode = node.nextSibling;
-//     while(NextElementNode.nodeValue != null){
-//       NextElementNode = NextElementNode.nextSibling
-//     }
-//     return NextElementNode;
-//   }
-
-// //获取上一个字节点
-//   SwiperItem.prototype.getPrivousElement = function(node){
-//     var PriviousElementNode = node.priviousSibling;
-//     while(PriviousElementNode.nodeValue != null){
-//       PriviousElementNode = PriviousElementNode.priviousSibling
-//     }
-//     return PriviousElementNode;
-//   }
 
 //四个滑动事件函数
   SwiperItem.prototype.touchstart = function(e){
@@ -191,26 +161,26 @@
     var displacement = touches.pageX - this.pageX //位移
     var total = this.total
     var index = this.current
-  
+
     //计算当前索引值与执行动画索引值
       var currentIndex, //当前索引值
           counter //执行动画索引值
 
       //中间计算值
-      var num = parseInt(-displacement/this.width) + index 
+      var num = parseInt(-displacement/this.width) + index
       var a = parseInt(num/total)
-      
+
       if (num < 0 ) {
         currentIndex = (a + 1)*4 + num
         counter = (a + 1)*4 + num
       }else{
-        currentIndex = num - (a * 4) 
-        counter = num - (a * 4) 
+        currentIndex = num - (a * 4)
+        counter = num - (a * 4)
       }
       if (Math.abs(displacement % this.width) > this.width/2 && displacement < 0) {
         currentIndex = currentIndex + 1 >= total ?0:currentIndex + 1
       }else{
-        if (Math.abs(displacement % this.width) > this.width/2 && displacement > 0){ 
+        if (Math.abs(displacement % this.width) > this.width/2 && displacement > 0){
           currentIndex = currentIndex - 1 < 0 ?total-1:currentIndex - 1
         }
       }
@@ -222,11 +192,11 @@
       var current = this.$el.children[currentIndex]
       var next = (current.nextElementSibling)?current.nextElementSibling:this.$el.firstElementChild
       var prev = (current.previousElementSibling)?current.previousElementSibling:this.$el.lastElementChild
-      
+
       current.classList.add('currentitem')
       next.classList.add('nextitem')
       prev.classList.add('previousitem')
-      
+
       if(this.tablist) {
         for( i = 0 ;i<this.tablist.childElementCount;i++){
           this.tablist.children[i].classList.remove('on')
@@ -240,11 +210,11 @@
         if (this.$el.children[i].classList.contains("currentitem")) {
           current = this.$el.children[i]
           currentX = this.getX(current)
-          
+
           var prevDiv = i - 1 < 0 ? total - 1 : i - 1
           this.$el.children[prevDiv].style.webkitTransform = 'translate3d(' + (currentX - this.width) + 'px' + ',0,0)'
           this.$el.children[prevDiv].children[0].style.webkitTransform = 'translate3d('+ this.width*0.9 + 'px' +',0,0) scale3d(0.9,0.9,1)'
-          
+
           var nextDiv = i + 1 > total - 1 ? 0 : i + 1
           this.$el.children[nextDiv].style.webkitTransform = 'translate3d(' + (currentX + this.width) + 'px' + ',0,0)'
           this.$el.children[nextDiv].children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
@@ -263,12 +233,12 @@
 
       var _enlarge = 0.9 + (0.1 * (displacement % this.width)) / this.width
       var _shrink = 1 + (0.1 * (displacement % this.width)) / this.width
-      
+
       if (displacement > 0) {
         var moveDiv = counter - 1 < 0 ? total- 1 : counter - 1
         this.setXAndScale(this.$el.children[moveDiv].children[0],position - (displacement % this.width),_enlarge)
       }
-      
+
       if (displacement < 0) {
         var moveDiv = counter
         this.setXAndScale(this.$el.children[moveDiv].children[0],(-displacement % this.width) * 0.9,_shrink)
@@ -284,7 +254,7 @@
 
     var current = this.current
     if (Math.abs(remainder) >= minRange && move > 0) {
-      current = current + n - 1 < 0 ? this.total + current + n - 1 : current + n - 1 
+      current = current + n - 1 < 0 ? this.total + current + n - 1 : current + n - 1
       return this.go(current,-n + 1,true)
     }
     if (Math.abs(remainder) < minRange && move > 0) {
@@ -315,7 +285,7 @@
         if (this.displacement < 0) {
           ii = i -1 < 0?this.total - 1:i -1
           var targetChild = this.$el.children[ii].children[0]
-          
+
           targetChild.classList.add('moving')
           parent.classList.add('moving')
           parent.style.webkitTransform = 'translate3d('+ targetX + 'px' +',0,0)'
@@ -334,7 +304,7 @@
       }else{
         if (this.displacement < 0) {
           var targetChild = this.$el.children[i].children[0]
-          
+
           targetChild.classList.add('moving')
           parent.classList.add('moving')
           targetChild.style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
@@ -351,7 +321,7 @@
           parent.style.webkitTransform = 'translate3d('+ targetX + 'px' +',0,0)'
         }
      }
-  
+
     this.resize()
   }
 
@@ -450,7 +420,7 @@
       var current = this.$el.children[this.current]
       var next = (current.nextElementSibling)?current.nextElementSibling:this.$el.firstElementChild
       var prev = (current.previousElementSibling)?current.previousElementSibling:this.$el.lastElementChild
-      
+
       current.classList.add('currentitem')
       next.classList.add('nextitem')
       prev.classList.add('previousitem')
@@ -476,7 +446,7 @@
       }
       this.$el.children[prevDiv].style.webkitTransform = 'translate3d(' + (currentX - this.width) + 'px' + ',0,0)'
       this.$el.children[prevDiv].children[0].style.webkitTransform = 'translate3d('+ this.width*0.9 + 'px' +',0,0) scale3d(0.9,0.9,1)'
-      
+
       var nextDiv = this.current + 1 > this.total - 1 ? 0 : this.current + 1
       this.$el.children[nextDiv].style.webkitTransform = 'translate3d(' + (currentX + this.width) + 'px' + ',0,0)'
       this.$el.children[nextDiv].children[0].style.webkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)'
