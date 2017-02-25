@@ -15,8 +15,8 @@
 }
 
 .article-smimg {
-  border-top: 1px solid $color-line;  
-  border-bottom: 1px solid $color-line;  
+  border-top: 1px solid $color-line;
+  border-bottom: 1px solid $color-line;
 
   .head {
     height: 45px;
@@ -84,7 +84,7 @@
           color: $color-gray-light;
         }
       }
-    }   
+    }
 
   }
   .more-tag {
@@ -154,7 +154,7 @@
 }
 .article-onlytitle{
   border-top: 1px solid $color-line;
-  
+
   .noinfo {
     height: 49px;
     padding: 0 10px;
@@ -183,7 +183,7 @@
 }
 .article-midimg {
   border-top: 1px solid $color-line;
-  
+
   .article-cell {
     display: flex;
     flex-direction: row;
