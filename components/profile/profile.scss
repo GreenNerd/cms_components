@@ -1,62 +1,56 @@
 @import '../parm';
 
-// .profile-container {
-  // background: #fff;
-  // display: flex;
-  // flex-direction: column;
+.profile-cell {
+  position: relative;
+  display: flex;
+  padding: 0 10px;
+  min-height: 48px;
+  overflow: hidden;
+  line-height: 1;
+  align-items: center;
+  color: $color-black;
 
-  .profile-cell {
-    position: relative;
+  &::before {
+    content: "";
+    color: $color-line;
+    width: 100%;
+    height: 1;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    border-bottom: 1px solid;
+  }
+  .cell-title {
+    width: 85px;
+    flex: none;
+    font-size: $h3-size;
+  }
+  .cell-value {
+    flex: auto;
+    margin-left: 20px;
+    padding: 11px 0;
+    font-size: $h4-size;
     display: flex;
-    padding: 0 10px;
-    min-height: 48px;
-    overflow: hidden;
-    line-height: 1;
+    flex-direction: row-reverse;
     align-items: center;
-    color: $color-black;
+    line-height: 1.6;
 
-    &::before {
-      content: "";
+    .head {
+      @include img-size(50px);
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    i {
+      margin-left: 10px;
+      font-size: 1.7rem;
       color: $color-line;
-      width: 100%;
-      height: 1;
-      position: absolute;
-      bottom: 0;
-      left: 10px;
-      border-bottom: 1px solid;
     }
-    .cell-title {
-      width: 85px;
-      flex: none;
-      font-size: $h3-size;
-    }
-    .cell-value {
-      flex: auto;
-      margin-left: 20px;
-      padding: 11px 0;
-      font-size: $h4-size;
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      line-height: 1.6;
-      
-      .head {
-        @include img-size(50px);
-        
-        img {
-          width: 100%;
-          border-radius: 50%;
-        }
-      }
-      i {
-        margin-left: 10px;
-        font-size: 1.7rem;
-        color: $color-line;
-      }
-      span {
-        text-align: right;
-        color: $color-gray;
-      }
+    span {
+      text-align: right;
+      color: $color-gray;
     }
   }
-// }
+}
