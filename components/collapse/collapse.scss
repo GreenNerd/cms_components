@@ -21,7 +21,7 @@
     cursor:pointer;
     font-weight: normal;
     z-index:50;
-    
+
     .collapse-title {
       line-height: 49px;
       flex: auto;
@@ -36,11 +36,11 @@
       padding: 0 20px;
       line-height: 49px;
       display: none;
-     
+
       &.left {
         margin-left: -20px;
       }
-     
+
       &.right {
         margin-right: -20px;
       }

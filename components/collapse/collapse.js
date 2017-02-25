@@ -5,11 +5,6 @@
     for (var i = allCollapse.length - 1; i >= 0; i--) {
       new CollapseItem(allCollapse[i]);
     }
-    // const mountedElements = document.querySelectorAll("[data-comp]");
-    // mountedElements.forEach(element){
-    //   new SlpComp[element.getAttribute('data-comp')](element, args)
-    // }
-
   }
 
   function CollapseItem(element){
@@ -73,20 +68,6 @@
           break;
       }
     }
-    // allTitle.forEach(function(el, index){
-    //   var newIcon = document.createElement('i');
-    //   newIcon.className = index === this.activeIndex ? this.iconClass.open : this.iconClass.close;
-    //   switch (this.style) {
-    //     case 'default':
-    //       el.insertBefore(newIcon,el.querySelector('.collapse-title-txt'));
-    //       break;
-    //     case 'primary':
-    //       el.appendChild(newIcon);
-    //       break;
-    //     default:
-    //       break;
-    //   }
-    // }.bind(this))
   }
   CollapseItem.prototype.enableActive = function(){
     const active = this.element.querySelectorAll('.collapse-panel')[this.activeIndex];
