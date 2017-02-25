@@ -1,118 +1,118 @@
 @import '../parm';
 
 .pages-container{
-	position: relative;
-	overflow: hidden;
-	display: flex;
-	
-	.moving{
-		transition-timing-function: ease-out;
-		transition-duration: .6s;
-		transition-property: transform
-	}
+  position: relative;
+  overflow: hidden;
+  display: flex;
 
-	.pages{
-		flex: 1;
-		width: 100%;
-		position: relative;
+  .moving{
+    transition-timing-function: ease-out;
+    transition-duration: .6s;
+    transition-property: transform
+  }
 
-		.page{
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			z-index: 4;
-			
-			.item-content{
-				display: block;
-				width: 100%;
-				height: 100%;
-				background-size: cover;
+  .pages{
+    flex: 1;
+    width: 100%;
+    position: relative;
 
-				.mask{
-					width: 100%;
-					height: 60px;
-					position: absolute;
-					bottom: 0;
-					text-align: left;
-					background: -webkit-gradient(linear,0 0,0 bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,.4)));
-					background: -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.4));
-					background: -moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.4));
-					background: -o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.4));
-					background: -ms-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.4));
+    .page{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 4;
 
-					h4{
-						margin: 0 64px 10px 20px;	
-						line-height: 76px;
-						color: white;
-						overflow: hidden;
-						text-overflow: ellipsis;
-						white-space: nowrap;
-						word-break: keep-all;
-					}
-				}
-			}
+      .item-content{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
 
-			img{
-			height: 100%;
-			width: 100%;
-			}
-		}
+        .mask{
+          width: 100%;
+          height: 60px;
+          position: absolute;
+          bottom: 0;
+          text-align: left;
+          background: -webkit-gradient(linear,0 0,0 bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,.4)));
+          background: -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.4));
+          background: -moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.4));
+          background: -o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.4));
+          background: -ms-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.4));
 
-		.previousitem{
-			z-index: 5
-		}
-		.currentitem{
-			z-index: 6
-		}
-		.nextitem{
-			z-index: 7
-		}
-	}
-	
-	.dot-nav-widget {
-		flex: auto;
-		position: absolute;
+          h4{
+            margin: 0 64px 10px 20px;
+            line-height: 76px;
+            color: white;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: keep-all;
+          }
+        }
+      }
+
+      img{
+      height: 100%;
+      width: 100%;
+      }
+    }
+
+    .previousitem{
+      z-index: 5
+    }
+    .currentitem{
+      z-index: 6
+    }
+    .nextitem{
+      z-index: 7
+    }
+  }
+
+  .dot-nav-widget {
+    flex: auto;
+    position: absolute;
     z-index: 1000;
     bottom: 5px;
     width: 100%;
     right: 0;
-    
+
     &.right {
-    	text-align: right;
+      text-align: right;
     }
     &.middle {
-    	text-align: center;
+      text-align: center;
     }
     &.none {
-    	display: none;
+      display: none;
     }
 
     ul{
-    	display: inline-block;
-    	list-style: none;
-    	padding: 4px;
-			border-radius: 35%;
-    	background: rgba(0,0,0,.1);
+      display: inline-block;
+      list-style: none;
+      padding: 4px;
+      border-radius: 35%;
+      background: rgba(0,0,0,.1);
 
 
-    	li{
-    		margin: 4px;
-    		width: 4px;
-    		height: 4px;
-    		border-radius: 50%;
-    		float: left;
-    		position: relative;
-    		background: white;
-    	}
-			
-			.on{
-				width: 7px;
-				height: 7px;
-				margin: 2px;
-			}
+      li{
+        margin: 4px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        float: left;
+        position: relative;
+        background: white;
+      }
+
+      .on{
+        width: 7px;
+        height: 7px;
+        margin: 2px;
+      }
     }
-	}
+  }
 
 }
