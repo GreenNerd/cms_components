@@ -1,18 +1,18 @@
-#CMS-component
-##Environment
-###install dependencies
+# CMS-component
+## Environment
+### install dependencies
 ```
 npm install
 ```
-###webpack
+### webpack
 ```
 npm start
 ```
-###run
+### run
 ```
 npm run dev
 ```
-##Components from top to bottom
+## Components from top to bottom
 - header
     - fixed at the top of the page
 - breadcrumbs
@@ -55,5 +55,5 @@ npm run dev
 - footer
     - at the bottom of the page
 
-##USAGE
+## USAGE
 Usage is under each component
